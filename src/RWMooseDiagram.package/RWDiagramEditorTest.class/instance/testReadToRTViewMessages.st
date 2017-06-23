@@ -1,6 +1,7 @@
 public
 testReadToRTViewMessages
 	| editor v c e |
+	"This test shall fail"
 	editor := RWDiagramEditor new.
 	v := RTView new.
 	c := RWDiagramLocalComment new.
