@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RainerWinkler 8/13/2016 19:51",
+	"super" : "RWDiagramAbstractAttributesLayoutChanger",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"offsetY"
+	],
+	"name" : "RWDiagramLCPLayers",
+	"type" : "normal"
+}

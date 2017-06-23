@@ -1,0 +1,3 @@
+replaceMooseEntities
+replaceMooseEntities: aBooleanOrStringUndefinded
+	replaceMooseEntities := aBooleanOrStringUndefinded

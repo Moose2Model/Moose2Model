@@ -1,0 +1,1 @@
+I adapt positions in an RTView as specified in the attributes of an Layout.

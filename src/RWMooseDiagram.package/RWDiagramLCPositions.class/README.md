@@ -1,0 +1,1 @@
+I adapt positions as specfied in the attributes of an Layout.

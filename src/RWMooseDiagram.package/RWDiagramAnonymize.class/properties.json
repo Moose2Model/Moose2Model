@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "RWDiagram",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"anonymize",
+		"number"
+	],
+	"instvars" : [ ],
+	"name" : "RWDiagramAnonymize",
+	"type" : "normal"
+}

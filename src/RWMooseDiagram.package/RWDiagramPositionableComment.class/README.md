@@ -1,0 +1,1 @@
+I am the superclass for all comments that can have a position. It depends on the context what is the meaning of a position.

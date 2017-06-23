@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "RainerWinkler 8/10/2016 11:07",
+	"super" : "RWDiagramAppearanceChangeDeterminer",
+	"category" : "RWMooseDiagram-appearance",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"collectedElements",
+		"collectedElementsByLayer",
+		"includeMe",
+		"usedByLayers",
+		"usingLayers",
+		"ofElement",
+		"famixType",
+		"comp1",
+		"comp2"
+	],
+	"name" : "RWDiagramACDStandard",
+	"type" : "normal"
+}

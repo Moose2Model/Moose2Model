@@ -1,0 +1,3 @@
+initialization
+initialize
+   positionSet := false

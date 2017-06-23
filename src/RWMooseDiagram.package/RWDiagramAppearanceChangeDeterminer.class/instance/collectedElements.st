@@ -1,0 +1,3 @@
+accessing
+collectedElements
+	self subclassResponsibility

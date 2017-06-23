@@ -1,0 +1,3 @@
+globalComments
+defaultGlobalCommentColor
+	^ Color orange

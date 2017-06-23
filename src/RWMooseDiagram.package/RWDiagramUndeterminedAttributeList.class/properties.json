@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "RainerWinkler 8/10/2016 11:04",
+	"super" : "RWDiagramAbstractAttributeList",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RWDiagramUndeterminedAttributeList",
+	"type" : "normal"
+}

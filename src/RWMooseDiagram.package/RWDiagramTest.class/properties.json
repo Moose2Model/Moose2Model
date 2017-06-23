@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RWDiagramMooseModelTest",
+	"category" : "RWMooseDiagram-test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RWDiagramTest",
+	"type" : "normal"
+}

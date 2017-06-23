@@ -1,0 +1,3 @@
+public-diagram
+colorSchema
+^ colorSchema

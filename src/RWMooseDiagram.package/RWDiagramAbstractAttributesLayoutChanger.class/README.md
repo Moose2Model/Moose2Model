@@ -1,0 +1,1 @@
+My subclasses derive informations from attributes of an layout.

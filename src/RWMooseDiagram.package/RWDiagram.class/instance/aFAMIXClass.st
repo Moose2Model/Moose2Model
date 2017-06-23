@@ -1,0 +1,3 @@
+constants
+aFAMIXClass
+	^ #FAMIXClass

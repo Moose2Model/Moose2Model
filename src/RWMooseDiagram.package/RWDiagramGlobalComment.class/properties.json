@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RainerWinkler 8/17/2016 21:20",
+	"super" : "RWDiagramPositionableComment",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id"
+	],
+	"name" : "RWDiagramGlobalComment",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+A list with attributes of an element like position, color, filters ...
+
+I have all attributes that are available for a layout. I get attributes that may be stored globally by inheritance.

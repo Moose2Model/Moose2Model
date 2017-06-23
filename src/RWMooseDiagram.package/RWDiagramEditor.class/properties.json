@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "RainerWinkler 8/19/2016 18:03",
+	"super" : "RWDiagram",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [
+		"uniqueInstance"
+	],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"globalElementGroup",
+		"currentLayoutName",
+		"currentLayout",
+		"processedRTView",
+		"layouts",
+		"settings",
+		"globalComments"
+	],
+	"name" : "RWDiagramEditor",
+	"type" : "normal"
+}

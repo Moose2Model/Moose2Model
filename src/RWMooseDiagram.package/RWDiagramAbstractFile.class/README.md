@@ -1,0 +1,1 @@
+I have common methods to write and read XML files

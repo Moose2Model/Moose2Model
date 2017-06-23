@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "RainerWinkler 8/10/2016 11:08",
+	"super" : "RWDiagram",
+	"category" : "RWMooseDiagram-appearance",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"appearanceChangers"
+	],
+	"name" : "RWDiagramAppearanceChangerGroup",
+	"type" : "normal"
+}

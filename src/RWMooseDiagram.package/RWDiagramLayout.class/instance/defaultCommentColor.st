@@ -1,0 +1,3 @@
+commenting
+defaultCommentColor
+	^Color transparent

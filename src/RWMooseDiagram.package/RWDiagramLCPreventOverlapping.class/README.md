@@ -1,0 +1,1 @@
+I prevent overlapping of elements in diagrams.

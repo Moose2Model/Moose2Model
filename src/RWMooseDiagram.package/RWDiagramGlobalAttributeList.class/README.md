@@ -1,0 +1,1 @@
+I have all attributes that are available globally.

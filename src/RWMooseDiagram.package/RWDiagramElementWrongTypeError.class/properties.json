@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "RWDiagramError",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "RWDiagramElementWrongTypeError",
+	"type" : "normal"
+}

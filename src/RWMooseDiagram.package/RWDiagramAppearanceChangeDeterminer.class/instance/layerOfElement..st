@@ -1,0 +1,3 @@
+accessing
+layerOfElement: aRWDiagramElement 
+	self subclassResponsibility

@@ -1,0 +1,3 @@
+constants
+aFAMIXPackage
+	^ #FAMIXPackage
