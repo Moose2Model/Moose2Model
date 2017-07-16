@@ -121,6 +121,7 @@ Handles the modifies DBTable to color database tables differently
 
 
 	"Draw arrows and lines"
+	self flag: #todo. "edges object: gets a list of methods from whom most are not in the diagram at all. Is this a performance problem?"
 	allPackages
 		do: [ :pack | 
 			b shape arrowedLine
