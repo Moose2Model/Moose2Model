@@ -5,10 +5,6 @@ readToRTView: aRTView messages: aBoolean
 
 	<RWDiaEdit_14>
 	<RWDiaEdit_49>
-	Transcript
-		cr;
-		show: 'RWDiagramEditor readToRTView: aRTView';
-		cr.
 	self settings isReadingLayers
 		ifTrue: [ | lcLayers |
 			lcLayers := RWDiagramLCPLayers new.
