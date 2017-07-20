@@ -5,7 +5,7 @@ isModelElementNotShownWithChildren: aRWDiagramElement
 
 	<RWDiaEdit_28>
 	<RWDiaEdit_29>
-		aRWDiagramElement class = RWDiagramElement
+	aRWDiagramElement class = RWDiagramElement
 		ifFalse: [ RWDiagramElementWrongTypeError signal ].
 	(self isModelElementsuppressedWithChildren: aRWDiagramElement)
 		ifTrue: [ ^ true ].

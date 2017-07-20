@@ -11,7 +11,7 @@ Handles the modifies DBTable to color database tables differently
 
 	<duplicate_database_attr_color>
 	<menuItem: 'RW Method Usages in Packages d' category: 'Visualize'>
-	| b lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes |
+	| b lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods|
 	"Connect elements to comments"
 	"b edges objects: comments; connectToAll: #mooseID."
 	"b edges elements: b view elements; source: (aFAMIXGroup flatCollect: [:e | e mooseID ]) connectFrom: #mooseID to: #mooseID."
@@ -121,7 +121,11 @@ Handles the modifies DBTable to color database tables differently
 
 
 	"Draw arrows and lines"
-	self flag: #todo. "edges object: gets a list of methods from whom most are not in the diagram at all. Is this a performance problem?"
+
+	allMethods := aFAMIXGroup dAllMethods.
+	rwEditor settings isReading
+		ifTrue: [ allMethods := allMethods reject: [ :m | rwLayout isModelElementNotShownWithChildren: m ] ].
+	
 	allPackages
 		do: [ :pack | 
 			b shape arrowedLine
@@ -129,7 +133,7 @@ Handles the modifies DBTable to color database tables differently
 				withShorterDistanceAttachPoint.
 			b shape head color: rwLayout colorSchema methodLineColor.
 			b edges
-				objects: aFAMIXGroup dAllMethods;
+				objects: allMethods;
 				connectToAll: [ :m | ( m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod ) collect: [ :m2 | (m2 asRWDiagramElement: rwLayout) ] ].	" "
 			b shape line
 				color: rwLayout colorSchema attributeLineColor;
