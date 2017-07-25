@@ -6,7 +6,7 @@ The coding can be get from Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWi
 
 It can generate diagrams like this:
 
-![An example for a dependency graph](https://github.com/RainerWinkler/Moose-Diagram/raw/master/ExampleDiagram.png)
+![An example for a dependency graph](https://github.com/RainerWinkler/Moose2Model/raw/master/ExampleDiagram.png)
 
 # Compatibility
 Runs on Moose 6.
@@ -29,7 +29,7 @@ Go to [Moose Analysis Installation](http://www.moosetechnology.org/#install) and
 
 Install the Pharo Launcher from https://ci.inria.fr/pharo/view/Launcher/job/Launcher/ When the installation is done, choose a Moose 6.0 image.
 
-## Add the logic for RW-Moose-Diagram
+## Add the logic for Moose2Model
 
 Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground. Paste the following code into the Playground:
 
@@ -46,7 +46,7 @@ Make a left mouse click in the Pharo desktop and select Moose -> Moose Panel. Cl
 
 # Further informations
 
-This is a tool for generating adaptable dependency graphs on complex software applications. It is not restricted to SAP. See nonetheless https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor for further informations.
+This is a tool for generating adaptable dependency graphs on complex software applications. It is not restricted to SAP. See nonetheless https://github.com/RainerWinkler/SAP2Moose for further informations.
 
 It is currently used for Smalltalk and SAP application, but is expected to work on other languages too.
 
@@ -54,31 +54,31 @@ This is an enhancement to Roassal for editing, storing, commenting and simplifyi
 
 It can generate diagrams like this:
 
-![An example for a dependency graph](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor/wiki/figures/Complete_application_small_detail_2.png)
+![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_2.png)
 
 The above diagram is part of the next diagrams. This is a commented overview of the SAP2Moose extractor that explains how data is transfered between classes:
 
-![An example for a dependency graph](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor/wiki/figures/Complete_application_small_detail_1_initial.png)
+![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_1_initial.png)
 
 The above diagram was used during development. After some time new classes where added. And after extracting model data again it displayed the new classes (after some manual dragging of the new elements):
 
-![An example for a dependency graph](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor/wiki/figures/Complete_application_small_detail_1_later.png)
+![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_1_later.png)
 
 With different configurations, the whole application is shown:
 
-![An example for a dependency graph](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor/wiki/figures/Complete_application_small.png)
+![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small.png)
 
 Here a complete "real life" application:
 
-![An example for a dependency graph](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor/wiki/figures/Complete_application_big.jpg)
+![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_big.jpg)
 
-There is a new context menu available for groups of classes: ![Where to find the diagram](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor/wiki/figures/WhereToFindInMenu.png)
+There is a new context menu available for groups of classes: ![Where to find the diagram](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/WhereToFindInMenu.png)
 
 See [Moose](http://www.moosetechnology.org/) for further informations on the analysis platform that is used.
 
 See documentation of class RWDiagramEditor
 
-For further details see: [Github page for the SAP extractor](https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor (Errors are reported there)). Remind that this tool is not restricted to SAP applications.
+For further details see: [Github page for the SAP extractor](https://github.com/RainerWinkler/SAP2Moose (Errors are reported there)). Remind that this tool is not restricted to SAP applications.
 
 To load
 
@@ -89,7 +89,7 @@ To load
 
 To start open the Moose Panel, load a MooseModel and select either all classes or at least two classes. Then perform from context menu "RW Dependency graph":
 
-![How to start](https://github.com/RainerWinkler/Moose-Diagram/blob/master/RWDiagramHowToStart2.jpg?raw=true )
+![How to start](https://github.com/RainerWinkler/Moose2Model/blob/master/RWDiagramHowToStart2.jpg?raw=true )
 
 See Documentation of class RWDiagram
 and this list of statements by context:
