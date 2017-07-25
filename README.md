@@ -1,6 +1,6 @@
 # Moose2Model
 
-Add logic to edit and store diagrams created with Moose and Roassal
+This is a software exploration tool to support developers during their work. 
 
 The coding can be get from Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram (The link may work only in Firefox). The original coding is hosted in this repository.
 
