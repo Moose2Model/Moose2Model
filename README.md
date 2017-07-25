@@ -239,5 +239,7 @@ What is the layout the view belongs to?
 
 I thank Alexandre Bergel for providing the initial coding, giving valuable tips and feedback to support the development of this tool.
 
-I thank my company CubeServ for encouraging and supporting this development.
+# Funding
+
+*CubeServ* is encouraging and supporting this project.
 
