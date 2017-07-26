@@ -2,7 +2,7 @@
 
 This is a software exploration tool to support developers during their work. 
 
-The coding can be get from Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram (The link may work only in Firefox). The original coding is hosted in this repository.
+The intention of this tool is explained in this blogs: [Legacy Code – Storing the mental model in diagrams](https://blogs.sap.com/2017/06/08/legacy-code-storing-the-mental-model-in-diagrams/) and [Software exploration tool for developers (ABAP, SAP, Java, C, Smalltalk, …) – Roadmap](https://blogs.sap.com/2017/07/23/software-exploration-tool-next-steps/).
 
 It can generate diagrams like this:
 
@@ -21,15 +21,17 @@ See [YouTube video on how to install this application](https://www.youtube.com/w
 
 Load the [Moose2Model Image](http://www.poaceae.de/RWDiagram/Images/Windows/RWDiagram.zip) and run Pharo.exe after downloading. For Mac and Linux load the image and changes and add them to a virtual machine downloaded from http://pharo.org/download. You may have to add the PharoV50.sources if a warning is raised while starting the machine.
 
-## By downloading Moose 6
+## By installing Pharo, Moose and Moose2Model
+
+### Download Moose 6
 
 Go to [Moose Analysis Installation](http://www.moosetechnology.org/#install) and download an image for Moose 6.0. Extract the zip file, no installer is needed.
 
-## By using the Pharo Launcher
+### By using the Pharo Launcher
 
 Install the Pharo Launcher from https://ci.inria.fr/pharo/view/Launcher/job/Launcher/ When the installation is done, choose a Moose 6.0 image.
 
-## Add the logic for Moose2Model
+### Add the logic for Moose2Model
 
 Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground. Paste the following code into the Playground:
 
@@ -40,23 +42,35 @@ Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the P
 
 Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. 
 
-## A first model
+# A first model
 
-Make a left mouse click in the Pharo desktop and select Moose -> Moose Panel. Click in the upper right on the icon with MSE (Import model from file). Select the mse file that is generated with a FAMIX extractor. It is also possible to extract a model from the Smalltalk coding in the Pharo image itself (Icon ST "Import FAMIX Smalltalk model from the current image"). Click on the name of the file. There will now be a list with "All accesses ... All attributes ..."  Make a right click on All classes and choose Visualize -> RW Dependency graph. If the model is very big, it may need some time until the diagram is displayed. See next chapter how to work with it.
+Make a left mouse click in the Pharo desktop and select Moose -> Moose Panel. Click in the upper right on the icon with MSE (Import model from file). Select the mse file that is generated with a FAMIX extractor (See below). It is also possible to extract a model from the Smalltalk coding in the Pharo image itself (Icon ST "Import FAMIX Smalltalk model from the current image"). Click on the name of the file. There will now be a list with "All accesses ... All attributes ..."  Make a right click on All classes and choose Visualize -> RW Dependency graph. If the model is very big, it may need some time until the diagram is displayed. See next chapter how to work with it.
 
-# Further informations
+# Extractor
 
-This is a tool for generating adaptable dependency graphs on complex software applications. It is not restricted to SAP. See nonetheless https://github.com/RainerWinkler/SAP2Moose for further informations.
+Modelinformations for Smalltalk can be extracted with the Moose Panes (See above). 
 
-It is currently used for Smalltalk and SAP application, but is expected to work on other languages too.
+For SAP applications the extractor [SAP2Moose](http://www.sap2moose.org) can be used. Moose2Model and SAP2Moose are developed in parallel, so this might give the best results.
 
-This is an enhancement to Roassal for editing, storing, commenting and simplifying software diagrams that are extracted with Moose to Pharo and are displayed with Roassal.
+For Java you can extract mse files with [jdt2famix(https://github.com/feenkcom/jdt2famix).
 
-It can generate diagrams like this:
+# Where is the coding and how to contribute
+
+The original coding is hosted in this repository. A copy is stored on Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram (The link may work only in Firefox). This simplifies getting the code.
+
+To participate:
+
+Documentation: Make a fork change or add documentation and make a pull request.
+
+Coding: Install Iceberg, you will probably need to develop on Pharo 6 and Moose 6.1 to do this.
+
+# Examples
+
+A small diagrams that is part of bigger diagrams shown below:
 
 ![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_2.png)
 
-The above diagram is part of the next diagrams. This is a commented overview of the SAP2Moose extractor that explains how data is transfered between classes:
+This is a commented overview of the SAP2Moose extractor that explains how data is transfered between classes:
 
 ![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_1_initial.png)
 
@@ -71,6 +85,8 @@ With different configurations, the whole application is shown:
 Here a complete "real life" application:
 
 ![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_big.jpg)
+
+# Documenation
 
 There is a new context menu available for groups of classes: ![Where to find the diagram](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/WhereToFindInMenu.png)
 
