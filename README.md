@@ -8,6 +8,9 @@ It can generate diagrams like this:
 
 ![An example for a dependency graph](https://github.com/RainerWinkler/Moose2Model/raw/master/ExampleDiagram.png)
 
+
+It is build on top of Pharo, Roassal and [Moose](http://www.moosetechnology.org/).
+
 # Compatibility
 Runs on Moose 6.
 
@@ -41,10 +44,6 @@ Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the P
         load.
 
 Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. 
-
-# A first model
-
-Make a left mouse click in the Pharo desktop and select Moose -> Moose Panel. Click in the upper right on the icon with MSE (Import model from file). Select the mse file that is generated with a FAMIX extractor (See below). It is also possible to extract a model from the Smalltalk coding in the Pharo image itself (Icon ST "Import FAMIX Smalltalk model from the current image"). Click on the name of the file. There will now be a list with "All accesses ... All attributes ..."  Make a right click on All classes and choose Visualize -> RW Dependency graph. If the model is very big, it may need some time until the diagram is displayed. See next chapter how to work with it.
 
 # Extractor
 
@@ -88,9 +87,13 @@ Here a complete "real life" application:
 
 # Documenation
 
-There is a new context menu available for groups of classes: ![Where to find the diagram](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/WhereToFindInMenu.png)
+Please see this videos: [Customizable dependency or call graph for SAP ABAP with Pharo Moose ](https://www.youtube.com/watch?v=_RMeqd5-ZQ4&t=224s) and [Demo of a Customizable dependency or call graph with Pharo Moose - Applied to SAP ABAP ](https://www.youtube.com/watch?v=0jLN-2AVIvo&t=1s)
 
-See [Moose](http://www.moosetechnology.org/) for further informations on the analysis platform that is used.
+## First steps
+
+Make a left mouse click in the Pharo desktop and select Moose -> Moose Panel. Click in the upper right on the icon with MSE (Import model from file). Select the mse file that is generated with a FAMIX extractor (See above). It is also possible to extract a model from the Smalltalk coding in the Pharo image itself (Icon ST "Import FAMIX Smalltalk model from the current image"). Click on the name of the file. There will now be a list with "All accesses ... All attributes ..."  Make a right click on All classes and choose Visualize -> RW Dependency graph. If the model is very big, it may need some time until the diagram is displayed. See next chapter how to work with it.
+
+The context menu for groups of classes: ![Where to find the diagram](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/WhereToFindInMenu.png)
 
 ## Statements
 
