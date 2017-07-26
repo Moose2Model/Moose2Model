@@ -92,23 +92,7 @@ There is a new context menu available for groups of classes: ![Where to find the
 
 See [Moose](http://www.moosetechnology.org/) for further informations on the analysis platform that is used.
 
-See documentation of class RWDiagramEditor
-
-For further details see: [Github page for the SAP extractor](https://github.com/RainerWinkler/SAP2Moose (Errors are reported there)). Remind that this tool is not restricted to SAP applications.
-
-To load
-
-    Gofer new
-        smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
-        package: 'RWMooseDiagram';
-        load.
-
-To start open the Moose Panel, load a MooseModel and select either all classes or at least two classes. Then perform from context menu "RW Dependency graph":
-
-![How to start](https://github.com/RainerWinkler/Moose2Model/blob/master/RWDiagramHowToStart2.jpg?raw=true )
-
-See Documentation of class RWDiagram
-and this list of statements by context:
+## Statements
 
 ----------------------------------------------------------------------------------------------------
 Settings in Playground or at any place where code can be executed
