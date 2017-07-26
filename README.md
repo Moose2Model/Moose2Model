@@ -187,13 +187,13 @@ To remove (RWDiagram removeTemporary) can also be performed while inspecting the
 
     RWDiagram suppressOthersUsedByLayers: 1 usingLayers: 1 to: self.
 
-To comment (add <br> for line break):
+To comment (add &#60;br&#62; for line break):
 
     RWDiagram comment: 'My comment<br>Second Line of comment.' to: self.
 
 To remove the appearance changers:
 
-    RWDiagram removeAppearanceChangersFrom: self
+    RWDiagram removeAppearanceChangersFrom: self.
 
 To color a Component of the processed view explicitely:
 Navigate to the FAMIX element (for instance in the Moose Panel) and execute:
