@@ -4,6 +4,8 @@ This is a software exploration tool to support developers during their work.
 
 The intention of this tool is explained in this blogs: [Legacy Code – Storing the mental model in diagrams](https://blogs.sap.com/2017/06/08/legacy-code-storing-the-mental-model-in-diagrams/) and [Software exploration tool for developers (ABAP, SAP, Java, C, Smalltalk, …) – Roadmap](https://blogs.sap.com/2017/07/23/software-exploration-tool-next-steps/).
 
+It can be used in projects. The tool is currently improved, see the Roadmap in the above blog. Feel free to open an issue if you find errors or if you would like to have certain functions.
+
 It can generate diagrams like this:
 
 ![An example for a dependency graph](https://github.com/RainerWinkler/Moose2Model/raw/master/ExampleDiagram.png)
@@ -47,7 +49,7 @@ Select the complete coding with the mouse. This is mandatory because the Playgro
 
 # Extractor
 
-Modelinformations for Smalltalk can be extracted with the Moose Panes (See above). 
+Modelinformations for Smalltalk can be extracted with the Moose Panel (See above). 
 
 For SAP applications the extractor [SAP2Moose](http://www.sap2moose.org) can be used. Moose2Model and SAP2Moose are developed in parallel, so this might give the best results.
 
