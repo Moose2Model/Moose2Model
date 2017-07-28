@@ -1,4 +1,4 @@
-commenting
+sourceAnchor
 getLinkTo: aRWDiagramElement
 	| string |
 	aRWDiagramElement famixElement sourceAnchor
