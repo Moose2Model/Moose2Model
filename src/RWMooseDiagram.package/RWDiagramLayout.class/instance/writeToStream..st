@@ -12,7 +12,8 @@ writeToStream: aStream
 		with: [ elementGroup elementList
 				do: [ :element | 
 					element elementIsStored
-						ifTrue: [ writer tag
-								name: #element;
-								with: [ layoutFile writeElement: element toXML: writer.
-									layoutFile writeAttributeList: element attributeList toWriter: writer ] ] ] ]
+						ifTrue: [ element attributeList attributeIsSpecified
+								ifTrue: [ writer tag
+										name: #element;
+										with: [ layoutFile writeElement: element toXML: writer.
+											layoutFile writeAttributeList: element attributeList toWriter: writer ] ] ] ] ]

@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testWriteToStream
 	| layout aRTElement aStream aExpectedStream aExpectedClass1Stream aExpectedMethod1Stream aStartStream aEndStream aExpectedStream1 aExpectedStream2 |
 	layout := RWDiagramLayout new.
@@ -40,6 +40,7 @@ testWriteToStream
 	layout remember: [ :attributeList | attributeList position: (3 / 2) @ (5 / 2) ] fromRTElement: aRTElement.
 	aRTElement model: nil.
 	layout remember: [ :attributeList | attributeList position: (3 / 2) @ (5 / 2) ] fromRTElement: aRTElement.
+	
 	aStream := ReadWriteStream on: String new.
 	layout writeToStream: aStream.
 	aExpectedClass1Stream := ReadWriteStream on: String new.
