@@ -11,7 +11,10 @@ Legend
 
 30.07.2017 v0.2.1
 -----------------
-Requires commit 374 or higher from RW-Moose-Diagram, otherwise Programs, Functions or BW routines will not be displayed.
-(http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram)
 
 + Do not write elements with empty attributes to xml file anymore Issue #19
+
+31.07.2017 v0.2.2
+-----------------
+
++ Inform users when a diagram is displayed where very many elements are to be expected #21
