@@ -10,5 +10,7 @@ viewRWDiagramDependency
 			anFElement := RWDiagramElement famixElement: each.
 			aRWDElementGroup add: anFElement ].
 	view := diagram methodUsage: aRWDElementGroup withEditor: RWDiagramEditor uniqueInstance test: false.
-	view inspect.
-	diagram readToRTView: view withEditor: RWDiagramEditor uniqueInstance
+	view
+		ifNil: [ self inform: 'Generation of View aborted due to user request' ]
+		ifNotNil: [ view inspect.
+			diagram readToRTView: view withEditor: RWDiagramEditor uniqueInstance ]
