@@ -1,5 +1,5 @@
 MethodUsage-calledFromMoose
-methodUsage: aFAMIXGroup withEditor: rwEditor test: aBoolean
+methodUsage: aFAMIXGroup withEditor: rwEditor test: isTest
 	" Thanks to Alexandre Bergel for the first version with Accesses to attributes
   Grouping into packages by Rainer Winkler "
 
@@ -9,14 +9,23 @@ Handles the modifies DBTable to color database tables differently
 	Version 18.07.2016 major changes. No node for attribute and method anymore (reduces problems while reshaping the diagram)
 "
 
+	<RWDiaEdit_65>
 	<duplicate_database_attr_color>
 	<menuItem: 'RW Method Usages in Packages d' category: 'Visualize'>
-	| b lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods|
+	| b lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods |
 	"Connect elements to comments"
 	"b edges objects: comments; connectToAll: #mooseID."
 	"b edges elements: b view elements; source: (aFAMIXGroup flatCollect: [:e | e mooseID ]) connectFrom: #mooseID to: #mooseID."
 	"Now assign the arrows after all nodes are calculated"
 	rwLayout := rwEditor currentLayout.
+	isTest
+		ifFalse: [ rwLayout elementGroup elementList size = 0
+				ifTrue: [ self popUpAllElementsDisplayed
+						ifFalse: [ ^ nil ] ]
+				ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
+						on: NotFound
+						do: [ self popUpAllElementsDisplayed
+								ifFalse: [ ^ nil ] ] ] ].
 	rwLayout replaceElementsFromFAMIXGroup: aFAMIXGroup.
 	rwLayout resetAppearance.
 	rwLayout evaluateAppearance.
@@ -36,7 +45,7 @@ Handles the modifies DBTable to color database tables differently
 	b
 		nodes: allPackages
 		forEach: [ :pack | 
-			allClassesForPackage := (pack famixElement classes collect: [ :each | (each asRWDiagramElement: rwLayout) ]) intersection: aFAMIXGroup dAllClasses.
+			allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aFAMIXGroup dAllClasses.
 			rwEditor settings classBoxSuppressed
 				ifFalse: [ b shape box noBorder
 						withTextBelow: #dName;
@@ -84,9 +93,9 @@ Handles the modifies DBTable to color database tables differently
 				nodes: dataBaseTables
 				forEach: [ :cls | 
 					"This is duplicate coding:"
-						displayedAttributes := cls dAttributes collect:[:each | (each asRWDiagramElement: rwLayout) ].
-		rwEditor settings isReading
-		ifTrue: [displayedAttributes := displayedAttributes reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ]].
+					displayedAttributes := cls dAttributes collect: [ :each | each asRWDiagramElement: rwLayout ].
+					rwEditor settings isReading
+						ifTrue: [ displayedAttributes := displayedAttributes reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
 					b shape box
 						noBorder;
 						fillColor: Color transparent.
@@ -108,7 +117,6 @@ Handles the modifies DBTable to color database tables differently
 								editor: rwEditor
 								entity: self aFAMIXAttribute.
 							b layout grid ].
-
 					b layout verticalLine ].
 			b layout grid ].
 	" Draw comments for packages"
@@ -121,11 +129,9 @@ Handles the modifies DBTable to color database tables differently
 
 
 	"Draw arrows and lines"
-
 	allMethods := aFAMIXGroup dAllMethods.
 	rwEditor settings isReading
 		ifTrue: [ allMethods := allMethods reject: [ :m | rwLayout isModelElementNotShownWithChildren: m ] ].
-	
 	allPackages
 		do: [ :pack | 
 			b shape arrowedLine
@@ -134,7 +140,7 @@ Handles the modifies DBTable to color database tables differently
 			b shape head color: rwLayout colorSchema methodLineColor.
 			b edges
 				objects: allMethods;
-				connectToAll: [ :m | ( m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod ) collect: [ :m2 | (m2 asRWDiagramElement: rwLayout) ] ].	" "
+				connectToAll: [ :m | (m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod) collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ].	" "
 			b shape line
 				color: rwLayout colorSchema attributeLineColor;
 				withShorterDistanceAttachPoint.
@@ -148,7 +154,7 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 	lb := RTLegendBuilder new.
 	lb view: b view.
 	lb addText: 'Dependency graph'.
-	lb addText: 'Layout: ', rwLayout name.
+	lb addText: 'Layout: ' , rwLayout name.
 	lb addColor: rwLayout colorSchema classColor text: 'Class'.
 	lb addColor: rwLayout colorSchema dataBaseTableColor text: 'Database table'.
 	lb addColor: rwLayout colorSchema dataBaseAsAttributeColor text: 'Dummy Attribute for DataBase Table '.
