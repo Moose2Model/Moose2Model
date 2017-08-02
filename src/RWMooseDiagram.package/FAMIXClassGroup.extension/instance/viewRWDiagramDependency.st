@@ -1,6 +1,6 @@
 *RWMooseDiagram
 viewRWDiagramDependency
-	<menuItem: 'RW Dependency graph' category: 'Visualize'>
+	<menuItem: 'Moose2Model Software Exploration Tool' category: 'Visualize'>
 	| diagram aRWDElementGroup view |
 	diagram := RWDiagram new.
 	aRWDElementGroup := RWDiagramElementGroup new.
