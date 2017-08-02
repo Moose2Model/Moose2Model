@@ -14,6 +14,7 @@ Legend
 
 + Rename Diagram to Moose2Model Software Exploration Tool #23
 + Give a feedback when the current layout is changed #24
++ Write Version and attribute hasClassScope to file #25
 
 31.07.2017 v0.2.2
 -----------------

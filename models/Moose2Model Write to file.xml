@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
+<versions version="v0.3.0" />
 <elements>
     <element>
         <type>FAMIXClass</type>
@@ -37,8 +38,12 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayoutFile</class>
         <method>writeAttributeList:toWriter:</method>
-        <x>-516.0</x>
-        <y>229.0</y>
+        <x>-591.0</x>
+        <y>263.0</y>
+        <comment><![CDATA[The general tags of the attributes of the element are written here]]>
+        </comment>
+        <commentx>-530.0</commentx>
+        <commenty>315.0</commenty>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -76,21 +81,25 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramAbstractFile</class>
-        <x>-752.0</x>
-        <y>223.0</y>
+        <x>-704.0</x>
+        <y>212.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLayoutFile</class>
-        <x>-517.0</x>
-        <y>240.0</y>
+        <x>-591.0</x>
+        <y>273.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAbstractFile</class>
         <method>writeElement:toXML:</method>
-        <x>-752.0</x>
-        <y>213.0</y>
+        <x>-704.0</x>
+        <y>203.0</y>
+        <comment><![CDATA[The general tags of the element are written here]]>
+        </comment>
+        <commentx>-810.0</commentx>
+        <commenty>239.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
