@@ -9,12 +9,17 @@ Legend
 - : removed
 
 
-30.07.2017 v0.2.1
+02.08.2017 v0.3.0
 -----------------
 
-+ Do not write elements with empty attributes to xml file anymore Issue #19
++ Rename Diagram to Moose2Model Software Exploration Tool #23
 
 31.07.2017 v0.2.2
 -----------------
 
 + Inform users when a diagram is displayed where very many elements are to be expected #21
+
+30.07.2017 v0.2.1
+-----------------
+
++ Do not write elements with empty attributes to xml file anymore Issue #19
