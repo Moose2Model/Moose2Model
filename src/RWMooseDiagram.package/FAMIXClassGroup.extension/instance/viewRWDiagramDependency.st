@@ -1,6 +1,6 @@
 *RWMooseDiagram
 viewRWDiagramDependency
-	<menuItem: 'Moose2Model Software Exploration Tool' category: 'Visualize'>
+	<menuItem: 'RW Dependency graph' category: 'Visualize'>
 	| diagram aRWDElementGroup view |
 	diagram := RWDiagram new.
 	aRWDElementGroup := RWDiagramElementGroup new.
@@ -10,7 +10,5 @@ viewRWDiagramDependency
 			anFElement := RWDiagramElement famixElement: each.
 			aRWDElementGroup add: anFElement ].
 	view := diagram methodUsage: aRWDElementGroup withEditor: RWDiagramEditor uniqueInstance test: false.
-	view
-		ifNil: [ self inform: 'Generation of View aborted due to user request' ]
-		ifNotNil: [ view inspect.
-			diagram readToRTView: view withEditor: RWDiagramEditor uniqueInstance ]
+	view inspect.
+	diagram readToRTView: view withEditor: RWDiagramEditor uniqueInstance
