@@ -9,7 +9,8 @@ writeToStream: aStream
 		comment: 'Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file'.
 	writer tag
 		name: #elements;
-		with: [ elementGroup elementList
+		with: [ writer tag: #version with: 'v0.3.0'.
+			elementGroup elementList
 				do: [ :element | 
 					element elementIsStored
 						ifTrue: [ element attributeList attributeIsSpecified

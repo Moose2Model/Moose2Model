@@ -1,4 +1,4 @@
-as yet unclassified
+initialization
 setUp
 	"Copied from setUp of class MooseQueryTest"
 	"! Do not format this methods, because it is easier to read with manual formatting !"
@@ -14,7 +14,7 @@ setUp
 	class2 := FAMIXClass new name: 'class2'; parentPackage: package2; mooseModel: model.
 	class2RWDE := RWDiagramElement famixElement: class2.
 	inh := FAMIXInheritance new subclass: class1; superclass: class2; mooseModel: model.
-	method1 := FAMIXMethod new name: 'method1'; parentType: class1; mooseModel: model.
+	method1 := FAMIXMethod new name: 'method1'; parentType: class1; mooseModel: model; hasClassScope: true.
 	method1RWDE := RWDiagramElement famixElement: method1.
 	method2 := FAMIXMethod new name: 'method2'; parentType: class2; mooseModel: model.
 	method2RWDE := RWDiagramElement famixElement: method2.

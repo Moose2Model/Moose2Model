@@ -1,4 +1,3 @@
-as yet unclassified
+accessing
 suppressOthersActive: aBoolean
-   self haltOnce.
 	suppressOthersActive := aBoolean

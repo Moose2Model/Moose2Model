@@ -1,4 +1,4 @@
-as yet unclassified
+writing
 writeElement: aRWDiagramElement toXML: writer
 	aRWDiagramElement class = RWDiagramElement
 		ifFalse: [ RWDiagramElementWrongTypeError signal ].
@@ -10,8 +10,10 @@ writeElement: aRWDiagramElement toXML: writer
 	aRWDiagramElement famixElement class asString = self aFAMIXMethod
 		ifTrue: [ writer
 				tag: #class with: aRWDiagramElement famixElement parentType name asString;
-				tag: #method with: aRWDiagramElement famixElement name asString ].
+				tag: #method with: aRWDiagramElement famixElement name asString.
+				aRWDiagramElement famixElement hasClassScope ifTrue:[writer tag: #hasClassScope with: 'true'] ].
 	aRWDiagramElement famixElement class asString = self aFAMIXAttribute
 		ifTrue: [ writer
 				tag: #class with: aRWDiagramElement famixElement parentType name asString;
-				tag: #attribute with: aRWDiagramElement famixElement name asString ]
+				tag: #attribute with: aRWDiagramElement famixElement name asString.
+				aRWDiagramElement famixElement hasClassScope ifTrue:[writer tag: #hasClassScope ]  ]

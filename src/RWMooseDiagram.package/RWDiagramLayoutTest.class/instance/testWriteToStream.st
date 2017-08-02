@@ -67,6 +67,8 @@ testWriteToStream
 		crlf;
 		nextPutAll: '        <method>method1</method>';
 		crlf;
+		nextPutAll: '        <hasClassScope>true</hasClassScope>';
+		crlf;
 		nextPutAll: '        <x>1.5</x>';
 		crlf;
 		nextPutAll: '        <y>2.5</y>';
@@ -114,6 +116,8 @@ testWriteToStream
 		nextPutAll: '<!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->';
 		crlf;
 		nextPutAll: '<elements>';
+		crlf;
+      nextPutAll: '    <version>v0.3.0</version>';
 		crlf.
 	aEndStream := ReadWriteStream on: String new.
 	aEndStream nextPutAll: '</elements>'.
