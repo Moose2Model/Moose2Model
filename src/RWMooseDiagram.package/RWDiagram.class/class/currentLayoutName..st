@@ -1,7 +1,8 @@
 layout
 currentLayoutName: aString
-	| e |
 	<RWDiaEdit_3>
-	"Specify the Layout to be processed"
+	| e |
 	e := RWDiagramEditor uniqueInstance.
-	e currentLayoutName: aString
+	"Specify the Layout to be processed"
+	e currentLayoutName: aString.
+	self inform: 'New layout: ' , aString , ' do not forget to call the method readFromPath'
