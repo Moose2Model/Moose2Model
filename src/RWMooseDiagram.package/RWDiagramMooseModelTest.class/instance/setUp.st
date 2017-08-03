@@ -39,7 +39,7 @@ setUp
 	methodI0P1 := FAMIXMethod new name: 'methodI0P1'; parentType: class1; mooseModel: model.
 	methodI0P1RWDE := RWDiagramElement famixElement: methodI0P1.
 	inv0P2 := FAMIXInvocation new sender: methodI0P2; addCandidate: methodI0P1; mooseModel: model.
-	methodI0 := FAMIXMethod new name: 'methodI0'; parentType: class1; mooseModel: model.
+	methodI0 := FAMIXMethod new name: 'methodI0'; parentType: class1; mooseModel: model; hasClassScope: true.
 	methodI0RWDE := RWDiagramElement famixElement: methodI0.
 	inv0P1 := FAMIXInvocation new sender: methodI0P1; addCandidate: methodI0; mooseModel: model.
 	methodI0M1 := FAMIXMethod new name: 'methodI0M1'; parentType: class1; mooseModel: model.

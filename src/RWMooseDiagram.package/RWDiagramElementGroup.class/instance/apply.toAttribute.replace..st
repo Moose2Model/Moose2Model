@@ -15,10 +15,12 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 	isToBeReplaced = RWDiagramLayout replaceMooseEntitiesUndefined
 		ifTrue: [ RWDiagramReplaceUndefined signal ].
 	aRWDiagramElementOrMooseEntity class = RWDiagramElement
-	   ifTrue:[ aMooseEntity := aRWDiagramElementOrMooseEntity famixElement]
-		ifFalse: [ (aRWDiagramElementOrMooseEntity class inheritsFrom: MooseEntity) ifTrue:[aMooseEntity := aRWDiagramElementOrMooseEntity] ifFalse:[
-			aRWDiagramElementOrMooseEntity class = RWDiagramNoPackage ifTrue:[aMooseEntity := aRWDiagramElementOrMooseEntity]ifFalse:[ 
-			RWDiagramElementWrongTypeError signal ]]].
+		ifTrue: [ aMooseEntity := aRWDiagramElementOrMooseEntity famixElement ]
+		ifFalse: [ (aRWDiagramElementOrMooseEntity class inheritsFrom: MooseEntity)
+				ifTrue: [ aMooseEntity := aRWDiagramElementOrMooseEntity ]
+				ifFalse: [ aRWDiagramElementOrMooseEntity class = RWDiagramNoPackage
+						ifTrue: [ aMooseEntity := aRWDiagramElementOrMooseEntity ]
+						ifFalse: [ RWDiagramElementWrongTypeError signal ] ] ].
 	(elementList
 		select: [ :each | 
 			| found |
@@ -28,9 +30,12 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 			aMooseEntity class = each famixElement class
 				ifTrue: [ aMooseEntity name = each famixElement name
 						ifTrue: [ each elementHandledWithParents
-								ifFalse: [ found := true. ]
+								ifFalse: [ found := true ]
 								ifTrue: [ aMooseEntity parentType name = each famixElement parentType name
-										ifTrue: [ found := true. ] ] ] ].
+										ifTrue: [ (aMooseEntity class asString = self aFAMIXMethod or: [ aMooseEntity class asString = self aFAMIXMethod ])
+												ifTrue: [ aMooseEntity hasClassScope = each famixElement hasClassScope
+														ifTrue: [ found := true ] ]
+												ifFalse: [ found := true ] ] ] ] ].
 			found ])
 		do: [ :each | 
 			each attributeList: (aBlock value: each attributeList).
