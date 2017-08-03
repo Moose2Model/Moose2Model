@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
 <elements>
+    <version>v0.3.0</version>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLocalComment</class>
@@ -23,6 +24,7 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramAppearanceChanger</class>
         <method>changeDeterminer:changeType:</method>
+        <hasClassScope>true</hasClassScope>
         <x>-534.0</x>
         <y>322.0</y>
     </element>
@@ -64,8 +66,9 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>replaceMooseEntitiesUndefined</method>
-        <x>-880.0</x>
-        <y>113.0</y>
+        <hasClassScope>true</hasClassScope>
+        <x>-899.0</x>
+        <y>41.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -77,14 +80,18 @@
         <type>FAMIXAttribute</type>
         <class>RWDiagramLayout</class>
         <attribute>elementGroup</attribute>
-        <x>-891.0</x>
-        <y>68.0</y>
+        <x>-908.0</x>
+        <y>103.0</y>
+        <comment><![CDATA[Contains all informations specific of a layout]]>
+        </comment>
+        <commentx>-933.0</commentx>
+        <commenty>138.0</commenty>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramACDStandard</class>
-        <x>-894.0</x>
-        <y>219.0</y>
+        <x>-1057.0</x>
+        <y>217.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -104,8 +111,12 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>includeMe:usedByLayers:usingLayers:FAMIXType:comp1:comp2:</method>
-        <x>-894.0</x>
-        <y>209.0</y>
+        <x>-1057.0</x>
+        <y>208.0</y>
+        <comment><![CDATA[Remember the read attributes?<br>do not add compClassScope because comp2 is also not used]]>
+        </comment>
+        <commentx>-1119.0</commentx>
+        <commenty>262.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -118,8 +129,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramGlobalAttributeList</class>
         <method>attributeIsSpecified</method>
-        <x>-1068.0</x>
-        <y>162.0</y>
+        <x>-1075.0</x>
+        <y>130.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -162,6 +173,10 @@
         <method>readFromStreamXML:</method>
         <x>-746.0</x>
         <y>16.0</y>
+        <comment><![CDATA[Here the XML is parsed]]>
+        </comment>
+        <commentx>-701.0</commentx>
+        <commenty>-42.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -172,20 +187,21 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramGlobalAttributeList</class>
-        <x>-1068.0</x>
-        <y>173.0</y>
+        <x>-1075.0</x>
+        <y>141.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAppearanceChangerGroup</class>
         <method>addAppearentChanger:</method>
-        <x>-494.0</x>
-        <y>147.0</y>
+        <x>-458.0</x>
+        <y>150.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAbstractComment</class>
         <method>text:</method>
+        <hasClassScope>true</hasClassScope>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -198,21 +214,25 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>remember:FAMIXType:comp1:comp2:to:</method>
-        <x>-733.0</x>
-        <y>111.0</y>
+        <x>-552.0</x>
+        <y>73.0</y>
+        <comment><![CDATA[Stores the read elements<br>will be replaced #26 with new method<br>that has compClassScope]]>
+        </comment>
+        <commentx>-423.0</commentx>
+        <commenty>101.0</commenty>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramGlobalComment</class>
-        <x>-287.0</x>
-        <y>187.0</y>
+        <x>-324.0</x>
+        <y>192.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramGlobalComment</class>
         <method>exists</method>
-        <x>-287.0</x>
-        <y>177.0</y>
+        <x>-324.0</x>
+        <y>183.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -235,29 +255,29 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramAttributeList</class>
-        <x>-695.0</x>
-        <y>277.0</y>
+        <x>-702.0</x>
+        <y>257.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>suppressWithChildren:</method>
-        <x>-751.0</x>
-        <y>254.0</y>
+        <x>-758.0</x>
+        <y>233.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>attributeIsSpecified</method>
-        <x>-673.0</x>
-        <y>254.0</y>
+        <x>-680.0</x>
+        <y>233.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>comment</method>
-        <x>-616.0</x>
-        <y>254.0</y>
+        <x>-624.0</x>
+        <y>233.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -269,28 +289,28 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>appearanceChangerGroup</method>
-        <x>-744.0</x>
-        <y>279.0</y>
+        <x>-751.0</x>
+        <y>258.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramAppearanceChangerGroup</class>
-        <x>-494.0</x>
-        <y>157.0</y>
+        <x>-458.0</x>
+        <y>159.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>position:</method>
-        <x>-677.0</x>
-        <y>279.0</y>
+        <x>-684.0</x>
+        <y>258.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>comment:</method>
-        <x>-637.0</x>
-        <y>279.0</y>
+        <x>-645.0</x>
+        <y>258.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
