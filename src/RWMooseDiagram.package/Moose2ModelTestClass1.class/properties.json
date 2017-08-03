@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "RainerWinkler 8/3/2017 22:09",
+	"super" : "Object",
+	"category" : "RWMooseDiagram-testApplication",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"attribute1",
+		"attribute2"
+	],
+	"name" : "Moose2ModelTestClass1",
+	"type" : "normal"
+}
