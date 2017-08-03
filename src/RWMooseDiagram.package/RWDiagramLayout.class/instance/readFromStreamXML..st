@@ -1,6 +1,6 @@
 readFile
 readFromStreamXML: aReadStream
-	| famixType comp1 comp2 anElementGroup parsed elements x y point supressWithChildren comment commentx commenty commentPoint actsos aAC |
+	| famixType comp1 comp2 compClassScope anElementGroup parsed elements x y point supressWithChildren comment commentx commenty commentPoint actsos aAC versions |
 	aReadStream reset.
 	anElementGroup := elementGroup.
 	parsed := (XMLDOMParser on: aReadStream)
@@ -8,22 +8,33 @@ readFromStreamXML: aReadStream
 		optimizeForLargeDocuments;
 		preservesCDataNodes: true;
 		parseDocument.
+	versions := parsed allElementsNamed: #version.
+	"This appears not to work, why? There is no version extracted."
+	versions do: [ :version | readFileVersion := version contentStringAt: #version ].
 	elements := parsed allElementsNamed: #element.
 	elements
 		do: [ :element | 
 			famixType := element contentStringAt: #type.
 			famixType = self aFAMIXPackage
 				ifTrue: [ comp1 := element contentStringAt: #package.
-					comp2 := '' ].
+					comp2 := ''.
+					compClassScope := false ].
 			famixType = self aFAMIXClass
 				ifTrue: [ comp1 := element contentStringAt: #class.
-					comp2 := '' ].
+					comp2 := ''.
+					compClassScope := false ].
 			famixType = self aFAMIXAttribute
 				ifTrue: [ comp1 := element contentStringAt: #class.
-					comp2 := element contentStringAt: #attribute ].
+					comp2 := element contentStringAt: #attribute.
+					(element contentStringAt: #hasClassScope) = #true
+						ifTrue: [ compClassScope := true ]
+						ifFalse: [ compClassScope := false ] ].
 			famixType = self aFAMIXMethod
 				ifTrue: [ comp1 := element contentStringAt: #class.
-					comp2 := element contentStringAt: #method ].
+					comp2 := element contentStringAt: #method.
+					(element contentStringAt: #hasClassScope) = #true
+						ifTrue: [ compClassScope := true ]
+						ifFalse: [ compClassScope := false ] ].
 			"Position"
 			x := element contentStringAt: #x.
 			x = ''
@@ -37,6 +48,7 @@ readFromStreamXML: aReadStream
 						FAMIXType: famixType
 						comp1: comp1
 						comp2: comp2
+						compClassScope: compClassScope
 						to: anElementGroup ].
 			"Suppress with children"
 			supressWithChildren := element contentStringAt: #supressWithChildren.
@@ -49,6 +61,7 @@ readFromStreamXML: aReadStream
 						FAMIXType: famixType
 						comp1: comp1
 						comp2: comp2
+						compClassScope: compClassScope
 						to: anElementGroup ].
 			comment := element contentStringAt: #comment.
 			comment = ''
@@ -66,6 +79,7 @@ readFromStreamXML: aReadStream
 						FAMIXType: famixType
 						comp1: comp1
 						comp2: comp2
+						compClassScope: compClassScope
 						to: anElementGroup.
 					commentx := element contentStringAt: #commentx.
 					commentx = ''
@@ -84,6 +98,7 @@ readFromStreamXML: aReadStream
 								FAMIXType: famixType
 								comp1: comp1
 								comp2: comp2
+								compClassScope: compClassScope
 								to: anElementGroup ] ].
 			actsos := element allElementsNamed: #ACTSuppressOthers.
 			actsos
@@ -110,5 +125,6 @@ readFromStreamXML: aReadStream
 						FAMIXType: famixType
 						comp1: comp1
 						comp2: comp2
+						compClassScope: compClassScope
 						to: anElementGroup ] ].
 	self replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined

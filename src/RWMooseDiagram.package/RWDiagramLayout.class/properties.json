@@ -13,7 +13,8 @@
 		"colorSchema",
 		"processedRTView",
 		"suppressOthersActive",
-		"replaceMooseEntities"
+		"replaceMooseEntities",
+		"readFileVersion"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"

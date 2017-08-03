@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testReadFromStreamMessage
 	| layout aRTElement aStream tempElement |
 	layout := RWDiagramLayout new.
@@ -11,6 +11,8 @@ testReadFromStreamMessage
 		nextPutAll: '<!--Moose Diagram Editor-->';
 		crlf;
 		nextPutAll: '<elements>';
+		crlf;
+		nextPutAll: '    <version>v0.3.0</version>';
 		crlf;
 		nextPutAll: '<element>';
 		crlf;
@@ -33,6 +35,8 @@ testReadFromStreamMessage
 		nextPutAll: '    <class>class1</class>';
 		crlf;
 		nextPutAll: '    <method>methodI0</method>';
+		crlf;
+		nextPutAll: '    <hasClassScope>true</hasClassScope>';
 		crlf;
 		nextPutAll: '    <x>110</x>';
 		crlf;
@@ -92,6 +96,7 @@ testReadFromStreamMessage
 	aRTElement model: class1RWDE .
 	layout suppressWithChildren: true to: class1RWDE.
 	layout readFromStream: aStream readStream message: false.
+	"self assert: layout readFileVersion equals: 'v0.3.0'."
 	layout replaceMooseEntities: true.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) position point equals: 10 @ 20.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) suppressWithChildren equals: false.

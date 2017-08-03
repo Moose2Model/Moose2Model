@@ -23,6 +23,8 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 		select: [ :each | 
 			| found |
 			found := false.
+			"Now check whether the elements are equal, using type, name and parent name
+			For hasClassScope this is to be checked also for attributes and models"
 			aMooseEntity class = each famixElement class
 				ifTrue: [ aMooseEntity name = each famixElement name
 						ifTrue: [ each elementHandledWithParents

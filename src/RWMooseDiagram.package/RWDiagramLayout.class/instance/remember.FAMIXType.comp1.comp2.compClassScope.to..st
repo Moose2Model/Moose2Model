@@ -1,7 +1,6 @@
 elementGroupAccess
-remember: aBlock FAMIXType: aFAMIXTypeString comp1: aComp1 comp2: aComp2 to: aRWDiagramLayout
+remember: aBlock FAMIXType: aFAMIXTypeString comp1: aComp1 comp2: aComp2 compClassScope: aCompClassScope to: aRWDiagramLayout
 	| newFAMIXElement newFAMIXParentElement newRWDiagramElement |
-	self halt. "Is obsolete"
 	aFAMIXTypeString = self aFAMIXClass
 		ifTrue: [ newFAMIXElement := FAMIXClass new.
 			newFAMIXElement name: aComp1 ].
@@ -12,12 +11,14 @@ remember: aBlock FAMIXType: aFAMIXTypeString comp1: aComp1 comp2: aComp2 to: aRW
 		ifTrue: [ newFAMIXElement := FAMIXMethod new.
 			newFAMIXElement name: aComp2.
 			newFAMIXElement signature: newFAMIXElement name.
+			newFAMIXElement hasClassScope: aCompClassScope.
 			newFAMIXParentElement := FAMIXClass new.
 			newFAMIXParentElement name: aComp1.
 			newFAMIXElement parentType: newFAMIXParentElement ].
 	aFAMIXTypeString = self aFAMIXAttribute
 		ifTrue: [ newFAMIXElement := FAMIXAttribute new.
 			newFAMIXElement name: aComp2.
+			newFAMIXElement hasClassScope: aCompClassScope.
 			newFAMIXParentElement := FAMIXClass new.
 			newFAMIXParentElement name: aComp1.
 			newFAMIXElement parentType: newFAMIXParentElement ].
