@@ -9,12 +9,15 @@ Legend
 - : removed
 
 
-02.08.2017 v0.3.0
+03.08.2017 v0.3.0
 -----------------
 
 + Rename Diagram to Moose2Model Software Exploration Tool #23
 + Give a feedback when the current layout is changed #24
 + Write Version and attribute hasClassScope to file #25
++ Read Version and attribute hasClassScope from file #26
++ Use the attribute hasClassScope to select the elements to be displayed #27
++ Smalltalk is now better supported, class and instance methods can have the same name. This is now handled correctly.
 
 31.07.2017 v0.2.2
 -----------------
