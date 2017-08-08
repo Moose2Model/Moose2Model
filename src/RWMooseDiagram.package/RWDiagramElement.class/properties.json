@@ -4,10 +4,15 @@
 	"category" : "RWMooseDiagram-editor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"famixElementByUniqueKey",
+		"famixElementHash",
+		"lastHash"
+	],
 	"instvars" : [
 		"attributeList",
-		"famixElement"
+		"famixElement",
+		"uniqueKey"
 	],
 	"name" : "RWDiagramElement",
 	"type" : "normal"

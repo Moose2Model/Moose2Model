@@ -14,4 +14,4 @@ testGlobalCommentsOf
 	self assert: (comments select:[:each|each text = 'Global' ] )size equals: 1.
 	self assert: (comments select:[:each|each text = 'Test' ] )size equals: 0.
 	self assert: (comments select:[:each|each text = 'Else' ] )size equals: 0.
-	self assert: comments first mooseID equals: element mooseID
+	self assert: comments first mooseID equals: aRWDElement uniqueKey

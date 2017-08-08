@@ -1,3 +1,3 @@
-as yet unclassified
+comparing
 hash
-	^ self dMooseID
+	^ famixElementHash at: uniqueKey

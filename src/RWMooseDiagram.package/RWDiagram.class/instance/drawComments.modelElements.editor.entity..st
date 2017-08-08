@@ -10,7 +10,7 @@ drawComments: b modelElements: aMooseElements editor: rwEditor entity: aFAMIXEnt
 			aMooseElements
 				do: [ :e | 
 					e class = RWDiagramElement
-						ifTrue: [ c mooseID = e dMooseID
+						ifTrue: [ c mooseID = e uniqueKey
 								ifTrue: [ relevantComments add: c ] ]ifFalse:[] ] ].
 	globalComments := rwEditor globalCommentsOf: aMooseElements.	" Draw comments for packages"
 	globalComments
@@ -18,7 +18,7 @@ drawComments: b modelElements: aMooseElements editor: rwEditor entity: aFAMIXEnt
 			aMooseElements
 				do: [ :e | 
 					e class = RWDiagramElement
-						ifTrue: [ c mooseID = e dMooseID
+						ifTrue: [ c mooseID = e uniqueKey
 								ifTrue: [ relevantGlobalComments add: c ] ] ] ].
 	b shape
 		rectangle;
@@ -52,6 +52,6 @@ drawComments: b modelElements: aMooseElements editor: rwEditor entity: aFAMIXEnt
 						do: [ :e | 
 							e model class = RWDiagramElement
 								ifTrue: [ (e model famixElement class inheritsFrom: MooseEntity)
-										ifTrue: [ c mooseID = e model dMooseID
+										ifTrue: [ c mooseID = e model uniqueKey
 												ifTrue: [ b edges connectFrom: c to: e model ] ] ] ] ] ].
 	^ allComments

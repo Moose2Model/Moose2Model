@@ -5,7 +5,7 @@ runIncludeMe: aBoolean usedByLayers: aUsedByLayers usingLayers: aUsingLayers ofE
    collectedElementsByLayer ifNil: [ collectedElementsByLayer := Dictionary new ].
 	aBoolean
 		ifTrue: [ collectedElements add: aRWDiagramElement.
-			collectedElementsByLayer at: aRWDiagramElement dMooseID put: 0 ].
+			collectedElementsByLayer at: aRWDiagramElement uniqueKey put: 0 ].
 	aUsedByLayers > 0
 		ifTrue: [ self collectUsedByLayers: aUsedByLayers ofElement: aRWDiagramElement layer: 1 ].
 	aUsingLayers > 0

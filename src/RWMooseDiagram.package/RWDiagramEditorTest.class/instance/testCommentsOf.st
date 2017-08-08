@@ -20,7 +20,7 @@ testCommentsOf
 	self assert: (comments select: [ :each | each text = 'Global' ]) size equals: 0.
 	self assert: (comments select: [ :each | each text = 'Test' ]) size equals: 1.
 	self assert: (comments select: [ :each | each text = 'Else' ]) size equals: 0.
-	self assert: comments first mooseID equals: element2 mooseID.
+	self assert: comments first mooseID equals: aRWDElement2 uniqueKey.
 	"Comment methods"
 		element := FAMIXClass new.
 	element name: 'Class1'.
@@ -42,4 +42,4 @@ testCommentsOf
 	self assert: (comments select: [ :each | each text = 'Global' ]) size equals: 0.
 	self assert: (comments select: [ :each | each text = 'Test' ]) size equals: 1.
 	self assert: (comments select: [ :each | each text = 'Else' ]) size equals: 0.
-	self assert: comments first mooseID equals: elementM2 mooseID
+	self assert: comments first mooseID equals: aRWDElement2 uniqueKey

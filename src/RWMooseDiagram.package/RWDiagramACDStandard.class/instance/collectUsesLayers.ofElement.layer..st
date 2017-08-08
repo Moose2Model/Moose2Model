@@ -11,7 +11,7 @@ collectUsesLayers: aUsingLayers ofElement: aRWDiagramElement layer: currentLayer
 			collectedElements add: each.
 			aft := collectedElements size.
 			bef = aft
-				ifFalse: [ collectedElementsByLayer at: each dMooseID put: currentLayer ].
+				ifFalse: [ collectedElementsByLayer at: each uniqueKey put: currentLayer ].
 			tempUsingLayers := aUsingLayers - 1.
 			tempUsingLayers > 0
 				ifTrue:

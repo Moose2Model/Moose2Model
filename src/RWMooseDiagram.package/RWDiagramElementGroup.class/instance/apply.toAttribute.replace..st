@@ -11,7 +11,8 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 
 	"Returns the RWDiagramElement found"
 
-	| aElement aMooseEntity |
+	| aElement foundElement aMooseEntity |
+	"Checks"
 	isToBeReplaced = RWDiagramLayout replaceMooseEntitiesUndefined
 		ifTrue: [ RWDiagramReplaceUndefined signal ].
 	aRWDiagramElementOrMooseEntity class = RWDiagramElement
@@ -21,37 +22,26 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 				ifFalse: [ aRWDiagramElementOrMooseEntity class = RWDiagramNoPackage
 						ifTrue: [ aMooseEntity := aRWDiagramElementOrMooseEntity ]
 						ifFalse: [ RWDiagramElementWrongTypeError signal ] ] ].
-	(elementList
-		select: [ :each | 
-			| found |
-			found := false.
-			"Now check whether the elements are equal, using type, name and parent name
-			For hasClassScope this is to be checked also for attributes and models"
-			aMooseEntity class = each famixElement class
-				ifTrue: [ aMooseEntity name = each famixElement name
-						ifTrue: [ each elementHandledWithParents
-								ifFalse: [ found := true ]
-								ifTrue: [ aMooseEntity parentType name = each famixElement parentType name
-										ifTrue: [ (aMooseEntity class asString = self aFAMIXMethod or: [ aMooseEntity class asString = self aFAMIXMethod ])
-												ifTrue: [ aMooseEntity hasClassScope = each famixElement hasClassScope
-														ifTrue: [ found := true ] ]
-												ifFalse: [ found := true ] ] ] ] ].
-			found ])
-		do: [ :each | 
-			each attributeList: (aBlock value: each attributeList).
-			(each attributeList class inheritsFrom: RWDiagramAbstractAttributeList)
-				ifFalse: [ RWDiagramError signal ].	"The Block aBlock has at the end always to return the attribute list itself"
-			each dMooseID = aMooseEntity mooseID
-				ifTrue: [  ]
-				ifFalse: [ isToBeReplaced
-						ifTrue: [ elementList removeKey: each dMooseID ifAbsent: [  ].
-							each famixElement: aMooseEntity.
-							elementList at: aMooseEntity mooseID put: each ]
-						ifFalse: [ elementList at: each dMooseID put: each ] ].
-			^ each ].
+	"Read value"
 	aElement := RWDiagramElement new.
 	aElement famixElement: aMooseEntity.
-	aElement elementIsStored
-		ifTrue: [ aElement attributeList: (aBlock value: RWDiagramUndeterminedAttributeList new).
-			elementList at: aElement dMooseID put: aElement ].
-	^ aElement
+	[ foundElement := elementList at: aElement uniqueKey.
+	foundElement attributeList: (aBlock value: foundElement attributeList).
+	(foundElement attributeList class inheritsFrom: RWDiagramAbstractAttributeList)
+		ifFalse: [ RWDiagramError signal ].	"The Block aBlock has at the end always to return the attribute list itself"
+	foundElement famixElement mooseID = aMooseEntity mooseID
+		ifTrue: [  ]
+		ifFalse: [ isToBeReplaced
+				ifTrue: [ elementList removeKey: foundElement uniqueKey ifAbsent: [  ].
+					foundElement famixElement: aMooseEntity.
+					elementList at: foundElement uniqueKey put: foundElement ]
+				ifFalse: [ elementList at: foundElement uniqueKey put: foundElement ] ].
+	^ foundElement ]
+		on: KeyNotFound
+		do: [ "No existing RWDiagramElement is found, so insert a new one and apply the block"
+			aElement := RWDiagramElement new.
+			aElement famixElement: aMooseEntity.
+			aElement elementIsStored
+				ifTrue: [ aElement attributeList: (aBlock value: RWDiagramUndeterminedAttributeList new).
+					elementList at: aElement uniqueKey put: aElement ].
+			^ aElement ]

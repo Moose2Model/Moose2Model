@@ -2,7 +2,7 @@ initialization
 testWriteGlobalToStream
 	| editor gc aStream aExpectedStream aRWDiagramElementMethod1 |
 	"This test shall fail"
-	editor := RWDiagramEditor new.
+"	editor := RWDiagramEditor new.
 	gc := RWDiagramGlobalComment text: '2016-08-22T21:14:08.555084+02:00470177'.
 	gc text: 'Line 1<br>Line 2'.
 	aRWDiagramElementMethod1 := RWDiagramElement famixElement: method1.
@@ -51,4 +51,4 @@ testWriteGlobalToStream
 		nextPutAll: '    </element>';
 		crlf;
 		nextPutAll: '</elements>'.
-	self assert: aStream equals: aExpectedStream	
+	self assert: aStream equals: aExpectedStream	"

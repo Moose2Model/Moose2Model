@@ -2,4 +2,4 @@ as yet unclassified
 = aRWDiagramElement
 	self class = aRWDiagramElement class
 		ifFalse: [ ^ false ].
-	^ self dMooseID = aRWDiagramElement dMooseID
+	^ self uniqueKey = aRWDiagramElement uniqueKey

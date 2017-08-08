@@ -7,7 +7,7 @@ readPositions: aRTView
 	aRTView elements
 		do: [ :element1 | 
 			(element1 model class inheritsFrom: RWDiagramAbstractComment)
-				ifTrue: [ (aRTView elements select: [ :element | element model class = RWDiagramElement and: [ element1 model dMooseID = element model dMooseID ] ])
+				ifTrue: [ (aRTView elements select: [ :element | element model class = RWDiagramElement and: [ element1 model uniqueKey = element model uniqueKey ] ])
 						do: [ :each | 
 							attributeList := self currentLayout readAttributesFromFAMIXElement: each model.
 							attributeList

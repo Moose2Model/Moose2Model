@@ -10,7 +10,7 @@ collectUsedByLayers: aUsedByLayers ofElement: aRWDiagramElement layer: currentLa
 			collectedElements add: each.
 			aft := collectedElements size.
 			bef = aft
-				ifFalse: [ collectedElementsByLayer at: each dMooseID put: currentLayer ].
+				ifFalse: [ collectedElementsByLayer at: each uniqueKey put: currentLayer ].
 			TempUsedByLayers := aUsedByLayers - 1.
 			TempUsedByLayers > 0
 				ifTrue: [ self collectUsedByLayers: TempUsedByLayers ofElement: each layer: currentLayer + 1 ] ]
