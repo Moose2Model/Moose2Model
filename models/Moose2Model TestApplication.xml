@@ -3,10 +3,56 @@
 <elements>
     <version>v0.3.0</version>
     <element>
+        <type>FAMIXMethod</type>
+        <class>Moose2ModelTestClass1</class>
+        <method>method2</method>
+        <x>71.0</x>
+        <y>42.0</y>
+        <comment><![CDATA[called by instance method]]>
+        </comment>
+        <commentx>-54.0</commentx>
+        <commenty>-2.0</commenty>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
         <type>FAMIXPackage</type>
         <package>RWMooseDiagram</package>
         <x>89.0</x>
         <y>54.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>Moose2ModelTestClass1</class>
+        <method>method1</method>
+        <x>109.0</x>
+        <y>42.0</y>
+        <comment><![CDATA[Instance Method]]>
+        </comment>
+        <commentx>208.0</commentx>
+        <commenty>26.0</commenty>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -17,40 +63,34 @@
     <element>
         <type>FAMIXAttribute</type>
         <class>Moose2ModelTestClass1</class>
-        <attribute>attribute1</attribute>
-        <x>6.0</x>
-        <y>39.0</y>
+        <attribute>attribute2</attribute>
+        <x>-21.0</x>
+        <y>76.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>Moose2ModelTestClass1</class>
-        <attribute>attribute2</attribute>
-        <x>0.0</x>
-        <y>71.0</y>
+        <attribute>attribute1</attribute>
+        <x>-20.0</x>
+        <y>35.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Moose2ModelTestClass1</class>
-        <method>method2</method>
-        <x>71.0</x>
-        <y>42.0</y>
+        <method>method1</method>
+        <hasClassScope>true</hasClassScope>
+        <x>109.0</x>
+        <y>67.0</y>
+        <comment><![CDATA[Class Method]]>
+        </comment>
+        <commentx>206.0</commentx>
+        <commenty>77.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
             <usedByLayers>1</usedByLayers>
             <usingLayers>1</usingLayers>
         </ACTSuppressOthers>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>Moose2ModelTestClass1</class>
-        <method>method1</method>
-        <x>109.0</x>
-        <y>42.0</y>
-        <comment><![CDATA[Instance Method]]>
-        </comment>
-        <commentx>172.0</commentx>
-        <commenty>25.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -70,18 +110,6 @@
             <usedByLayers>1</usedByLayers>
             <usingLayers>1</usingLayers>
         </ACTSuppressOthers>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>Moose2ModelTestClass1</class>
-        <method>method1</method>
-        <hasClassScope>true</hasClassScope>
-        <x>109.0</x>
-        <y>67.0</y>
-        <comment><![CDATA[Class Method]]>
-        </comment>
-        <commentx>173.0</commentx>
-        <commenty>75.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
