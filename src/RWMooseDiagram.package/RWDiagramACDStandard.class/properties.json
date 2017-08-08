@@ -11,10 +11,7 @@
 		"includeMe",
 		"usedByLayers",
 		"usingLayers",
-		"ofElement",
-		"famixType",
-		"comp1",
-		"comp2"
+		"ofElement"
 	],
 	"name" : "RWDiagramACDStandard",
 	"type" : "normal"

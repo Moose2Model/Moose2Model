@@ -108,10 +108,7 @@ readFromStreamXML: aReadStream
 							(RWDiagramACDStandard new
 								includeMe: (actso contentStringAt: #includeMe) = 'true'
 									usedByLayers: (actso contentStringAt: #usedByLayers) asInteger
-									usingLayers: (actso contentStringAt: #usingLayers) asInteger
-									FAMIXType: famixType
-									comp1: comp1
-									comp2: comp2;
+									usingLayers: (actso contentStringAt: #usingLayers) asInteger;
 								yourself)
 						changeType: RWDiagramACTSuppressOthers new.
 					self
