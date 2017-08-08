@@ -5,7 +5,7 @@ rememberRTView: aRTView to: aLayout
 		do: [ :aRTElement | 
 			(aRTElement model class = RWDiagramLocalComment)
 				ifTrue: [ (aRTView elements
-						select: [ :each | each model class = RWDiagramElement and: [ (each model famixElement class inheritsFrom: MooseEntity) and: [ each model famixElement mooseID = aRTElement model mooseID ] ] ])
+						select: [ :each | each model class = RWDiagramElement and: [ (each model famixElement class inheritsFrom: MooseEntity) and: [ each model uniqueKey = aRTElement model uniqueKeyOfCommentedElement ] ] ])
 						do: [ :each | 
 							aLayout
 								remember: [ :attributeList | 

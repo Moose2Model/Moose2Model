@@ -1,3 +1,0 @@
-public-toDiagram
-mooseID
-	^ mooseID

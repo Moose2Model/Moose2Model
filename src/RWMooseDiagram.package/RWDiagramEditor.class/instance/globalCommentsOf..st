@@ -10,6 +10,6 @@ globalCommentsOf: aModelElementsCollection
 			globalAttributeList attributeIsSpecified
 				ifTrue: [ globalAttributeList comments
 						do: [ :globComment | 
-							globComment mooseID: each uniqueKey.
+							globComment uniqueKeyOfCommentedElement: each uniqueKey.
 							col add: globComment ] ] ].
 	^ col

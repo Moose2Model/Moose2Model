@@ -10,7 +10,7 @@ commentsOf: aRWDiagramElementCollection
 			attributeList := self currentLayout readAttributesFromFAMIXElement: each.
 			attributeList attributeIsSpecified
 				ifTrue: [ attributeList comment exists
-						ifTrue: [ attributeList comment mooseID: each uniqueKey.
+						ifTrue: [ attributeList comment uniqueKeyOfCommentedElement: each uniqueKey.
 							col add: attributeList comment ] ] ].
 self currentLayout replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined.
 	^ col
