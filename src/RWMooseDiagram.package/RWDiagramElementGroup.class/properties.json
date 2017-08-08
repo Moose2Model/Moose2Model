@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"elementList",
-		"generatedElementsList"
+		"elementList"
 	],
 	"name" : "RWDiagramElementGroup",
 	"type" : "normal"
