@@ -47,8 +47,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramACDStandard</class>
-        <x>-486.0</x>
-        <y>605.0</y>
+        <x>-473.0</x>
+        <y>586.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -79,19 +79,19 @@
         <type>FAMIXAttribute</type>
         <class>RWDiagramACDStandard</class>
         <attribute>collectedElementsByLayer</attribute>
-        <x>-588.0</x>
-        <y>569.0</y>
-        <comment><![CDATA[A dictionary with key Moose ID]]>
+        <x>-576.0</x>
+        <y>539.0</y>
+        <comment><![CDATA[A dictionary with key uniqueKey]]>
         </comment>
-        <commentx>-616.0</commentx>
-        <commenty>531.0</commenty>
+        <commentx>-603.0</commentx>
+        <commenty>512.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>runIncludeMe:usedByLayers:usingLayers:ofElement:</method>
-        <x>-299.0</x>
-        <y>530.0</y>
+        <x>-286.0</x>
+        <y>511.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -118,8 +118,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>usedByElements:</method>
-        <x>-544.0</x>
-        <y>583.0</y>
+        <x>-531.0</x>
+        <y>564.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -157,6 +157,11 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramAbstractComment</class>
+        <method>uniqueKey</method>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramElementGroup</class>
         <method>apply:toAttribute:replace:</method>
         <x>1078.0</x>
@@ -175,6 +180,13 @@
         <method>writeElement:toXML:</method>
         <x>702.0</x>
         <y>41.0</y>
+    </element>
+    <element>
+        <type>FAMIXAttribute</type>
+        <class>RWDiagramElement</class>
+        <attribute>uniqueKey</attribute>
+        <x>-412.0</x>
+        <y>347.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -254,6 +266,17 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramElement</class>
+        <method>uniqueKey</method>
+        <x>-356.0</x>
+        <y>352.0</y>
+        <comment><![CDATA[The main key to find an element faster]]>
+        </comment>
+        <commentx>-291.0</commentx>
+        <commenty>319.0</commenty>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>isDiagramElement:</method>
         <hasClassScope>true</hasClassScope>
@@ -277,8 +300,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>dIDependOn</method>
-        <x>-460.0</x>
-        <y>446.0</y>
+        <x>-437.0</x>
+        <y>447.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -311,8 +334,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>asRWDiagramElements:</method>
-        <x>-376.0</x>
-        <y>456.0</y>
+        <x>-353.0</x>
+        <y>457.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -320,6 +343,14 @@
         <method>elementHandledWithParents</method>
         <x>-413.0</x>
         <y>401.0</y>
+    </element>
+    <element>
+        <type>FAMIXAttribute</type>
+        <class>RWDiagramElement</class>
+        <attribute>famixElementHash</attribute>
+        <hasClassScope />
+        <x>-487.0</x>
+        <y>350.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -358,8 +389,8 @@
         <type>FAMIXAttribute</type>
         <class>RWDiagramACDStandard</class>
         <attribute>collectedElements</attribute>
-        <x>-672.0</x>
-        <y>569.0</y>
+        <x>-652.0</x>
+        <y>566.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -399,12 +430,12 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>hash</method>
-        <x>-540.0</x>
-        <y>351.0</y>
-        <comment><![CDATA[obsolete?]]>
+        <x>-529.0</x>
+        <y>384.0</y>
+        <comment><![CDATA[Returns uniqueKey analog to method =]]>
         </comment>
-        <commentx>-564.0</commentx>
-        <commenty>322.0</commenty>
+        <commentx>-543.0</commentx>
+        <commenty>323.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -472,7 +503,7 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElement</class>
-        <x>-428.0</x>
+        <x>-405.0</x>
         <y>386.0</y>
     </element>
     <element>
@@ -506,8 +537,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>usesElements:</method>
-        <x>-461.0</x>
-        <y>599.0</y>
+        <x>-448.0</x>
+        <y>580.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -553,12 +584,12 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>=</method>
-        <x>-482.0</x>
-        <y>347.0</y>
-        <comment><![CDATA[Compares using Moose ID,<br>many calling methods]]>
+        <x>-448.0</x>
+        <y>380.0</y>
+        <comment><![CDATA[Compares using uniqueKey]]>
         </comment>
-        <commentx>-487.0</commentx>
-        <commenty>297.0</commenty>
+        <commentx>-424.0</commentx>
+        <commenty>316.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -645,13 +676,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>famixElement</method>
-        <x>-422.0</x>
-        <y>517.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAbstractComment</class>
-        <method>dMooseID</method>
+        <x>-402.0</x>
+        <y>518.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -664,8 +690,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>collectedElements</method>
-        <x>-616.0</x>
-        <y>619.0</y>
+        <x>-603.0</x>
+        <y>600.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -684,8 +710,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>collectUsedByLayers:ofElement:layer:</method>
-        <x>-390.0</x>
-        <y>659.0</y>
+        <x>-377.0</x>
+        <y>640.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -704,8 +730,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>collectUsesLayers:ofElement:layer:</method>
-        <x>-527.0</x>
-        <y>664.0</y>
+        <x>-514.0</x>
+        <y>645.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -724,8 +750,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>dDependOnMe</method>
-        <x>-294.0</x>
-        <y>426.0</y>
+        <x>-274.0</x>
+        <y>427.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>

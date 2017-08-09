@@ -30,6 +30,10 @@
         <package>RWMooseDiagram</package>
         <x>89.0</x>
         <y>54.0</y>
+        <comment><![CDATA[A comment to a package]]>
+        </comment>
+        <commentx>310.0</commentx>
+        <commenty>-21.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -59,6 +63,10 @@
         <class>Moose2ModelTestClass1</class>
         <x>89.0</x>
         <y>64.0</y>
+        <comment><![CDATA[A comment to a class]]>
+        </comment>
+        <commentx>-132.0</commentx>
+        <commenty>126.0</commenty>
     </element>
     <element>
         <type>FAMIXAttribute</type>
