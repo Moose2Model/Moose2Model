@@ -8,6 +8,10 @@ Legend
 + : added
 - : removed
 
+09.08.2017 v0.4.0
+-----------------
+
+* Improve performance while generating diagrams
 
 04.08.2017 v0.3.0
 -----------------
