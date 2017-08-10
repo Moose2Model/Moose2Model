@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testEvaluateAppearance
 	| l aAC aAC1 |
 	l := RWDiagramLayout new.
@@ -30,4 +30,7 @@ testEvaluateAppearance
 	self assert: l suppressOthersActive equals: true.
 	l replaceMooseEntities: true.
 	self assert: (l readAttributesFromFAMIXElement: methodI0RWDE) appearance othersAreSuppressed equals: true.	
-	l replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined	
+	l replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined.
+	"No error if appearance is calculated on refreshed layout. There no element in the elementlist has a not nil FAMIXElement"	
+	l refresh.
+	l evaluateAppearance 

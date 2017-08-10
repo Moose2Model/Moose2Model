@@ -1,5 +1,5 @@
 MethodUsage-calledFromMoose
-methodUsage: aFAMIXGroup withEditor: rwEditor test: isTest
+methodUsage: aRWDiagramElementGroup withEditor: rwEditor test: isTest
 	" Thanks to Alexandre Bergel for the first version with Accesses to attributes
   Grouping into packages by Rainer Winkler "
 
@@ -20,17 +20,18 @@ Handles the modifies DBTable to color database tables differently
 	rwLayout := rwEditor currentLayout.
 	isTest
 		ifFalse: [ rwLayout elementGroup elementList size = 0
-				ifTrue: [ self popUpAllElementsDisplayed
+				ifTrue: [ self popUpAllElementsDisplayed "Warn that runtime can be long"
 						ifFalse: [ ^ nil ] ]
 				ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
 						on: NotFound
-						do: [ self popUpAllElementsDisplayed
+						do: [ self popUpAllElementsDisplayed "Warn that runtime can be long"
 								ifFalse: [ ^ nil ] ] ] ].
-	rwLayout replaceElementsFromFAMIXGroup: aFAMIXGroup.
+	rwLayout refresh.				
+	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
 	rwLayout resetAppearance.
 	rwLayout evaluateAppearance.
-	rwLayout currentClasses: aFAMIXGroup.
-	allPackages := aFAMIXGroup dAllModelPackages.
+	rwLayout currentClasses: aRWDiagramElementGroup.
+	allPackages := aRWDiagramElementGroup dAllModelPackages.
 	rwEditor settings isReading
 		ifTrue: [ allPackages := allPackages reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
 	b := RTMondrian new.
@@ -45,7 +46,7 @@ Handles the modifies DBTable to color database tables differently
 	b
 		nodes: allPackages
 		forEach: [ :pack | 
-			allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aFAMIXGroup dAllClasses.
+			allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aRWDiagramElementGroup dAllClasses.
 			rwEditor settings classBoxSuppressed
 				ifFalse: [ b shape box noBorder
 						withTextBelow: #dName;
@@ -129,7 +130,7 @@ Handles the modifies DBTable to color database tables differently
 
 
 	"Draw arrows and lines"
-	allMethods := aFAMIXGroup dAllMethods.
+	allMethods := aRWDiagramElementGroup dAllMethods.
 	rwEditor settings isReading
 		ifTrue: [ allMethods := allMethods reject: [ :m | rwLayout isModelElementNotShownWithChildren: m ] ].
 	allPackages

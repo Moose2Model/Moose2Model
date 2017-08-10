@@ -29,13 +29,13 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 	foundElement attributeList: (aBlock value: foundElement attributeList).
 	(foundElement attributeList class inheritsFrom: RWDiagramAbstractAttributeList)
 		ifFalse: [ RWDiagramError signal ].	"The Block aBlock has at the end always to return the attribute list itself"
-	foundElement famixElement mooseID = aMooseEntity mooseID
-		ifTrue: [  ]
-		ifFalse: [ isToBeReplaced
-				ifTrue: [ elementList removeKey: foundElement uniqueKey ifAbsent: [  ].
-					foundElement famixElement: aMooseEntity.
-					elementList at: foundElement uniqueKey put: foundElement ]
-				ifFalse: [ elementList at: foundElement uniqueKey put: foundElement ] ].
+	foundElement famixElement
+		ifNil: [ self replace: foundElement with: aMooseEntity ]
+		ifNotNil: [ foundElement famixElement mooseID = aMooseEntity mooseID
+				ifTrue: [  ]
+				ifFalse: [ isToBeReplaced
+						ifTrue: [ self replace: foundElement with: aMooseEntity ]
+						ifFalse: [ elementList at: foundElement uniqueKey put: foundElement ] ] ].
 	^ foundElement ]
 		on: KeyNotFound
 		do: [ "No existing RWDiagramElement is found, so insert a new one and apply the block"

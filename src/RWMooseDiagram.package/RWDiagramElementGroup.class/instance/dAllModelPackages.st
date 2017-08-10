@@ -6,8 +6,8 @@ dAllModelPackages
 	packages := Set new.
 	noPackage := RWDiagramNoPackage new.
 	elementList
-		do: [ :each | 
+		do: [ :each | each famixElement ifNotNil: [ 
 			each famixElement class asString= self aFAMIXPackage
 				ifFalse:
-					[ each dParentPackage ifNotNil: [ packages add: (each dParentPackage asRWDiagramElement: self) ] ifNil: [noPackage add: each. packages add: noPackage asRWDiagramElement] ] ].
+					[ each dParentPackage ifNotNil: [ packages add: (each dParentPackage asRWDiagramElement: self) ] ifNil: [noPackage add: each. packages add: noPackage asRWDiagramElement] ] ] ].
 	^ packages
