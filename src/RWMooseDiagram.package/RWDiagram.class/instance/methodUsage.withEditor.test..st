@@ -30,7 +30,6 @@ Handles the modifies DBTable to color database tables differently
 	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
 	rwLayout resetAppearance.
 	rwLayout evaluateAppearance.
-	rwLayout currentClasses: aRWDiagramElementGroup.
 	allPackages := aRWDiagramElementGroup dAllModelPackages.
 	rwEditor settings isReading
 		ifTrue: [ allPackages := allPackages reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
