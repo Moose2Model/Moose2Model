@@ -14,6 +14,8 @@ testReadFromStreamMessage
 		crlf;
 		nextPutAll: '    <version>v0.3.0</version>';
 		crlf;
+		nextPutAll: '    <scope>package</scope>';
+		crlf;
 		nextPutAll: '<element>';
 		crlf;
 		nextPutAll: '    <type>FAMIXClass</type>';
@@ -96,7 +98,8 @@ testReadFromStreamMessage
 	aRTElement model: class1RWDE .
 	layout suppressWithChildren: true to: class1RWDE.
 	layout readFromStream: aStream readStream message: false.
-	"self assert: layout readFileVersion equals: 'v0.3.0'."
+	self assert: layout readFileVersion equals: 'v0.3.0'.
+	self assert: layout scope equals: layout packageScope.
 	layout replaceMooseEntities: true.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) position point equals: 10 @ 20.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) suppressWithChildren equals: false.

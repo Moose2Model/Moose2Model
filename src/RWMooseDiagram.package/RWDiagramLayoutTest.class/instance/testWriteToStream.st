@@ -117,7 +117,9 @@ testWriteToStream
 		crlf;
 		nextPutAll: '<elements>';
 		crlf;
-      nextPutAll: '    <version>v0.3.0</version>';
+      nextPutAll: '    <version>v0.4.0</version>';
+		crlf;
+		nextPutAll: '    <scope>method</scope>';
 		crlf.
 	aEndStream := ReadWriteStream on: String new.
 	aEndStream nextPutAll: '</elements>'.

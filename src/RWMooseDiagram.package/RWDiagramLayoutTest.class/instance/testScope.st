@@ -1,6 +1,7 @@
 tests
 testScope
 	| layout |
+	<RWDiaEdit_68>
 	layout := RWDiagramLayout new.
 	self assert: layout scope equals: layout methodScope.
 	layout scope: layout packageScope.

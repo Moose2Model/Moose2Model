@@ -1,6 +1,6 @@
 readFile
 readFromStreamXML: aReadStream
-	| famixType comp1 comp2 compClassScope anElementGroup parsed elements x y point supressWithChildren comment commentx commenty commentPoint actsos aAC versions |
+	| famixType comp1 comp2 compClassScope anElementGroup parsed elements x y point supressWithChildren comment commentx commenty commentPoint actsos aAC versions scopeXML |
 	aReadStream reset.
 	anElementGroup := elementGroup.
 	parsed := (XMLDOMParser on: aReadStream)
@@ -10,7 +10,19 @@ readFromStreamXML: aReadStream
 		parseDocument.
 	versions := parsed allElementsNamed: #version.
 	"This appears not to work, why? There is no version extracted."
-	versions do: [ :version | readFileVersion := version contentStringAt: #version ].
+	versions do: [ :version | readFileVersion := version contentString ].
+	scopeXML := parsed allElementsNamed: #scope.
+	scopeXML
+		do: [ :s | 
+			| readScope |
+			readScope := s contentString.
+			readScope = 'package'
+				ifTrue: [ self scope: self packageScope ]
+				ifFalse: [ readScope = 'class'
+						ifTrue: [ self scope: self classScope ]
+						ifFalse: [ readScope = 'method'
+								ifTrue: [ self scope: self methodScope ]
+								ifFalse: [  ] ] ] ].
 	elements := parsed allElementsNamed: #element.
 	elements
 		do: [ :element | 
@@ -106,9 +118,7 @@ readFromStreamXML: aReadStream
 					aAC := RWDiagramAppearanceChanger
 						changeDeterminer:
 							(RWDiagramACDStandard new
-								includeMe: (actso contentStringAt: #includeMe) = 'true'
-									usedByLayers: (actso contentStringAt: #usedByLayers) asInteger
-									usingLayers: (actso contentStringAt: #usingLayers) asInteger;
+								includeMe: (actso contentStringAt: #includeMe) = 'true' usedByLayers: (actso contentStringAt: #usedByLayers) asInteger usingLayers: (actso contentStringAt: #usingLayers) asInteger;
 								yourself)
 						changeType: RWDiagramACTSuppressOthers new.
 					self
