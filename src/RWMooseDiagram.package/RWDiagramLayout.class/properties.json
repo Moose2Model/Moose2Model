@@ -13,7 +13,8 @@
 		"processedRTView",
 		"suppressOthersActive",
 		"replaceMooseEntities",
-		"readFileVersion"
+		"readFileVersion",
+		"scope"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"

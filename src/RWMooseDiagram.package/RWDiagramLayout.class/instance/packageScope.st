@@ -1,0 +1,3 @@
+scope
+packageScope
+	^#packageScope
