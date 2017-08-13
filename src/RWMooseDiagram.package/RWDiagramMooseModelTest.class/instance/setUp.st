@@ -30,7 +30,7 @@ setUp
 	access := FAMIXAccess new accessor: method1; variable: var2; mooseModel: model.
 	acc1 := FAMIXAccess new accessor: method2; variable: var1; mooseModel: model.
 	inv1 := FAMIXInvocation new sender: method1; addCandidate: method2; receiver: var2; mooseModel: model.
-	inv2 := FAMIXInvocation new sender: method2; addCandidate: method2; receiver: var2; mooseModel: model.
+	"inv2 := FAMIXInvocation new sender: method2; addCandidate: method2; receiver: var2; mooseModel: model."
 	inv3 := FAMIXInvocation new sender: method3; addCandidate: method2; receiver: var2; mooseModel: model.
 	ref1 := FAMIXReference new source: method1; target: class2; mooseModel: model.
 	"Test invocations"

@@ -1,5 +1,5 @@
 {
-	"commentStamp" : "RainerWinkler 8/8/2017 22:15",
+	"commentStamp" : "RainerWinkler 8/13/2017 07:49",
 	"super" : "RWDiagram",
 	"category" : "RWMooseDiagram-editor",
 	"classinstvars" : [ ],
@@ -12,7 +12,9 @@
 	"instvars" : [
 		"attributeList",
 		"famixElement",
-		"uniqueKey"
+		"uniqueKey",
+		"connectedTo",
+		"accessedTo"
 	],
 	"name" : "RWDiagramElement",
 	"type" : "normal"

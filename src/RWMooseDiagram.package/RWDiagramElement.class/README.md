@@ -5,3 +5,5 @@ I am indexed using my uniqueKey, when I am created I remember my uniqueKey in th
 When I am neither FAMIXPackage, FAMIXClass, FAMIXAttribute nor FAMIXMethod, my uniqueKey will be the MooseID.
 I have a dictionary famixElementHash, this is needed to provide a unique hash value for method hash. This is required because I refefine = and in this case I have to redefine hash also.
 I have a dictionary famixElementByUniqueKey. This is currently not used because a similar list in RWDiagramElementGroup is used.
+I store in connectedTo all Elements I where invocations  exists on method level on package and class level.
+I store in accessedTo all Elements where accesses exists on attribut level on package and class level.
