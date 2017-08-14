@@ -5,7 +5,6 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [
-		"famixElementByUniqueKey",
 		"famixElementHash",
 		"lastHash"
 	],

@@ -1,6 +1,7 @@
 tests
 testSetConnections
 	| layout |
+	RWDiagramElement refresh.
 	layout := RWDiagramLayout new.
 	layout elementGroup add: class1RWDE.
 	layout elementGroup add: class2RWDE.

@@ -20,16 +20,17 @@ Handles the modifies DBTable to color database tables differently
 	rwLayout := rwEditor currentLayout.
 	isTest
 		ifFalse: [ rwLayout elementGroup elementList size = 0
-				ifTrue: [ self popUpAllElementsDisplayed "Warn that runtime can be long"
-						ifFalse: [ ^ nil ] ]
+				ifTrue: [ self popUpAllElementsDisplayed
+						ifFalse: [ ^ nil ]	"Warn that runtime can be long" ]
 				ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
 						on: NotFound
-						do: [ self popUpAllElementsDisplayed "Warn that runtime can be long"
-								ifFalse: [ ^ nil ] ] ] ].
-	rwLayout refresh.				
+						do: [ self popUpAllElementsDisplayed
+								ifFalse: [ ^ nil ]	"Warn that runtime can be long" ] ] ].
+	rwLayout refresh.
 	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
 	rwLayout resetAppearance.
 	rwLayout evaluateAppearance.
+	rwLayout setConnections.
 	allPackages := aRWDiagramElementGroup dAllModelPackages.
 	rwEditor settings isReading
 		ifTrue: [ allPackages := allPackages reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
@@ -126,8 +127,14 @@ Handles the modifies DBTable to color database tables differently
 		editor: rwEditor
 		entity: self aFAMIXPackage.
 	b layout grid.
-
-
+	"Draw arrows for packages and classes"
+	b shape arrowedLine
+		color: rwLayout colorSchema methodLineColor;
+		withShorterDistanceAttachPoint.
+	b shape head color: rwLayout colorSchema methodLineColor.
+	b edges
+		objects: rwLayout elementGroup elementList asCollection;
+		connectToAll: [ :m | m connectedTo ].
 	"Draw arrows and lines"
 	allMethods := aRWDiagramElementGroup dAllMethods.
 	rwEditor settings isReading

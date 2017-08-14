@@ -7,7 +7,7 @@ apply: aBlock toAttribute: aRWDiagramElementOrMooseEntity replace: isToBeReplace
 
 	"Replace is true: Replaces the Moose Entity in RWDiagramElement with the Moose Entity used for the search. This is used, when the search is done with a real model. For instance when diagram data is stored."
 
-	"Replace is false: Returns the Moose Entity that is already existing if it is found. This is done when the search is done while reading attributes. The real model has to remain untouched."
+	"Replace is false: Returns the Moose Entity that is already existing if it is found. This is done when the search is done while reading attributes. The real model has to remain untouched. If no element is found, the element used for searching is added to the element list and a corresponding Diagram Element is returned."
 
 	"Returns the RWDiagramElement found"
 

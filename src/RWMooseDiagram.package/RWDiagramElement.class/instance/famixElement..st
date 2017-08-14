@@ -6,5 +6,4 @@ famixElement: aFAMIXElement
 		ifFalse: [ RWDiagramElementWrongTypeError signal ].
 	famixElement := aFAMIXElement.
 	self determineUniqueKey.
-	self setlistWithHash.
-	self setListWithUniqueKey
+	self setlistWithHash

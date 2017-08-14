@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testElementList
 	| eg |
 	eg := RWDiagramElementGroup new.

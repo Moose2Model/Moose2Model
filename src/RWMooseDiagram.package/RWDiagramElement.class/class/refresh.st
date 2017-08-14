@@ -1,5 +1,4 @@
 private
 refresh
 	famixElementHash := nil.
-	lastHash := nil.
-	famixElementByUniqueKey := nil
+	lastHash := nil
