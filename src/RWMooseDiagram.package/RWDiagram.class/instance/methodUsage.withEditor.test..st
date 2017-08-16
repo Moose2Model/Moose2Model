@@ -137,6 +137,7 @@ Handles the modifies DBTable to color database tables differently
 		entity: self aFAMIXPackage.
 	b layout grid.
 	aRWDiagramElementGroup setConnections.
+	aRWDiagramElementGroup setAccesses.
 	"Draw arrows for packages and classes"
 	b shape arrowedLine
 		color: rwLayout colorSchema methodLineColor;
@@ -145,6 +146,13 @@ Handles the modifies DBTable to color database tables differently
 	b edges
 		objects: aRWDiagramElementGroup elementList asCollection;
 		connectToAll: [ :m | m connectedTo ].
+		"Draw access line for packages and classes"
+			b shape line
+				color: rwLayout colorSchema attributeLineColor;
+				withShorterDistanceAttachPoint.
+	b edges
+		objects: aRWDiagramElementGroup elementList asCollection;
+		connectToAll: [ :m | m accessedTo ].		
 	"Draw arrows and lines"
 	allMethods := aRWDiagramElementGroup dAllMethods.
 	rwEditor settings isReading

@@ -5,8 +5,6 @@ testSetConnections
 	eg := RWDiagramElementGroup new.
 	eg add: class1RWDE.
 	eg add: class2RWDE.
-"	eg add: method1RWDE.
-	eg add: method2RWDE."
 	eg setConnections.
 	eg elementList
 		do: [ :el | 
