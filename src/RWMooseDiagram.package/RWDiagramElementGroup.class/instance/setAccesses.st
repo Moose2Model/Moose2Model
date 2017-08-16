@@ -10,7 +10,7 @@ setAccesses
 								do: [ :a | 
 									| elParent aParent |
 									elParent := el famixElement parentPackage.
-									aParent := a parentType parentPackage.
+									aParent := a variable parentType parentPackage.
 									"Ignore cases when there are no parent packages"
 									elParent
 										ifNotNil: [ aParent
@@ -19,7 +19,7 @@ setAccesses
 													pe1 = pe2
 														ifFalse: [ pe1 accessedTo: pe2 ] ] ].
 									ce1 := self getElementForFAMIXElement: el famixElement.
-									ce2 := self getElementForFAMIXElement: a parentType.
+									ce2 := self getElementForFAMIXElement: a variable parentType.
 									ce1 = ce2
 										ifFalse:
 											[  ce1 accessedTo: ce2 ] ] ] ] ]
