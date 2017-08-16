@@ -1,14 +1,14 @@
 tests
 testSetConnections
-	| layout |
+	| eg |
 	RWDiagramElement refresh.
-	layout := RWDiagramLayout new.
-	layout elementGroup add: class1RWDE.
-	layout elementGroup add: class2RWDE.
-	layout elementGroup add: method1RWDE.
-	layout elementGroup add: method2RWDE.
-	layout setConnections.
-	layout elementGroup elementList
+	eg := RWDiagramElementGroup new.
+	eg add: class1RWDE.
+	eg add: class2RWDE.
+"	eg add: method1RWDE.
+	eg add: method2RWDE."
+	eg setConnections.
+	eg elementList
 		do: [ :el | 
 			el famixElement name = 'class1'
 				ifTrue: [ self assert: el connectedTo size equals: 1 ].

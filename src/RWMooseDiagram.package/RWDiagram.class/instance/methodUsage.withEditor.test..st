@@ -21,16 +21,15 @@ Handles the modifies DBTable to color database tables differently
 	isTest
 		ifFalse: [ rwLayout elementGroup elementList size = 0
 				ifTrue: [ self popUpAllElementsDisplayed
-						ifFalse: [ ^ nil ]	"Warn that runtime can be long" ]
+						ifFalse: [ "Warn that runtime can be long" ^ nil ] ]
 				ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
 						on: NotFound
 						do: [ self popUpAllElementsDisplayed
-								ifFalse: [ ^ nil ]	"Warn that runtime can be long" ] ] ].
+								ifFalse: [ "Warn that runtime can be long" ^ nil ] ] ] ].
 	rwLayout refresh.
 	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
 	rwLayout resetAppearance.
 	rwLayout evaluateAppearance.
-	rwLayout setConnections.
 	allPackages := aRWDiagramElementGroup dAllModelPackages.
 	rwEditor settings isReading
 		ifTrue: [ allPackages := allPackages reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
@@ -43,83 +42,93 @@ Handles the modifies DBTable to color database tables differently
 				fillColor: Color transparent;
 				borderColor: Color black ]
 		ifTrue: [ b shape rectangle noBorder fillColor: Color transparent ].
-	b
-		nodes: allPackages
-		forEach: [ :pack | 
-			allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aRWDiagramElementGroup dAllClasses.
-			rwEditor settings classBoxSuppressed
-				ifFalse: [ b shape box noBorder
-						withTextBelow: #dName;
-						withTextColor: Color black;
-						fillColor: rwLayout colorSchema classColor ]
-				ifTrue: [ b shape box
-						noBorder;
-						fillColor: Color transparent ].
-			displayedClasses := allClassesForPackage
-				select: [ :each | (each dModifiers includesAnyOf: #(#ABAPGlobalClass #ABAPGlobalInterface #ABAPLocalClass #ABAPWebDynproComponent #ABAPProgram)) or: each dModifiers isEmpty ].
-			rwEditor settings isReading
-				ifTrue: [ displayedClasses := displayedClasses reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
-			b
-				nodes: displayedClasses
-				forEach: [ :cls | 
-					self
-						attributesWithEditor: rwEditor
-						class: cls
-						layout: rwLayout
-						mondrian: b.
-					self
-						methodsWithEditor: rwEditor
-						class: cls
-						layout: rwLayout
-						mondrian: b ].
-
-			" Draw comments for classes"
-			self
-				drawComments: b
-				modelElements: displayedClasses
-				editor: rwEditor
-				entity: self aFAMIXClass.
-
-
-
-			"For the database tables"
-			b shape
-				box;
-				fillColor: Color transparent;
-				borderColor: Color transparent.
-			dataBaseTables := allClassesForPackage select: [ :each | each dModifiers includes: 'DBTable' ].
-			rwEditor settings isReading
-				ifTrue: [ dataBaseTables := dataBaseTables reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
-			b
-				nodes: dataBaseTables
-				forEach: [ :cls | 
-					"This is duplicate coding:"
-					displayedAttributes := cls dAttributes collect: [ :each | each asRWDiagramElement: rwLayout ].
+	rwLayout scope = rwLayout packageScope
+		ifTrue: [ b nodes: allPackages ]
+		ifFalse: [ b
+				nodes: allPackages
+				forEach: [ :pack | 
+					"The following is problematic. dAllClasses should return correct RWDiagramElements, but pack famixElement ... asRWDiagramElement returns new RWDiagramElements that have no relation to the found connections."
+					"allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aRWDiagramElementGroup dAllClasses."
+					allClassesForPackage := aRWDiagramElementGroup dAllClassesOfPackage: pack.
+					rwEditor settings classBoxSuppressed
+						ifFalse: [ b shape box noBorder
+								withTextBelow: #dName;
+								withTextColor: Color black;
+								fillColor: rwLayout colorSchema classColor ]
+						ifTrue: [ b shape box
+								noBorder;
+								fillColor: Color transparent ].
+					rwLayout scope = rwLayout methodScope
+						ifTrue: [ displayedClasses := allClassesForPackage
+								select: [ :each | (each dModifiers includesAnyOf: #(#ABAPGlobalClass #ABAPGlobalInterface #ABAPLocalClass #ABAPWebDynproComponent #ABAPProgram)) or: each dModifiers isEmpty ] ]
+						ifFalse: [ displayedClasses := allClassesForPackage ].
 					rwEditor settings isReading
-						ifTrue: [ displayedAttributes := displayedAttributes reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
-					b shape box
-						noBorder;
-						fillColor: Color transparent.
-					b
-						node: 'attributes'
-						forIt: [ b shape rectangle
-								if: [ :m | rwLayout highlight: m ] fillColor: rwLayout colorSchema dataBaseAsAttributeHighLighteColor;
-								if: [ :m | (rwLayout highlight: m) not ] fillColor: rwLayout colorSchema dataBaseAsAttributeColor;
-								width: 20;
-								height: 20;
-								withText: #dName;
-								fontSize: 6;
-								withTextColor: Color black.
-							b nodes: displayedAttributes.
-							b layout grid.
-							self
-								drawComments: b
-								modelElements: displayedAttributes
-								editor: rwEditor
-								entity: self aFAMIXAttribute.
-							b layout grid ].
-					b layout verticalLine ].
-			b layout grid ].
+						ifTrue: [ displayedClasses := displayedClasses reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+					rwLayout scope = rwLayout classScope
+						ifTrue: [ 
+							b nodes: displayedClasses forEach: [  ].
+							b layout grid ]
+						ifFalse: [ b
+								nodes: displayedClasses
+								forEach: [ :cls | 
+									self
+										attributesWithEditor: rwEditor
+										class: cls
+										layout: rwLayout
+										mondrian: b.
+									self
+										methodsWithEditor: rwEditor
+										class: cls
+										layout: rwLayout
+										mondrian: b ] ].
+					" Draw comments for classes"
+					self
+						drawComments: b
+						modelElements: displayedClasses
+						editor: rwEditor
+						entity: self aFAMIXClass.
+
+
+
+					"For the database tables"
+					rwLayout scope = rwLayout methodScope
+						ifTrue: [ b shape
+								box;
+								fillColor: Color transparent;
+								borderColor: Color transparent.
+							dataBaseTables := allClassesForPackage select: [ :each | each dModifiers includes: 'DBTable' ].
+							rwEditor settings isReading
+								ifTrue: [ dataBaseTables := dataBaseTables reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+							b
+								nodes: dataBaseTables
+								forEach: [ :cls | 
+									"This is duplicate coding:"
+									displayedAttributes := cls dAttributes collect: [ :each | each asRWDiagramElement: rwLayout ].
+									rwEditor settings isReading
+										ifTrue: [ displayedAttributes := displayedAttributes reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+									b shape box
+										noBorder;
+										fillColor: Color transparent.
+									b
+										node: 'attributes'
+										forIt: [ b shape rectangle
+												if: [ :m | rwLayout highlight: m ] fillColor: rwLayout colorSchema dataBaseAsAttributeHighLighteColor;
+												if: [ :m | (rwLayout highlight: m) not ] fillColor: rwLayout colorSchema dataBaseAsAttributeColor;
+												width: 20;
+												height: 20;
+												withText: #dName;
+												fontSize: 6;
+												withTextColor: Color black.
+											b nodes: displayedAttributes.
+											b layout grid.
+											self
+												drawComments: b
+												modelElements: displayedAttributes
+												editor: rwEditor
+												entity: self aFAMIXAttribute.
+											b layout grid ].
+									b layout verticalLine ].
+							b layout grid ] ] ].
 	" Draw comments for packages"
 	self
 		drawComments: b
@@ -127,13 +136,14 @@ Handles the modifies DBTable to color database tables differently
 		editor: rwEditor
 		entity: self aFAMIXPackage.
 	b layout grid.
+	aRWDiagramElementGroup setConnections.
 	"Draw arrows for packages and classes"
 	b shape arrowedLine
 		color: rwLayout colorSchema methodLineColor;
 		withShorterDistanceAttachPoint.
 	b shape head color: rwLayout colorSchema methodLineColor.
 	b edges
-		objects: rwLayout elementGroup elementList asCollection;
+		objects: aRWDiagramElementGroup elementList asCollection;
 		connectToAll: [ :m | m connectedTo ].
 	"Draw arrows and lines"
 	allMethods := aRWDiagramElementGroup dAllMethods.
