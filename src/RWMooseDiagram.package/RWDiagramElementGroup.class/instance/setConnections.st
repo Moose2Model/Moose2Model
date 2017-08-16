@@ -9,11 +9,18 @@ setConnections
 						do: [ :me | 
 							(me queryAllOutgoingInvocations atScope: FAMIXMethod) storage
 								do: [ :m | 
-									pe1 := self getElementForFAMIXElement: el famixElement parentPackage.
+									| elParent mParent |
+									elParent := el famixElement parentPackage.
+									mParent := m parentType parentPackage.
+									"Ignore cases when there are no parent packages"
+									elParent
+										ifNotNil: [ mParent
+												ifNotNil: [ pe1 := self getElementForFAMIXElement: elParent.
+													pe2 := self getElementForFAMIXElement: mParent.
+													pe1 = pe2
+														ifFalse: [ pe1 connectedTo: pe2 ] ] ].
 									ce1 := self getElementForFAMIXElement: el famixElement.
-									pe2 := self getElementForFAMIXElement: m parentType parentPackage.
 									ce2 := self getElementForFAMIXElement: m parentType.
-									pe1 = pe2
-										ifFalse: [ pe1 connectedTo: pe2 ].
 									ce1 = ce2
-										ifFalse: [ "Now determine the FAMIX Element of the class and the package of the found method m. This is the target of the invocation. Determine class and package of the processed element el, this is the source of the found invocation. A similar logic is also to be done for the found accesses." ce1 connectedTo: ce2 ] ] ] ] ]
+										ifFalse:
+											[ "Now determine the FAMIX Element of the class and the package of the found method m. This is the target of the invocation. Determine class and package of the processed element el, this is the source of the found invocation. A similar logic is also to be done for the found accesses." ce1 connectedTo: ce2 ] ] ] ] ]
