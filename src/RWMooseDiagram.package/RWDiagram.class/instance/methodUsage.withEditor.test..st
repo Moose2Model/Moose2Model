@@ -65,8 +65,7 @@ Handles the modifies DBTable to color database tables differently
 					rwEditor settings isReading
 						ifTrue: [ displayedClasses := displayedClasses reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
 					rwLayout scope = rwLayout classScope
-						ifTrue: [ 
-							b nodes: displayedClasses forEach: [  ].
+						ifTrue: [ b nodes: displayedClasses forEach: [  ].
 							b layout grid ]
 						ifFalse: [ b
 								nodes: displayedClasses
@@ -138,21 +137,22 @@ Handles the modifies DBTable to color database tables differently
 	b layout grid.
 	aRWDiagramElementGroup setConnections.
 	aRWDiagramElementGroup setAccesses.
-	"Draw arrows for packages and classes"
-	b shape arrowedLine
-		color: rwLayout colorSchema methodLineColor;
-		withShorterDistanceAttachPoint.
-	b shape head color: rwLayout colorSchema methodLineColor.
-	b edges
-		objects: aRWDiagramElementGroup elementList asCollection;
-		connectToAll: [ :m | m connectedTo ].
-		"Draw access line for packages and classes"
+	(rwLayout scope = rwLayout packageScope or: [ rwLayout scope = rwLayout classScope ])
+		ifTrue: [ "Draw arrows for packages and classes"
+			b shape arrowedLine
+				color: rwLayout colorSchema methodLineColor;
+				withShorterDistanceAttachPoint.
+			b shape head color: rwLayout colorSchema methodLineColor.
+			b edges
+				objects: aRWDiagramElementGroup elementList asCollection;
+				connectToAll: [ :m | m connectedTo ].
+			"Draw access line for packages and classes"
 			b shape line
 				color: rwLayout colorSchema attributeLineColor;
 				withShorterDistanceAttachPoint.
-	b edges
-		objects: aRWDiagramElementGroup elementList asCollection;
-		connectToAll: [ :m | m accessedTo ].		
+			b edges
+				objects: aRWDiagramElementGroup elementList asCollection;
+				connectToAll: [ :m | m accessedTo ] ].
 	"Draw arrows and lines"
 	allMethods := aRWDiagramElementGroup dAllMethods.
 	rwEditor settings isReading
