@@ -143,16 +143,24 @@ Handles the modifies DBTable to color database tables differently
 				color: rwLayout colorSchema methodLineColor;
 				withShorterDistanceAttachPoint.
 			b shape head color: rwLayout colorSchema methodLineColor.
-			b edges
-				objects: aRWDiagramElementGroup elementList asCollection;
-				connectToAll: [ :m | m connectedTo ].
+			rwLayout scope = rwLayout packageScope
+				ifTrue: [ b edges
+						objects: aRWDiagramElementGroup dAllModelPackages;
+						connectToAll: [ :m | m connectedTo ] ]
+				ifFalse: [ b edges
+						objects: aRWDiagramElementGroup dAllClasses;
+						connectToAll: [ :m | m connectedTo ] ].
 			"Draw access line for packages and classes"
 			b shape line
 				color: rwLayout colorSchema attributeLineColor;
 				withShorterDistanceAttachPoint.
-			b edges
-				objects: aRWDiagramElementGroup elementList asCollection;
-				connectToAll: [ :m | m accessedTo ] ].
+			rwLayout scope = rwLayout packageScope
+				ifTrue: [ b edges
+						objects: aRWDiagramElementGroup dAllModelPackages;
+						connectToAll: [ :m | m accessedTo ] ]
+				ifFalse: [ b edges
+						objects: aRWDiagramElementGroup dAllClasses;
+						connectToAll: [ :m | m accessedTo ] ] ].
 	"Draw arrows and lines"
 	allMethods := aRWDiagramElementGroup dAllMethods.
 	rwEditor settings isReading
