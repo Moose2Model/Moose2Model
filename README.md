@@ -116,7 +116,8 @@ After this all data is to be reloaded from file or rebuild. Do this as a workaro
     RWDiagram listLayouts.
     RWDiagram list.
     
-The setting of the scope (Package, Class and Method). It is possible to limit the display to packages or classes and their dependecies. The scope is stored and read to and from file
+The setting of the scope (Package, Class and Method). It is possible to limit the display to packages or classes and their dependecies. The scope is stored and read to and from file.
+
     RWDiagram setMethodScope. 'The default: to display packages, classes, methods and attributes and their dependencies'
     RWDiagram setClassScope. 'to display only classes and their dependencies'
     RWDiagram setPackageScope. 'to display only packages and their dependencies'
