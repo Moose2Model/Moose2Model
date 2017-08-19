@@ -9,7 +9,7 @@ Handles the modifies DBTable to color database tables differently
 	Version 18.07.2016 major changes. No node for attribute and method anymore (reduces problems while reshaping the diagram)
 "
 
-	<RWDiaEdit_65>
+	<RWDiaEdit_65> <RWDiaEdit_70>
 	<duplicate_database_attr_color>
 	<menuItem: 'RW Method Usages in Packages d' category: 'Visualize'>
 	| b lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods |
@@ -19,13 +19,14 @@ Handles the modifies DBTable to color database tables differently
 	"Now assign the arrows after all nodes are calculated"
 	rwLayout := rwEditor currentLayout.
 	isTest
-		ifFalse: [ rwLayout elementGroup elementList size = 0
-				ifTrue: [ self popUpAllElementsDisplayed
-						ifFalse: [ "Warn that runtime can be long" ^ nil ] ]
-				ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
-						on: NotFound
-						do: [ self popUpAllElementsDisplayed
-								ifFalse: [ "Warn that runtime can be long" ^ nil ] ] ] ].
+		ifFalse: [ rwLayout scope = rwLayout methodScope
+				ifTrue: [ rwLayout elementGroup elementList size = 0
+						ifTrue: [ self popUpAllElementsDisplayed
+								ifFalse: [ "Warn that runtime can be long" ^ nil ] ]
+						ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
+								on: NotFound
+								do: [ self popUpAllElementsDisplayed
+										ifFalse: [ "Warn that runtime can be long" ^ nil ] ] ] ] ].
 	rwLayout refresh.
 	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
 	rwLayout resetAppearance.
