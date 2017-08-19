@@ -12,6 +12,11 @@ Legend
 -----------------
 
 * Improve performance while generating diagrams
++ Display Dependencies of Classes, Interfaces and Packages #22 Use:
+RWDiagram setPackageScope. to display only packages and their dependencies
+RWDiagram setClassScope. to display only classes and their dependencies
+RWDiagram setMethodScope. to display packages, classes, methods and attributes and their dependencies
+The setting of the scope (Package, Class and Method) is stored and read to and from file
 
 04.08.2017 v0.3.0
 -----------------
