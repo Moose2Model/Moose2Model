@@ -8,18 +8,18 @@ setAccesses
 						do: [ :me | 
 							me accesses
 								do: [ :a | 
-									| elParent aParent |
+									| accessed elParent aParent |
 									elParent := el famixElement parentPackage.
-									aParent := a variable parentType parentPackage.
-									"Ignore cases when there are no parent packages"
-									elParent
-										ifNotNil: [ aParent
-												ifNotNil: [ pe1 := self getElementForFAMIXElement: elParent.
-													pe2 := self getElementForFAMIXElement: aParent.
-													pe1 = pe2
-														ifFalse: [ pe1 accessedTo: pe2 ] ] ].
-									ce1 := self getElementForFAMIXElement: el famixElement.
-									ce2 := self getElementForFAMIXElement: a variable parentType.
-									ce1 = ce2
-										ifFalse:
-											[  ce1 accessedTo: ce2 ] ] ] ] ]
+									accessed := a variable.
+									accessed class asString = self aFAMIXAttribute
+										ifTrue: [ aParent := accessed parentType parentPackage.	"Ignore cases when there are no parent packages"
+											elParent
+												ifNotNil: [ aParent
+														ifNotNil: [ pe1 := self getElementForFAMIXElement: elParent.
+															pe2 := self getElementForFAMIXElement: aParent.
+															pe1 = pe2
+																ifFalse: [ pe1 accessedTo: pe2 ] ] ].
+											ce1 := self getElementForFAMIXElement: el famixElement.
+											ce2 := self getElementForFAMIXElement: accessed parentType.
+											ce1 = ce2
+												ifFalse: [ ce1 accessedTo: ce2 ] ] ] ] ] ]
