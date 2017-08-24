@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
 <elements>
-    <version>v0.3.0</version>
+    <version>v0.4.0</version>
+    <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
@@ -24,8 +25,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>isModelElementsuppressedWithChildren:</method>
-        <x>-612.0</x>
-        <y>402.0</y>
+        <x>-621.0</x>
+        <y>394.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -132,9 +133,16 @@
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
+        <method>refresh</method>
+        <x>-734.0</x>
+        <y>338.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
         <method>addAppearanceChangeType:to:</method>
-        <x>-746.0</x>
-        <y>474.0</y>
+        <x>-738.0</x>
+        <y>486.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
@@ -180,8 +188,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>highlight:</method>
-        <x>-408.0</x>
-        <y>330.0</y>
+        <x>-314.0</x>
+        <y>357.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -401,8 +409,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>readFromStreamXML:</method>
-        <x>-665.0</x>
-        <y>431.0</y>
+        <x>-684.0</x>
+        <y>439.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -422,12 +430,12 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>isModelElementNotShownWithChildren:</method>
-        <x>-458.0</x>
-        <y>346.0</y>
+        <x>-472.0</x>
+        <y>344.0</y>
         <comment><![CDATA[Here it is determined whether an element is displayed]]>
         </comment>
-        <commentx>-591.0</commentx>
-        <commenty>321.0</commenty>
+        <commentx>-587.0</commentx>
+        <commenty>302.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -491,13 +499,6 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagramLayout</class>
-        <method>remember:FAMIXType:comp1:comp2:to:</method>
-        <x>-698.0</x>
-        <y>425.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>famixElement</method>
         <x>-537.0</x>
@@ -522,13 +523,6 @@
         <method>layerZeroY:</method>
         <x>-142.0</x>
         <y>415.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayout</class>
-        <method>replaceMooseEntitiesUndefined</method>
-        <x>-423.0</x>
-        <y>480.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
