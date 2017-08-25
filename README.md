@@ -24,9 +24,9 @@ See [YouTube video on how to install this application](https://www.youtube.com/w
 
 ## By downloading an Image for Windows
 
-Load the  [Moose2Model Windows Image v0.3.0](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.3.0.zip) and run Pharo.exe after downloading. For Apple and Linux load the [Moose2Model Image and changes v0.3.0](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.3.0_Image_Changes.zip) and add them to a virtual machine for Pharo 5 downloaded from http://pharo.org/download. You may have to add the PharoV50.sources if a warning is raised while starting the machine.
+Load the  [Moose2Model Windows Image v0.4.2](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.4.2.zip) and run Pharo.exe after downloading. For Apple and Linux load the [Moose2Model Image and changes v0.4.2](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.4.2_Image_Changes.zip) and add them to a virtual machine for Pharo 5 downloaded from http://pharo.org/download. You may have to add the PharoV50.sources if a warning is raised while starting the machine.
 
-Previous Image:  [Moose2Model Windows Image v0.2.2](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.2.2.zip). Image and Changes (For Apple and Linux: [Moose2Model Image and changes v0.2.2](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.2.2_Image_Changes.zip)
+Previous Image:  [Moose2Model Windows Image v0.3.0](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.3.0.zip). Image and Changes (For Apple and Linux: [Moose2Model Image and changes v0.3.0](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.3.0_Image_Changes.zip)
 
 ## By installing Pharo, Moose and Moose2Model
 
