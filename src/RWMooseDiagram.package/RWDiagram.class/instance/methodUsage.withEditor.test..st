@@ -9,7 +9,8 @@ Handles the modifies DBTable to color database tables differently
 	Version 18.07.2016 major changes. No node for attribute and method anymore (reduces problems while reshaping the diagram)
 "
 
-	<RWDiaEdit_65> <RWDiaEdit_70>
+	<RWDiaEdit_65>
+	<RWDiaEdit_70>
 	<duplicate_database_attr_color>
 	<menuItem: 'RW Method Usages in Packages d' category: 'Visualize'>
 	| b lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods |
@@ -128,7 +129,8 @@ Handles the modifies DBTable to color database tables differently
 												entity: self aFAMIXAttribute.
 											b layout grid ].
 									b layout verticalLine ].
-							b layout grid ] ] ].
+							b layout grid ].
+					b layout grid "So that classes are arranged as grid" ] ].
 	" Draw comments for packages"
 	self
 		drawComments: b
