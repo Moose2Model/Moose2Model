@@ -54,7 +54,9 @@
 		"methodI0P1RWDE",
 		"methodI0M1RWDE",
 		"methodI0M2RWDE",
-		"attributeA0RWDE"
+		"attributeA0RWDE",
+		"classNopackage",
+		"classNopackageRWDE"
 	],
 	"name" : "RWDiagramMooseModelTest",
 	"type" : "normal"

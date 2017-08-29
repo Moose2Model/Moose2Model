@@ -4,5 +4,8 @@ dAllClassesOfPackage: aRWDiagramElementTypePackage
 
 	| classes |
 	classes := Set new.
-	classes := elementList select: [ :each | ( each famixElement class asString = self aFAMIXClass) and: [ each dParentPackage name =  aRWDiagramElementTypePackage famixElement name ] ].
+	classes := elementList
+		select: [ :each | 
+			each famixElement class asString = self aFAMIXClass
+				and: [ each dParentPackage name = aRWDiagramElementTypePackage famixElement name or: [ each dParentPackage isNil and: [ aRWDiagramElementTypePackage isNoPackage ] ] ] ].
 	^ classes

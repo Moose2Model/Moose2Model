@@ -9,10 +9,10 @@ setAccesses
 							me accesses
 								do: [ :a | 
 									| accessed elParent aParent |
-									elParent := el famixElement parentPackage.
+									elParent := el famixElement m2mParentPackage.
 									accessed := a variable.
 									accessed class asString = self aFAMIXAttribute
-										ifTrue: [ aParent := accessed parentType parentPackage.	"Ignore cases when there are no parent packages"
+										ifTrue: [ aParent := accessed parentType m2mParentPackage.	"Ignore cases when there are no parent packages"
 											elParent
 												ifNotNil: [ aParent
 														ifNotNil: [ pe1 := self getElementForFAMIXElement: elParent.

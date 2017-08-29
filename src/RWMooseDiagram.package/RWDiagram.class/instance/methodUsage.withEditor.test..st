@@ -62,7 +62,7 @@ Handles the modifies DBTable to color database tables differently
 								fillColor: Color transparent ].
 					rwLayout scope = rwLayout methodScope
 						ifTrue: [ displayedClasses := allClassesForPackage
-								select: [ :each | (each dModifiers includesAnyOf: #(#ABAPGlobalClass #ABAPGlobalInterface #ABAPLocalClass #ABAPWebDynproComponent #ABAPProgram)) or: each dModifiers isEmpty ] ]
+								select: [ :each | ((each dModifiers includesAnyOf: #(#DBTable) ) = false) or: each dModifiers isEmpty ] ]
 						ifFalse: [ displayedClasses := allClassesForPackage ].
 					rwEditor settings isReading
 						ifTrue: [ displayedClasses := displayedClasses reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].

@@ -10,8 +10,8 @@ setConnections
 							(me queryAllOutgoingInvocations atScope: FAMIXMethod) storage
 								do: [ :m | 
 									| elParent mParent |
-									elParent := el famixElement parentPackage.
-									mParent := m parentType parentPackage.
+									elParent := el famixElement m2mParentPackage.
+									mParent := m parentType m2mParentPackage.
 									"Ignore cases when there are no parent packages"
 									elParent
 										ifNotNil: [ mParent

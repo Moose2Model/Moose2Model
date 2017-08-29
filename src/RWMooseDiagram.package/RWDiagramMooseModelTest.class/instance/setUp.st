@@ -13,6 +13,8 @@ setUp
 	class1RWDE := RWDiagramElement famixElement: class1.
 	class2 := FAMIXClass new name: 'class2'; parentPackage: package2; mooseModel: model.
 	class2RWDE := RWDiagramElement famixElement: class2.
+	classNopackage := FAMIXClass new name: 'classNopackage'; mooseModel: model.
+	classNopackageRWDE := RWDiagramElement famixElement: classNopackage.
 	inh := FAMIXInheritance new subclass: class1; superclass: class2; mooseModel: model.
 	method1 := FAMIXMethod new name: 'method1'; parentType: class1; mooseModel: model; hasClassScope: true.
 	method1RWDE := RWDiagramElement famixElement: method1.
