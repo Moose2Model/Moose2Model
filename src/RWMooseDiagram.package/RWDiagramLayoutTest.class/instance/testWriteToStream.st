@@ -117,7 +117,7 @@ testWriteToStream
 		crlf;
 		nextPutAll: '<elements>';
 		crlf;
-      nextPutAll: '    <version>v0.4.2</version>';
+      nextPutAll: '    <version>v0.4.3</version>';
 		crlf;
 		nextPutAll: '    <scope>method</scope>';
 		crlf.
