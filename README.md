@@ -2,6 +2,8 @@
 
 This is a software exploration tool to support developers during their work. 
 
+The documentation is in the Wiki of this repository
+
 The intention of this tool is explained in this blogs: [Legacy Code – Storing the mental model in diagrams](https://blogs.sap.com/2017/06/08/legacy-code-storing-the-mental-model-in-diagrams/) and [Software exploration tool for developers (ABAP, SAP, Java, C, Smalltalk, …) – Roadmap](https://blogs.sap.com/2017/07/23/software-exploration-tool-next-steps/).
 
 It can be used in projects. The tool is currently improved, see the Roadmap in the above blog. Feel free to open an issue if you find errors or if you would like to have certain functions.
@@ -17,37 +19,6 @@ It is build on top of Pharo, Roassal and [Moose](http://www.moosetechnology.org/
 Runs on Moose 6.
 
 Is currently tested on Moose 6.1. You might switch of the warning of deprecated methods under System->Settings.
-
-# Installation
-
-See [YouTube video on how to install this application](https://www.youtube.com/watch?v=_RMeqd5-ZQ4&t=95s) for a complete 14 minute description on how to install and run. This describes the installation using the Pharo Launcher, you may prefer to download a preconfigured image.
-
-## By downloading an Image for Windows
-
-Load the  [Moose2Model Windows Image v0.4.2](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.4.2.zip) and run Pharo.exe after downloading. For Apple and Linux load the [Moose2Model Image and changes v0.4.2](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.4.2_Image_Changes.zip) and add them to a virtual machine for Pharo 5 downloaded from http://pharo.org/download. You may have to add the PharoV50.sources if a warning is raised while starting the machine.
-
-Previous Image:  [Moose2Model Windows Image v0.3.0](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.3.0.zip). Image and Changes (For Apple and Linux: [Moose2Model Image and changes v0.3.0](http://www.poaceae.de/RWDiagram/Images/Windows/Moose2Model_v0.3.0_Image_Changes.zip)
-
-## By installing Pharo, Moose and Moose2Model
-
-### Download Moose 6
-
-Go to [Moose Analysis Installation](http://www.moosetechnology.org/#install) and download an image for Moose 6.0. Extract the zip file, no installer is needed.
-
-### By using the Pharo Launcher
-
-Install the Pharo Launcher from https://ci.inria.fr/pharo/view/Launcher/job/Launcher/ When the installation is done, choose a Moose 6.0 image.
-
-### Add the logic for Moose2Model
-
-Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground. Paste the following code into the Playground:
-
-    Gofer new
-        smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
-        package: 'RWMooseDiagram';
-        load.
-
-Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. 
 
 # Extractor
 
@@ -66,32 +37,6 @@ To participate:
 Documentation: Make a fork change or add documentation and make a pull request.
 
 Coding: Install Iceberg, you will probably need to develop on Pharo 6 and Moose 6.1 to do this.
-
-# Examples
-
-A small diagrams that is part of bigger diagrams shown below:
-
-![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_2.png)
-
-This is a commented overview of the SAP2Moose extractor that explains how data is transfered between classes:
-
-![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_1_initial.png)
-
-The above diagram was used during development. After some time new classes where added. And after extracting model data again it displayed the new classes (after some manual dragging of the new elements):
-
-![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small_detail_1_later.png)
-
-With different configurations, the whole application is shown:
-
-![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_small.png)
-
-Here a complete "real life" application:
-
-![An example for a dependency graph](https://github.com/RainerWinkler/SAP2Moose/wiki/figures/Complete_application_big.jpg)
-
-# Documenation
-
-Please see this videos: [Customizable dependency or call graph for SAP ABAP with Pharo Moose ](https://www.youtube.com/watch?v=_RMeqd5-ZQ4&t=224s) and [Demo of a Customizable dependency or call graph with Pharo Moose - Applied to SAP ABAP ](https://www.youtube.com/watch?v=0jLN-2AVIvo&t=1s)
 
 ## First steps
 
