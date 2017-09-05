@@ -2,7 +2,11 @@
 
 This is a software exploration tool to support developers during their work. 
 
+# Documentation
+
 The documentation is in the Wiki of this repository
+
+# Further
 
 The intention of this tool is explained in this blogs: [Legacy Code – Storing the mental model in diagrams](https://blogs.sap.com/2017/06/08/legacy-code-storing-the-mental-model-in-diagrams/) and [Software exploration tool for developers (ABAP, SAP, Java, C, Smalltalk, …) – Roadmap](https://blogs.sap.com/2017/07/23/software-exploration-tool-next-steps/).
 
