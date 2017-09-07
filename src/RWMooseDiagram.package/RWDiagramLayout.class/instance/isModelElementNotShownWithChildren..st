@@ -11,8 +11,9 @@ isModelElementNotShownWithChildren: aRWDiagramElement
 		ifTrue: [ ^ true ].
 	self suppressOthersActive
 		ifTrue: [ aRWDiagramElement famixElement class asString = self aFAMIXPackage
-				ifTrue: [ aRWDiagramElement famixElement classes
-						do: [ :cl | 
+				ifTrue: [|classesOfPackage| classesOfPackage := aRWDiagramElement famixElement classes.
+					   classesOfPackage size = 0 ifTrue:[^ false "Workaround for issue #31. In case of Java no classes are stored yet in the packages. So do not suppress packages"].
+						classesOfPackage do: [ :cl | 
 							(self classNotToBeShown: cl)
 								ifFalse: [ ^ false ] ].
 					^ true ].
