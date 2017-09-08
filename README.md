@@ -24,13 +24,15 @@ Runs on Moose 6.
 
 Is currently tested on Moose 6.1. You might switch of the warning of deprecated methods under System->Settings.
 
-# Extractor
+# Supported languages
 
 Modelinformations for Smalltalk can be extracted with the Moose Panel (See above). 
 
 For SAP applications the extractor [SAP2Moose](http://www.sap2moose.org) can be used. Moose2Model and SAP2Moose are developed in parallel, so this might give the best results.
 
 For Java you can extract mse files with [jdt2famix(https://github.com/feenkcom/jdt2famix).
+
+Other computer languages can be extracted to Moose, please check whether there is already an extractor available. Feel free to open an issue to receive supports to make other lanugages working.
 
 # Where is the coding
 
