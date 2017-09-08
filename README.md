@@ -32,15 +32,9 @@ For SAP applications the extractor [SAP2Moose](http://www.sap2moose.org) can be 
 
 For Java you can extract mse files with [jdt2famix(https://github.com/feenkcom/jdt2famix).
 
-# Where is the coding and how to contribute
+# Where is the coding
 
 The original coding is hosted in this repository. A copy is stored on Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram (The link may work only in Firefox). This simplifies getting the code.
-
-To participate:
-
-Documentation: Make a fork change or add documentation and make a pull request.
-
-Coding: Install Iceberg, you will probably need to develop on Pharo 6 and Moose 6.1 to do this.
 
 # Thanks
 
