@@ -15,7 +15,8 @@
 		"preventOverlapping",
 		"lCPORepeat",
 		"lCPOSpace",
-		"lCPOMaxChecks"
+		"lCPOMaxChecks",
+		"displayFormatter"
 	],
 	"name" : "RWDiagramSettings",
 	"type" : "normal"

@@ -3,6 +3,10 @@ highlight: aFAMIXElement
 	| attributeList |
 	self replaceMooseEntities: false.
 	attributeList := self readAttributesFromFAMIXElement: aFAMIXElement.
-	
-   self replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined.
-	^ attributeList appearance highlight
+	RWDiagramEditor uniqueInstance settings displayFormatter
+		ifFalse: [ self replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined.
+			^ attributeList appearance highlight ]
+		ifTrue: [ "Highlight elements without permanent appearance changers"
+			(attributeList appearanceChangerGroup appearanceChangers select: [ :each | each changeType isTemporary not ]) isEmpty
+				ifTrue: [ ^ true ]
+				ifFalse: [ ^ false ] ]
