@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
 <elements>
-    <version>v0.4.2</version>
+    <version>v0.4.3</version>
     <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
@@ -28,8 +28,8 @@
     <element>
         <type>FAMIXPackage</type>
         <package>de.poaceae.rainer.bmods</package>
-        <x>-223.0</x>
-        <y>517.0</y>
+        <x>-236.0</x>
+        <y>514.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -42,8 +42,8 @@
         <type>FAMIXMethod</type>
         <class>MainPanel</class>
         <method>MainPanel</method>
-        <x>-637.0</x>
-        <y>318.0</y>
+        <x>-650.0</x>
+        <y>316.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -96,8 +96,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>getPictureType</method>
-        <x>-537.0</x>
-        <y>555.0</y>
+        <x>-549.0</x>
+        <y>552.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -109,15 +109,15 @@
     <element>
         <type>FAMIXClass</type>
         <class>Main</class>
-        <x>-624.0</x>
-        <y>453.0</y>
+        <x>-636.0</x>
+        <y>450.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>&lt;init&gt;</method>
-        <x>-257.0</x>
-        <y>530.0</y>
+        <x>-269.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
@@ -130,15 +130,15 @@
         <type>FAMIXMethod</type>
         <class>CustomizeDiver</class>
         <method>evaluateContent</method>
-        <x>-544.0</x>
-        <y>811.0</y>
+        <x>-472.0</x>
+        <y>818.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>MainMenuBar</class>
         <method>MainMenuBar</method>
-        <x>94.0</x>
-        <y>479.0</y>
+        <x>81.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -199,14 +199,14 @@
     <element>
         <type>FAMIXClass</type>
         <class>Manager</class>
-        <x>-455.0</x>
-        <y>527.0</y>
+        <x>-467.0</x>
+        <y>525.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>MainPanel</class>
-        <x>-656.0</x>
-        <y>364.0</y>
+        <x>-669.0</x>
+        <y>361.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -226,8 +226,8 @@
         <type>FAMIXAttribute</type>
         <class>MainWindow</class>
         <attribute>manager</attribute>
-        <x>-548.0</x>
-        <y>611.0</y>
+        <x>-560.0</x>
+        <y>608.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -293,21 +293,21 @@
         <type>FAMIXAttribute</type>
         <class>MainPanel</class>
         <attribute>manager</attribute>
-        <x>-677.0</x>
-        <y>353.0</y>
+        <x>-689.0</x>
+        <y>351.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>Diver</class>
-        <x>-157.0</x>
-        <y>527.0</y>
+        <x>-170.0</x>
+        <y>525.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>START_DEPTH</attribute>
-        <x>-305.0</x>
-        <y>505.0</y>
+        <x>-317.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -319,8 +319,8 @@
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>Depth</attribute>
-        <x>-127.0</x>
-        <y>480.0</y>
+        <x>-139.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -390,22 +390,22 @@
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>getSinkRate</method>
-        <x>-277.0</x>
-        <y>555.0</y>
+        <x>-289.0</x>
+        <y>552.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>Manager</class>
         <attribute>OVERVIEW_PICTURE</attribute>
-        <x>-503.0</x>
-        <y>480.0</y>
+        <x>-516.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>Manager</class>
         <attribute>activeFrame</attribute>
-        <x>-402.0</x>
-        <y>480.0</y>
+        <x>-414.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -444,8 +444,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>getMSRefreshrate</method>
-        <x>-507.0</x>
-        <y>530.0</y>
+        <x>-519.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -468,8 +468,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>MainMenuBar</class>
-        <x>74.0</x>
-        <y>490.0</y>
+        <x>62.0</x>
+        <y>487.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
@@ -482,8 +482,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>shallThreadRun</method>
-        <x>-418.0</x>
-        <y>505.0</y>
+        <x>-431.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -535,8 +535,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>startThread</method>
-        <x>-365.0</x>
-        <y>505.0</y>
+        <x>-379.0</x>
+        <y>500.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -611,8 +611,8 @@
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>setSinkRate</method>
-        <x>-220.0</x>
-        <y>530.0</y>
+        <x>-233.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -637,8 +637,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>Manager</method>
-        <x>-443.0</x>
-        <y>555.0</y>
+        <x>-420.0</x>
+        <y>553.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -749,16 +749,16 @@
         <type>FAMIXAttribute</type>
         <class>ManageThread</class>
         <attribute>manager</attribute>
-        <x>-401.0</x>
-        <y>399.0</y>
+        <x>-413.0</x>
+        <y>396.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>Manager</class>
         <attribute>animator</attribute>
         <hasClassScope />
-        <x>-446.0</x>
-        <y>480.0</y>
+        <x>-458.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -782,8 +782,8 @@
         <type>FAMIXAttribute</type>
         <class>MainMenuBar</class>
         <attribute>manager</attribute>
-        <x>48.0</x>
-        <y>479.0</y>
+        <x>35.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -801,8 +801,8 @@
         <type>FAMIXMethod</type>
         <class>MainWindow</class>
         <method>MainWindow</method>
-        <x>-503.0</x>
-        <y>611.0</y>
+        <x>-516.0</x>
+        <y>608.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -814,15 +814,15 @@
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>DEFAULT_RETURN_DEPTH_TOP</attribute>
-        <x>-199.0</x>
-        <y>480.0</y>
+        <x>-211.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>MainWindow</class>
         <method>getManager</method>
-        <x>-543.0</x>
-        <y>636.0</y>
+        <x>-556.0</x>
+        <y>633.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -853,8 +853,8 @@
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>isReleased</attribute>
-        <x>-219.0</x>
-        <y>505.0</y>
+        <x>-232.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -874,8 +874,8 @@
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>Diver</method>
-        <x>-282.0</x>
-        <y>530.0</y>
+        <x>-295.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -892,22 +892,22 @@
     <element>
         <type>FAMIXClass</type>
         <class>MainWindow</class>
-        <x>-511.0</x>
-        <y>633.0</y>
+        <x>-524.0</x>
+        <y>631.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>getDepth</method>
-        <x>-234.0</x>
-        <y>555.0</y>
+        <x>-246.0</x>
+        <y>552.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>&lt;init&gt;</method>
-        <x>-553.0</x>
-        <y>530.0</y>
+        <x>-566.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -940,8 +940,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>stopThread</method>
-        <x>-484.0</x>
-        <y>555.0</y>
+        <x>-497.0</x>
+        <y>552.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1022,15 +1022,15 @@
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>DEFAULT_RETURN_DEPTH_BOTTOM</attribute>
-        <x>-47.0</x>
-        <y>480.0</y>
+        <x>-60.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>ManageThread</class>
         <method>run</method>
-        <x>-369.0</x>
-        <y>399.0</y>
+        <x>-382.0</x>
+        <y>396.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1054,8 +1054,8 @@
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>sinkRate</attribute>
-        <x>-259.0</x>
-        <y>505.0</y>
+        <x>-271.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1067,8 +1067,8 @@
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>getIsReleased</method>
-        <x>-171.0</x>
-        <y>505.0</y>
+        <x>-183.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -1081,8 +1081,8 @@
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>setDepth</method>
-        <x>-314.0</x>
-        <y>530.0</y>
+        <x>-326.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1133,8 +1133,8 @@
         <type>FAMIXAttribute</type>
         <class>Manager</class>
         <attribute>shallThreadRun</attribute>
-        <x>-536.0</x>
-        <y>505.0</y>
+        <x>-549.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1146,8 +1146,8 @@
         <type>FAMIXAttribute</type>
         <class>Diver</class>
         <attribute>DEFAULT_SINKRATE</attribute>
-        <x>-295.0</x>
-        <y>480.0</y>
+        <x>-307.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -1195,27 +1195,27 @@
         <class>Manager</class>
         <attribute>manageThread</attribute>
         <hasClassScope />
-        <x>-477.0</x>
-        <y>505.0</y>
+        <x>-490.0</x>
+        <y>502.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Diver</class>
         <method>release</method>
-        <x>-317.0</x>
-        <y>555.0</y>
+        <x>-329.0</x>
+        <y>552.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Main</class>
         <method>main</method>
         <hasClassScope>true</hasClassScope>
-        <x>-624.0</x>
-        <y>443.0</y>
+        <x>-636.0</x>
+        <y>441.0</y>
         <comment><![CDATA[Start here]]>
         </comment>
-        <commentx>-642.0</commentx>
-        <commenty>410.0</commenty>
+        <commentx>-655.0</commentx>
+        <commenty>408.0</commenty>
     </element>
     <element>
         <type>FAMIXAttribute</type>
@@ -1249,15 +1249,15 @@
         <type>FAMIXMethod</type>
         <class>MainWindow</class>
         <method>actionPerformed</method>
-        <x>-488.0</x>
-        <y>636.0</y>
+        <x>-500.0</x>
+        <y>633.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>ManageThread</class>
         <method>ManageThread</method>
-        <x>-391.0</x>
-        <y>424.0</y>
+        <x>-404.0</x>
+        <y>421.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1302,8 +1302,8 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>repaint</method>
-        <x>-457.0</x>
-        <y>530.0</y>
+        <x>-470.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -1342,15 +1342,15 @@
         <type>FAMIXMethod</type>
         <class>Manager</class>
         <method>getDiver</method>
-        <x>-423.0</x>
-        <y>530.0</y>
+        <x>-436.0</x>
+        <y>527.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>Manager</class>
         <attribute>diver</attribute>
-        <x>-554.0</x>
-        <y>480.0</y>
+        <x>-566.0</x>
+        <y>477.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -1367,8 +1367,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>ManageThread</class>
-        <x>-388.0</x>
-        <y>421.0</y>
+        <x>-401.0</x>
+        <y>419.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>

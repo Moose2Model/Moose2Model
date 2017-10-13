@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
 <elements>
-    <version>v0.4.0</version>
+    <version>v0.4.3</version>
     <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
@@ -127,8 +127,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramNoPackage</class>
         <method>classes</method>
-        <x>-730.0</x>
-        <y>281.0</y>
+        <x>-739.0</x>
+        <y>259.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -329,6 +329,7 @@
         <class>RWDiagramAttributeListTest</class>
         <x>137.0</x>
         <y>748.0</y>
+        <supressWithChildren>true</supressWithChildren>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -434,8 +435,8 @@
         <y>344.0</y>
         <comment><![CDATA[Here it is determined whether an element is displayed]]>
         </comment>
-        <commentx>-587.0</commentx>
-        <commenty>302.0</commenty>
+        <commentx>-532.0</commentx>
+        <commenty>291.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -514,8 +515,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramNoPackage</class>
-        <x>-732.0</x>
-        <y>289.0</y>
+        <x>-741.0</x>
+        <y>267.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
