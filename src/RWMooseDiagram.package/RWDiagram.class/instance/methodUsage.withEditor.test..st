@@ -61,8 +61,7 @@ Handles the modifies DBTable to color database tables differently
 								noBorder;
 								fillColor: Color transparent ].
 					rwLayout scope = rwLayout methodScope
-						ifTrue: [ displayedClasses := allClassesForPackage
-								select: [ :each | ((each dModifiers includesAnyOf: #(#DBTable) ) = false) or: each dModifiers isEmpty ] ]
+						ifTrue: [ displayedClasses := allClassesForPackage select: [ :each | (each dModifiers includesAnyOf: #(#DBTable)) = false or: each dModifiers isEmpty ] ]
 						ifFalse: [ displayedClasses := allClassesForPackage ].
 					rwEditor settings isReading
 						ifTrue: [ displayedClasses := displayedClasses reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
@@ -130,7 +129,7 @@ Handles the modifies DBTable to color database tables differently
 											b layout grid ].
 									b layout verticalLine ].
 							b layout grid ].
-					b layout grid "So that classes are arranged as grid" ] ].
+					b layout grid	"So that classes are arranged as grid" ] ].
 	" Draw comments for packages"
 	self
 		drawComments: b
@@ -189,7 +188,9 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 	b build.
 	lb := RTLegendBuilder new.
 	lb view: b view.
-	lb addText: 'Dependency graph'.
+	rwEditor settings displayFormatter
+		ifFalse: [ lb addText: 'Dependency graph' ]
+		ifTrue: [ lb addText: 'Dependency graph - Elements without permanent appearance changers are highlighted' ].
 	lb addText: 'Layout: ' , rwLayout name.
 	lb addColor: rwLayout colorSchema classColor text: 'Class'.
 	lb addColor: rwLayout colorSchema dataBaseTableColor text: 'Database table'.
