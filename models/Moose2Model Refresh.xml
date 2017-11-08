@@ -1,22 +1,34 @@
 <?xml version="1.0"?>
 <!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
 <elements>
-    <version>v0.4.3</version>
+    <version>v0.4.4</version>
     <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>methodUsage:withEditor:test:</method>
-        <x>-390.0</x>
-        <y>-21.0</y>
+        <x>-690.0</x>
+        <y>-51.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>refresh</method>
         <hasClassScope>true</hasClassScope>
-        <x>-293.0</x>
-        <y>-37.0</y>
+        <x>-594.0</x>
+        <y>-67.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -26,23 +38,31 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramElementGroupTest</class>
+        <method>testDAllClasses</method>
+        <x>-394.0</x>
+        <y>251.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>refresh</method>
-        <x>275.0</x>
-        <y>-15.0</y>
+        <x>-520.0</x>
+        <y>253.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElementGroupTest</class>
-        <x>-21.0</x>
-        <y>108.0</y>
+        <x>-397.0</x>
+        <y>273.0</y>
+        <supressWithChildren>true</supressWithChildren>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>refresh</method>
-        <x>-61.0</x>
-        <y>41.0</y>
+        <x>-511.0</x>
+        <y>112.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -54,79 +74,88 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElementTest</class>
         <method>testRefresh</method>
-        <x>119.0</x>
-        <y>-15.0</y>
+        <x>-322.0</x>
+        <y>88.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElementGroupTest</class>
+        <method>testDAllClassesOfPackage</method>
+        <x>-439.0</x>
+        <y>276.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagram</class>
-        <x>-350.0</x>
-        <y>-13.0</y>
+        <x>-651.0</x>
+        <y>-45.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramElementGroupTest</class>
         <method>testDAllMethods</method>
-        <x>-64.0</x>
-        <y>97.0</y>
+        <x>-488.0</x>
+        <y>244.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElementTest</class>
-        <x>119.0</x>
-        <y>-4.0</y>
+        <x>-322.0</x>
+        <y>99.0</y>
+        <supressWithChildren>true</supressWithChildren>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLayout</class>
-        <x>-61.0</x>
-        <y>52.0</y>
+        <x>-511.0</x>
+        <y>121.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramLayoutTest</class>
         <method>testEvaluateAppearance</method>
-        <x>-24.0</x>
-        <y>-15.0</y>
+        <x>-215.0</x>
+        <y>-126.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLayoutTest</class>
-        <x>-47.0</x>
-        <y>-4.0</y>
+        <x>-238.0</x>
+        <y>-116.0</y>
+        <supressWithChildren>true</supressWithChildren>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElement</class>
-        <x>275.0</x>
-        <y>-4.0</y>
+        <x>-520.0</x>
+        <y>261.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramElementGroupTest</class>
         <method>testDAllModelPackages</method>
-        <x>10.0</x>
-        <y>97.0</y>
+        <x>-344.0</x>
+        <y>273.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramEditor</class>
-        <x>-340.0</x>
-        <y>73.0</y>
+        <x>-772.0</x>
+        <y>138.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramLayoutTest</class>
         <method>testRefresh</method>
-        <x>-91.0</x>
-        <y>-15.0</y>
+        <x>-282.0</x>
+        <y>-126.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>refresh</method>
         <hasClassScope>true</hasClassScope>
-        <x>-340.0</x>
-        <y>62.0</y>
+        <x>-772.0</x>
+        <y>127.0</y>
     </element>
 </elements>
