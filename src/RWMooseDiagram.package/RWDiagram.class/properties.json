@@ -4,7 +4,9 @@
 	"category" : "RWMooseDiagram-editor",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"path"
+	],
 	"instvars" : [ ],
 	"name" : "RWDiagram",
 	"type" : "normal"

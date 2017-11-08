@@ -14,7 +14,9 @@
 		"processedRTView",
 		"layouts",
 		"settings",
-		"globalComments"
+		"globalComments",
+		"lastUsedView",
+		"lastUsedClassGroup"
 	],
 	"name" : "RWDiagramEditor",
 	"type" : "normal"

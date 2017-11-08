@@ -1,6 +1,6 @@
 *RWMooseDiagram
 generateMoose2ModelDiagram
-	| aRWDElementGroup diagram view |
+	| aRWDElementGroup diagram view e |
 	diagram := RWDiagram new.
 	aRWDElementGroup := RWDiagramElementGroup new.
 	self
@@ -17,4 +17,6 @@ generateMoose2ModelDiagram
 		ifNotNil: [ view inspect.
 			diagram
 				readToRTView: view
-				withEditor: RWDiagramEditor uniqueInstance ]
+				withEditor: RWDiagramEditor uniqueInstance.
+				    e := RWDiagramEditor uniqueInstance.
+				    e lastUsedView: view ]
