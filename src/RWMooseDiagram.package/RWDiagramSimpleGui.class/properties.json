@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "RWMooseDiagram-frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"instance"
+	],
+	"instvars" : [
+		"myColor",
+		"lastLayout"
+	],
+	"name" : "RWDiagramSimpleGui",
+	"type" : "normal"
+}
