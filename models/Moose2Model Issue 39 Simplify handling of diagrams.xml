@@ -8,7 +8,7 @@
         <class>RWDiagram</class>
         <method>rememberRTView:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-638.0</x>
+        <x>-592.0</x>
         <y>-19.0</y>
     </element>
     <element>
@@ -16,23 +16,23 @@
         <class>RWDiagram</class>
         <method>refresh</method>
         <hasClassScope>true</hasClassScope>
-        <x>-409.0</x>
-        <y>2.0</y>
+        <x>-697.0</x>
+        <y>-44.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>RWDiagramEditor</class>
         <attribute>lastUsedClassGroup</attribute>
-        <x>-933.0</x>
-        <y>202.0</y>
+        <x>-955.0</x>
+        <y>251.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>path</method>
         <hasClassScope>true</hasClassScope>
-        <x>-705.0</x>
-        <y>-73.0</y>
+        <x>-793.0</x>
+        <y>-20.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -50,23 +50,23 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramAbstractAttributesLayoutChanger</class>
         <method>currentLayout</method>
-        <x>-253.0</x>
-        <y>163.0</y>
+        <x>-408.0</x>
+        <y>79.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>readFromPath:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-292.0</x>
-        <y>-27.0</y>
+        <x>-528.0</x>
+        <y>-19.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>lastUsedClassGroup</method>
-        <x>-888.0</x>
-        <y>151.0</y>
+        <x>-926.0</x>
+        <y>209.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -93,20 +93,20 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>refresh</method>
-        <x>-446.0</x>
-        <y>221.0</y>
+        <x>-511.0</x>
+        <y>202.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>readLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-367.0</x>
-        <y>-91.0</y>
+        <x>-594.0</x>
+        <y>-98.0</y>
         <comment><![CDATA[A fast way to set a layout,<br>refresh it and read his data from file]]>
         </comment>
-        <commentx>-322.0</commentx>
-        <commenty>-159.0</commenty>
+        <commentx>-575.0</commentx>
+        <commenty>-183.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -130,8 +130,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>lastUsedView:</method>
-        <x>-1092.0</x>
-        <y>149.0</y>
+        <x>-1084.0</x>
+        <y>190.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -149,15 +149,15 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>refresh</method>
-        <x>-518.0</x>
-        <y>137.0</y>
+        <x>-707.0</x>
+        <y>390.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>currentLayout</method>
-        <x>-829.0</x>
-        <y>255.0</y>
+        <x>-906.0</x>
+        <y>275.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -176,16 +176,16 @@
         <class>RWDiagram</class>
         <method>write:toPath:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-558.0</x>
-        <y>-30.0</y>
+        <x>-652.0</x>
+        <y>-19.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>RWDiagram</class>
         <attribute>path</attribute>
         <hasClassScope />
-        <x>-732.0</x>
-        <y>-31.0</y>
+        <x>-725.0</x>
+        <y>-44.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -217,8 +217,8 @@
         <class>RWDiagramElement</class>
         <method>refresh</method>
         <hasClassScope>true</hasClassScope>
-        <x>-415.0</x>
-        <y>221.0</y>
+        <x>-480.0</x>
+        <y>202.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -248,14 +248,14 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLayout</class>
-        <x>-518.0</x>
-        <y>147.0</y>
+        <x>-707.0</x>
+        <y>400.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElement</class>
-        <x>-431.0</x>
-        <y>233.0</y>
+        <x>-496.0</x>
+        <y>213.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -285,15 +285,15 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>currentLayoutName:</method>
-        <x>-835.0</x>
-        <y>192.0</y>
+        <x>-839.0</x>
+        <y>247.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>lastUsedView</method>
-        <x>-1034.0</x>
-        <y>150.0</y>
+        <x>-1017.0</x>
+        <y>189.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -311,8 +311,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>lastUsedClassGroup:</method>
-        <x>-964.0</x>
-        <y>149.0</y>
+        <x>-963.0</x>
+        <y>199.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -329,16 +329,16 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramAbstractAttributesLayoutChanger</class>
-        <x>-253.0</x>
-        <y>170.0</y>
+        <x>-408.0</x>
+        <y>86.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>currentLayoutName:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-503.0</x>
-        <y>62.0</y>
+        <x>-549.0</x>
+        <y>-45.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -351,14 +351,14 @@
         <type>FAMIXAttribute</type>
         <class>RWDiagramEditor</class>
         <attribute>lastUsedView</attribute>
-        <x>-1064.0</x>
-        <y>197.0</y>
+        <x>-1054.0</x>
+        <y>250.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramEditor</class>
-        <x>-979.0</x>
-        <y>241.0</y>
+        <x>-1010.0</x>
+        <y>284.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -368,8 +368,6 @@
         <y>20.0</y>
         <comment><![CDATA[A new option to set a FAMIX Class Group as current<br>without displaying a diagram.]]>
         </comment>
-        <commentx>-1042.0</commentx>
-        <commenty>-87.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -378,7 +376,6 @@
         <hasClassScope>true</hasClassScope>
         <x>-1030.0</x>
         <y>292.0</y>
-        <supressWithChildren>true</supressWithChildren>
     </element>
     <element>
         <type>FAMIXMethod</type>
