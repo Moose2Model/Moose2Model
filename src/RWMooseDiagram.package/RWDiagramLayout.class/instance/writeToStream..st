@@ -6,7 +6,7 @@ writeToStream: aStream
 		enablePrettyPrinting;
 		xml;
 		lineBreak: String crlf;
-		comment: 'Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file'.
+		comment: 'Moose2Model Layout data, visit moose2model.org on how to use this file'.
 	writer tag
 		name: #elements;
 		with: [ writer tag: #version with: self actualVersion.
