@@ -113,7 +113,7 @@ testWriteToStream
 	aStartStream
 		nextPutAll: '<?xml version="1.0"?>';
 		crlf;
-		nextPutAll: '<!--Moose2Model Layout data, see www.moose2model.org on how to use this file-->';
+		nextPutAll: '<!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->';
 		crlf;
 		nextPutAll: '<elements>';
 		crlf;

@@ -1,6 +1,6 @@
 initialization
 initialize
 	super initialize.
-	myColor := Color veryLightGray.
+	myColor := Color lightGreen.
 	lastLayout := 'Not yet set'.
-	self extent: 1000 @ 100
+	self extent: 1000 @ 43
