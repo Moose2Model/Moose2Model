@@ -192,13 +192,13 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 		ifFalse: [ lb addText: 'Dependency graph' ]
 		ifTrue: [ lb addText: 'Dependency graph - Elements without permanent appearance changers are highlighted' ].
 	lb addText: 'Layout: ' , rwLayout name.
-	lb addColor: rwLayout colorSchema classColor text: 'Class'.
-	lb addColor: rwLayout colorSchema dataBaseTableColor text: 'Database table'.
-	lb addColor: rwLayout colorSchema dataBaseAsAttributeColor text: 'Dummy Attribute for DataBase Table '.
-	lb addColor: rwLayout colorSchema attributeColor text: 'Class attribute or Dummy Attribute for DataBase Table'.
-	lb addColor: rwLayout colorSchema methodColor text: 'Class method'.
-	lb addLineColor: rwLayout colorSchema attributeLineColor text: 'Access to attribute'.
-	lb addLineColor: rwLayout colorSchema methodLineColor text: 'Invocation between methods'.
+	lb addColor: rwLayout colorSchema classColor text: 'Class or interface or a grouping that is mapped to class'.
+	"lb addColor: rwLayout colorSchema dataBaseTableColor text: 'Database table'."
+	lb addColor: rwLayout colorSchema dataBaseAsAttributeColor text: 'DataBase Table'.
+	lb addColor: rwLayout colorSchema attributeColor text: '"Data" - Class or interface attribute'.
+	lb addColor: rwLayout colorSchema methodColor text: '"Coding" - Class method or some element that is mapped to class method'.
+	lb addLineColor: rwLayout colorSchema attributeLineColor text: 'Access to "Data" resp. attribute'.
+	lb addLineColor: rwLayout colorSchema methodLineColor text: 'Invocation between "Coding" resp. methods, the arrow points to the used one'.
 	lb build.
 	RWDiagramAnonymize anonymize: false.
 	^ b
