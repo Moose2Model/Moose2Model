@@ -4,7 +4,7 @@ This is a software exploration tool to support developers during their work.
 
 # Documentation
 
-The documentation is in the Wiki of this repository
+The documentation is in the Wiki of this repository (Go to the tab "Wiki").
 
 # Further
 
