@@ -10,6 +10,8 @@ The documentation is in the Wiki of this repository (Go to the tab "Wiki").
 
 The intention of this tool is explained in this blogs: [Legacy Code – Storing the mental model in diagrams](https://blogs.sap.com/2017/06/08/legacy-code-storing-the-mental-model-in-diagrams/) and [Software exploration tool for developers (ABAP, SAP, Java, C, Smalltalk, …) – Roadmap](https://blogs.sap.com/2017/07/23/software-exploration-tool-next-steps/).
 
+See also the most recent presentation [Survive the Chaos - S4H151 - SAP TechED Barcelona 2017 - Lecture](https://www.slideshare.net/RainerWinkler/survive-the-chaos-s4h151-sap-teched-barcelona-2017-lecture-82319920) and the video [Training video of presentation](https://www.youtube.com/watch?v=f_9kkB92TCM&feature=youtu.be&t=1726).
+
 It can be used in projects. The tool is currently improved, see the Roadmap in the above blog. Feel free to open an issue if you find errors or if you would like to have certain functions.
 
 It can generate diagrams like this:
