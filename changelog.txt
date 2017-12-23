@@ -8,6 +8,10 @@ Legend
 + : added
 - : removed
 
+22.12.2017 v0.4.6
+-----------------
+* Handle cases when openLInk or getLink to where performed on sources that do not understand fileName #43
+
 11.11.2017 v0.4.5
 -----------------
 
