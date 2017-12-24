@@ -1,5 +1,5 @@
 *RWMooseDiagram
-viewRWDiagramDependency
+moose2ModelDependency
 	<menuItem: 'Display Diagram' category: 'Moose2Model'>
 	self inform: 'Use "Moose2Model with formatting info" to get a hint on how a diagram is generated'.
 	RWDiagramEditor uniqueInstance settings displayFormatter: false.

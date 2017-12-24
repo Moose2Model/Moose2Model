@@ -1,5 +1,5 @@
 *RWMooseDiagram
-viewRWDiagramDependencyInfo
+moose2ModelDependencyInfo
 	<menuItem: 'Display with formatting info' category: 'Moose2Model'>
 	self
 		inform:
