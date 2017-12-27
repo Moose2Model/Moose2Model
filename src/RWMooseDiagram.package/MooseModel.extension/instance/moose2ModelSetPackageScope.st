@@ -1,4 +1,4 @@
 *RWMooseDiagram
 moose2ModelSetPackageScope
-	<menuItem: 'Display only packages' category: 'Moose2Model'>
+	<menuItem: 'Set mode to display only packages' category: 'Moose2Model'>
 	RWDiagram setPackageScope 
