@@ -13,6 +13,7 @@ methodsWithEditor: rwEditor class: clsRWDiagramElement layout: rwLayout mondrian
 	displayedMethods := clsRWDiagramElement dMethods collect:[:each | (each asRWDiagramElement: rwLayout)].
 	rwEditor settings isReading
 		ifTrue: [ displayedMethods := displayedMethods reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+   b interaction menu item: 'Add with Neighbours' action:  [ :e | RWDiagram suppressOthersUsedByLayers: 1 usingLayers: 1 to: e model.  ].		
 	b nodes: displayedMethods.
 	b layout grid.
 	self
