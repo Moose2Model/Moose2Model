@@ -1,0 +1,3 @@
+accessing
+comment
+	^ RWDiagramNoComment new
