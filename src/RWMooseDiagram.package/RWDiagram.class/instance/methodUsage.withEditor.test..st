@@ -37,6 +37,21 @@ Handles the modifies DBTable to color database tables differently
 		ifTrue: [ allPackages := allPackages reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
 	b := RTMondrian new.
 	b view @ RTZoomableView.
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Draw again' action: [ :e | RWDiagram drawDiagram ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Draw again with formatting info' action: [ :e | RWDiagram drawDiagramWithFormattingInfo ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Remember to File' action: [ :e | RWDiagram rememberLastUsedDiagram ]).
 	rwEditor settings packageBoxSuppressed
 		ifFalse: [ b shape rectangle
 				withTextAbove: #dName;
