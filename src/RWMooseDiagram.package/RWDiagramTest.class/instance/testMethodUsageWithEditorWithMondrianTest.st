@@ -1,5 +1,5 @@
-as yet unclassified
-testMethodUsageWithEditorTest
+tests
+testMethodUsageWithEditorWithMondrianTest
 	| classes diagram aRWDElementGroup view |
 	classes := FAMIXClassGroup
 		withAll:

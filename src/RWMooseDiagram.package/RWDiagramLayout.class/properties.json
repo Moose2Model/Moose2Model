@@ -14,7 +14,8 @@
 		"suppressOthersActive",
 		"replaceMooseEntities",
 		"readFileVersion",
-		"scope"
+		"scope",
+		"lineStyle"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"
