@@ -11,6 +11,7 @@ generateMoose2ModelDiagram
 	view := diagram
 		methodUsage: aRWDElementGroup
 		withEditor: RWDiagramEditor uniqueInstance
+		 withMondrian: nil
 		test: false.
 	view
 		ifNil: [ self inform: 'Generation of View aborted due to user request' ]
