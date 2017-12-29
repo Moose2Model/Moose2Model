@@ -1,3 +1,3 @@
 version
 actualVersion
-	^ 'v0.4.6'
+	^ 'v1.0.0'

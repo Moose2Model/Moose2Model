@@ -47,7 +47,7 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Draw in same Window (Work in progress)'
+						item: 'Redraw in same Window'
 							action: [ :e | 
 							e clean.
 							self
