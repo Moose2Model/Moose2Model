@@ -50,16 +50,33 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
+						item: 'Layout: ' , rwLayout name action: [ :e | self inform: rwLayout name ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
 						item: 'Redraw in same Window'
 							action: [ :e | 
-							e clean.
+							rwEditor settings displayFormatter: false.
 							self
-								methodUsage: aRWDiagramElementGroup
+								redraw: aRWDiagramElementGroup
+								view: e
 								withEditor: rwEditor
-								withMondrian: b
-								test: isTest.
-							self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance.
-							e signalUpdate ]).
+								mondrian: b
+								test: isTest ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Redraw in same Window with formatting info'
+							action: [ :e | 
+							rwEditor settings displayFormatter: true.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]).
 			b view
 				@
 					(RTMenuActivable
@@ -79,12 +96,67 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Lines straight' action: [ :e | rwLayout lineStyle: rwLayout straightLineStyle ]).
+						item: 'Lines straight (redraw)'
+							action: [ :e | 
+							rwLayout lineStyle: rwLayout straightLineStyle.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]).
 			b view
 				@
 					(RTMenuActivable
 						new;
-						item: 'Lines multiline' action: [ :e | rwLayout lineStyle: rwLayout multiLineStyle ]) ].
+						item: 'Lines multiline (redraw)'
+							action: [ :e | 
+							rwLayout lineStyle: rwLayout multiLineStyle.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Set mode to display methods, attributes, classes and packages (Default)'
+							action: [ :e | 
+							rwLayout scope: rwLayout methodScope.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Set mode to display classes and packages'
+							action: [ :e | 
+							rwLayout scope: rwLayout classScope.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Set mode to display only packages'
+							action: [ :e | 
+							rwLayout scope: rwLayout packageScope.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]) ].
 	rwEditor settings packageBoxSuppressed
 		ifFalse: [ b shape rectangle
 				withTextAbove: #dName;
