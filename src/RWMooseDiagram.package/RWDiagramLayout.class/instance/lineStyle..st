@@ -1,3 +1,3 @@
-scope
+linestyle
 lineStyle: aLineStyle 
 	lineStyle := aLineStyle

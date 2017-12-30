@@ -15,16 +15,13 @@ Handles the modifies DBTable to color database tables differently
 	<RWDiaEdit_70>
 	<duplicate_database_attr_color>
 	<menuItem: 'RW Method Usages in Packages d' category: 'Visualize'>
-	| b isRebuild lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods newLineType |
+	| b isRebuild lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods  |
 	"Connect elements to comments"
 	"b edges objects: comments; connectToAll: #mooseID."
 	"b edges elements: b view elements; source: (aFAMIXGroup flatCollect: [:e | e mooseID ]) connectFrom: #mooseID to: #mooseID."
 	"Now assign the arrows after all nodes are calculated"
 	aRTMondrian ifNil: [ isRebuild := false ] ifNotNil: [ isRebuild := true ].
 	rwLayout := rwEditor currentLayout.
-	rwLayout lineStyle = rwLayout multiLineStyle
-		ifTrue: [ newLineType := true ]
-		ifFalse: [ newLineType := false ].
 	isTest
 		ifFalse: [ rwLayout scope = rwLayout methodScope
 				ifTrue: [ rwLayout elementGroup elementList size = 0
@@ -96,7 +93,7 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Lines straight (redraw)'
+						item: 'Lines straight'
 							action: [ :e | 
 							rwLayout lineStyle: rwLayout straightLineStyle.
 							self
@@ -109,9 +106,22 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Lines multiline (redraw)'
+						item: 'Lines multiline'
 							action: [ :e | 
 							rwLayout lineStyle: rwLayout multiLineStyle.
+							self
+								redraw: aRWDiagramElementGroup
+								view: e
+								withEditor: rwEditor
+								mondrian: b
+								test: isTest ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Lines multiline (horizontal)'
+							action: [ :e | 
+							rwLayout lineStyle: rwLayout multiLineStyle2.
 							self
 								redraw: aRWDiagramElementGroup
 								view: e
@@ -264,16 +274,24 @@ Handles the modifies DBTable to color database tables differently
 	aRWDiagramElementGroup setAccesses.
 	(rwLayout scope = rwLayout packageScope or: [ rwLayout scope = rwLayout classScope ])
 		ifTrue: [ "Draw arrows for packages and classes"
-			newLineType
-				ifFalse: [ b shape arrowedLine
+			rwLayout lineStyle = rwLayout straightLineStyle
+				ifTrue: [ b shape arrowedLine
 						color: rwLayout colorSchema methodLineColor;
 						withShorterDistanceAttachPoint.
-					b shape head color: rwLayout colorSchema methodLineColor ]
+					b shape head color: rwLayout colorSchema methodLineColor ].
+			rwLayout lineStyle = rwLayout multiLineStyle
 				ifTrue: [ b shape: RTStyledMultiLine new.
 					b shape arrowHead
 						color: rwLayout colorSchema methodLineColor;
 						withShorterDistanceAttachPoint;
 						orthoVertical.
+					b shape head color: rwLayout colorSchema methodLineColor ].
+			rwLayout lineStyle = rwLayout multiLineStyle2
+				ifTrue: [ b shape: RTStyledMultiLine new.
+					b shape arrowHead
+						color: rwLayout colorSchema methodLineColor;
+						withShorterDistanceAttachPoint;
+						orthoHorizontal.
 					b shape head color: rwLayout colorSchema methodLineColor ].
 			rwLayout scope = rwLayout packageScope
 				ifTrue: [ b edges
@@ -283,15 +301,22 @@ Handles the modifies DBTable to color database tables differently
 						objects: aRWDiagramElementGroup dAllClasses;
 						connectToAll: [ :m | m connectedTo ] ].
 			"Draw access line for packages and classes"
-			newLineType
-				ifFalse: [ b shape line
+			rwLayout lineStyle = rwLayout straightLineStyle
+				ifTrue: [ b shape line
 						color: rwLayout colorSchema attributeLineColor;
-						withShorterDistanceAttachPoint ]
+						withShorterDistanceAttachPoint ].
+			rwLayout lineStyle = rwLayout multiLineStyle
 				ifTrue: [ b shape: RTStyledMultiLine new.
 					b shape arrowHead
 						color: rwLayout colorSchema attributeLineColor;
 						withShorterDistanceAttachPoint;
 						orthoVertical ].
+			rwLayout lineStyle = rwLayout multiLineStyle2
+				ifTrue: [ b shape: RTStyledMultiLine new.
+					b shape arrowHead
+						color: rwLayout colorSchema attributeLineColor;
+						withShorterDistanceAttachPoint;
+						orthoHorizontal ].
 			rwLayout scope = rwLayout packageScope
 				ifTrue: [ b edges
 						objects: aRWDiagramElementGroup dAllModelPackages;
@@ -305,29 +330,44 @@ Handles the modifies DBTable to color database tables differently
 		ifTrue: [ allMethods := allMethods reject: [ :m | rwLayout isModelElementNotShownWithChildren: m ] ].
 	allPackages
 		do: [ :pack | 
-			newLineType
-				ifFalse: [ b shape arrowedLine
+			rwLayout lineStyle = rwLayout straightLineStyle
+				ifTrue: [ b shape arrowedLine
 						color: rwLayout colorSchema methodLineColor;
 						withShorterDistanceAttachPoint.
-					b shape head color: rwLayout colorSchema methodLineColor ]
+					b shape head color: rwLayout colorSchema methodLineColor ].
+			rwLayout lineStyle = rwLayout multiLineStyle
 				ifTrue: [ b shape: RTStyledMultiLine new.
 					b shape arrowHead
 						color: rwLayout colorSchema methodLineColor;
 						withShorterDistanceAttachPoint;
 						orthoVertical.
 					b shape head color: rwLayout colorSchema methodLineColor ].
+			rwLayout lineStyle = rwLayout multiLineStyle2
+				ifTrue: [ b shape: RTStyledMultiLine new.
+					b shape arrowHead
+						color: rwLayout colorSchema methodLineColor;
+						withShorterDistanceAttachPoint;
+						orthoHorizontal.
+					b shape head color: rwLayout colorSchema methodLineColor ].
 			b edges
 				objects: allMethods;
 				connectToAll: [ :m | (m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod) collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ].	" "
-			newLineType
-				ifFalse: [ b shape line
+			rwLayout lineStyle = rwLayout straightLineStyle
+				ifTrue: [ b shape line
 						color: rwLayout colorSchema attributeLineColor;
-						withShorterDistanceAttachPoint ]
+						withShorterDistanceAttachPoint ].
+			rwLayout lineStyle = rwLayout multiLineStyle
 				ifTrue: [ b shape: RTStyledMultiLine new.
 					b shape
 						color: rwLayout colorSchema attributeLineColor;
 						withShorterDistanceAttachPoint;
 						orthoVertical ].
+			rwLayout lineStyle = rwLayout multiLineStyle2
+				ifTrue: [ b shape: RTStyledMultiLine new.
+					b shape
+						color: rwLayout colorSchema attributeLineColor;
+						withShorterDistanceAttachPoint;
+						orthoHorizontal ].
 			b edges
 				elements: b view elements;
 				"Use if allAccesses returns something: 
