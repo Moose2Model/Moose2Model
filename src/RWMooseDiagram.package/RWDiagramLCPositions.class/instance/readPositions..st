@@ -4,6 +4,7 @@ readPositions: aRTView
 	log := false.
 	log ifTrue:[Transcript cr; show: 'Read positions'; cr.].
 	self currentLayout replaceMooseEntities: true.
+	self currentLayout snapToGrid reset.
 	aRTView elements
 		do: [ :element1 | 
 			(element1 model class inheritsFrom: RWDiagramAbstractComment)
@@ -20,7 +21,7 @@ readPositions: aRTView
 							attributeList := self currentLayout readAttributesFromFAMIXElement: aRWDiagramElement.
 							attributeList attributeIsSpecified
 								ifTrue: [ attributeList position positionIsDetermined
-										ifTrue: [ element1 translateTo: attributeList position point.
+										ifTrue: [ element1 translateTo: ( ( self currentLayout snapToGrid) element: element1 model famixElement  snap: attributeList position point).
 											log
 												ifTrue: [ Transcript show: element1 model asString, ' to ',attributeList position point x asString, '@',attributeList position point y asString; cr  ] ] ] ] ] ].
 	self currentLayout replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined

@@ -15,7 +15,7 @@ Handles the modifies DBTable to color database tables differently
 	<RWDiaEdit_70>
 	<duplicate_database_attr_color>
 	<menuItem: 'RW Method Usages in Packages d' category: 'Visualize'>
-	| b isRebuild lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods  |
+	| b isRebuild lb rwLayout allPackages displayedClasses allClassesForPackage dataBaseTables displayedAttributes allMethods |
 	"Connect elements to comments"
 	"b edges objects: comments; connectToAll: #mooseID."
 	"b edges elements: b view elements; source: (aFAMIXGroup flatCollect: [:e | e mooseID ]) connectFrom: #mooseID to: #mooseID."
@@ -166,7 +166,17 @@ Handles the modifies DBTable to color database tables differently
 								view: e
 								withEditor: rwEditor
 								mondrian: b
-								test: isTest ]) ].
+								test: isTest ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Activate Snapping' action: [ :e | rwLayout snapToGrid gridX: 5. rwLayout snapToGrid gridY: 5.rwLayout snapToGrid active: true ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Deactivate Snapping' action: [ :e | rwLayout snapToGrid active: false ]) ].
 	rwEditor settings packageBoxSuppressed
 		ifFalse: [ b shape rectangle
 				withTextAbove: #dName;

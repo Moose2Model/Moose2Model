@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "RainerWinkler 12/30/2017 21:27",
+	"super" : "RWDiagram",
+	"category" : "RWMooseDiagram-editor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"startX",
+		"startY",
+		"gridX",
+		"gridY",
+		"history",
+		"active"
+	],
+	"name" : "RWDiagramSnapToGrid",
+	"type" : "normal"
+}

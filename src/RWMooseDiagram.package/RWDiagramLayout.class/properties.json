@@ -15,7 +15,8 @@
 		"replaceMooseEntities",
 		"readFileVersion",
 		"scope",
-		"lineStyle"
+		"lineStyle",
+		"snapToGrid"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"
