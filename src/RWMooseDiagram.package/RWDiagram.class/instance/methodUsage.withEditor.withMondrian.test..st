@@ -42,7 +42,7 @@ Handles the modifies DBTable to color database tables differently
 		ifFalse: [ b := RTMondrian new ]
 		ifTrue: [ b := aRTMondrian ].
 	isRebuild
-		ifFalse: [ b view @ RTZoomableView."Do not add more than a single time to prevent problems with too much zooming per step"
+		ifFalse: [ b view @ RTZoomableView.	"Do not add more than a single time to prevent problems with too much zooming per step"
 			b view
 				@
 					(RTMenuActivable
@@ -171,16 +171,14 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Activate Snapping'
+						item: 'Snapp to Grid'
 							action: [ :e | 
 							rwLayout snapToGrid gridX: 5.
 							rwLayout snapToGrid gridY: 5.
-							rwLayout snapToGrid active: true ]).
-			b view
-				@
-					(RTMenuActivable
-						new;
-						item: 'Deactivate Snapping' action: [ :e | rwLayout snapToGrid active: false ]) ].
+							rwLayout snapToGrid active: true.
+							self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance.
+							rwLayout snapToGrid active: false.
+							e signalUpdate ])].
 	rwEditor settings packageBoxSuppressed
 		ifFalse: [ b shape rectangle
 				withTextAbove: #dName;
