@@ -16,7 +16,7 @@ readToRTView: aRTView messages: aBoolean
 				ifTrue: [ | lcp |
 					lcp := RWDiagramLCPositions new.
 					lcp
-						currentLayout: self currentLayout;
+						currentLayout2: self currentLayout;
 						readPositions: aRTView ] ].
 	self settings preventOverlapping
 		ifTrue: [ | lcPO |

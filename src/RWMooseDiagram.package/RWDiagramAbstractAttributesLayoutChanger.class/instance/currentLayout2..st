@@ -1,3 +1,3 @@
 as yet unclassified
-currentLayout: aRWDiagramLayout 
+currentLayout2: aRWDiagramLayout 
 	currentLayout := aRWDiagramLayout
