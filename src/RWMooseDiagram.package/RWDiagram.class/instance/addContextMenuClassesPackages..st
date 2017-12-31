@@ -13,4 +13,5 @@ addContextMenuClassesPackages: b
 		action: [ :e | 
 			(UIManager default question: 'Do you want to suppress element ' , e model name , 'with all contained elements')
 				ifTrue: [ RWDiagram suppressWithChildren: true to: e model ] ].
-	aRTMenuActivable item: 'Redo suppress with all contained classes, methods and attributes' action: [ :e | RWDiagram suppressWithChildren: false to: e model ]
+	aRTMenuActivable item: 'Redo suppress with all contained classes, methods and attributes' action: [ :e | RWDiagram suppressWithChildren: false to: e model ].
+	aRTMenuActivable item: 'Inspect' action: [ :e | e inspect ].
