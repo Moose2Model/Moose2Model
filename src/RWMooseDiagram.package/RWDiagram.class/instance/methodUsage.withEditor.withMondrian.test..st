@@ -41,9 +41,9 @@ Handles the modifies DBTable to color database tables differently
 	isRebuild
 		ifFalse: [ b := RTMondrian new ]
 		ifTrue: [ b := aRTMondrian ].
-	b view @ RTZoomableView.
 	isRebuild
-		ifFalse: [ b view
+		ifFalse: [ b view @ RTZoomableView."Do not add more than a single time to prevent problems with too much zooming per step"
+			b view
 				@
 					(RTMenuActivable
 						new;
@@ -171,7 +171,11 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Activate Snapping' action: [ :e | rwLayout snapToGrid gridX: 5. rwLayout snapToGrid gridY: 5.rwLayout snapToGrid active: true ]).
+						item: 'Activate Snapping'
+							action: [ :e | 
+							rwLayout snapToGrid gridX: 5.
+							rwLayout snapToGrid gridY: 5.
+							rwLayout snapToGrid active: true ]).
 			b view
 				@
 					(RTMenuActivable
