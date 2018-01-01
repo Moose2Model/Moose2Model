@@ -15,3 +15,5 @@ addContextMenuClassesPackages: b
 				ifTrue: [ RWDiagram suppressWithChildren: true to: e model ] ].
 	aRTMenuActivable item: 'Redo suppress with all contained classes, methods and attributes' action: [ :e | RWDiagram suppressWithChildren: false to: e model ].
 	aRTMenuActivable item: 'Inspect' action: [ :e | e inspect ].
+	aRTMenuActivable item: 'Copy Link to coding to Clipboard' action: [ :e | RWDiagram getLinkTo: e model ].
+	aRTMenuActivable item: 'Open URL to coding' action: [ :e | RWDiagram openLinkTo: e model ].

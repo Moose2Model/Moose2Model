@@ -44,3 +44,5 @@ addContextMenuAttributesMethods: b
 			c := UIManager default textEntry: 'Specify a new comment' title: '' entryText: e model attributeList comment text.
 			c ifNotNil: [ RWDiagram comment: c to: e model ] ].
 	aRTMenuActivable item: 'Inspect' action: [ :e | e inspect ].
+	aRTMenuActivable item: 'Copy Link to coding to Clipboard' action: [ :e | RWDiagram getLinkTo: e model ].
+	aRTMenuActivable item: 'Open URL to coding' action: [ :e | RWDiagram openLinkTo: e model ].
