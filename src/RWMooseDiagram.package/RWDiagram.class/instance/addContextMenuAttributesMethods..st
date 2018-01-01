@@ -12,6 +12,30 @@ addContextMenuAttributesMethods: b
 				usedByLayers: 1
 				usingLayers: 1
 				to: e model ].
+	aRTMenuActivable
+		item: 'Hightlight Used By'
+		action: [ :e | 
+			RWDiagram
+				highlightIncludingMe: false
+				usedByLayers: 1
+				usingLayers: 0
+				to: e model ].
+	aRTMenuActivable
+		item: 'Hightlight'
+		action: [ :e | 
+			RWDiagram
+				highlightIncludingMe: true
+				usedByLayers: 0
+				usingLayers: 0
+				to: e model ].
+	aRTMenuActivable
+		item: 'Hightlight Using'
+		action: [ :e | 
+			RWDiagram
+				highlightIncludingMe: false
+				usedByLayers: 0
+				usingLayers: 1
+				to: e model ].
 	aRTMenuActivable item: 'Remove all Highlighting' action: [ :e | RWDiagram removeTemporary ].
 	aRTMenuActivable
 		item: 'Comment'
