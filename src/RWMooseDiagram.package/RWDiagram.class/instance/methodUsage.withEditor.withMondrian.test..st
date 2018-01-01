@@ -78,17 +78,12 @@ Handles the modifies DBTable to color database tables differently
 				@
 					(RTMenuActivable
 						new;
-						item: 'Draw again' action: [ :e | RWDiagram drawDiagram ]).
+						item: 'Remember to File' action: [ :e | RWDiagram rememberWrite: e ]).
 			b view
 				@
 					(RTMenuActivable
 						new;
-						item: 'Draw again with formatting info' action: [ :e | RWDiagram drawDiagramWithFormattingInfo ]).
-			b view
-				@
-					(RTMenuActivable
-						new;
-						item: 'Remember to File' action: [ :e | RWDiagram rememberLastUsedDiagram ]).
+						item: 'Remember' action: [ :e | RWDiagram rememberRTView: e ]).
 			b view
 				@
 					(RTMenuActivable
@@ -178,7 +173,12 @@ Handles the modifies DBTable to color database tables differently
 							rwLayout snapToGrid active: true.
 							self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance.
 							rwLayout snapToGrid active: false.
-							e signalUpdate ])].
+							e signalUpdate ]).
+			b view
+				@
+					(RTMenuActivable
+						new;
+						item: 'Remove all Highlighting' action: [ :e | RWDiagram removeTemporary ]) ].
 	rwEditor settings packageBoxSuppressed
 		ifFalse: [ b shape rectangle
 				withTextAbove: #dName;
