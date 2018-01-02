@@ -31,7 +31,7 @@ testReadPositions
 	aRTElement model: 	localComments first.
 	view add: aRTElement.
 	rpos := RWDiagramLCPositions new.
-	rpos currentLayout: layout.
+	rpos currentLayout2: layout.
 	rpos readPositions: view.
 
 	count := 0.

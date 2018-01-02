@@ -11,6 +11,7 @@ generateMoose2ModelDiagram
 	view := diagram
 		methodUsage: aRWDElementGroup
 		withEditor: RWDiagramEditor uniqueInstance
+		withLayout: nil
 		 withMondrian: nil
 		test: false.
 	view
