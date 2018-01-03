@@ -37,7 +37,10 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Remember to File' action: [ :e | RWDiagram rememberWrite: e ]).
+				item: 'Remember to File'
+					action: [ :e | 
+					rwEditor rememberRTView: b view to: rwLayout.
+					RWDiagram write: b view toPath: RWDiagram path	"RWDiagram rememberWrite: e" ]).
 	b view
 		@
 			(RTMenuActivable
@@ -140,7 +143,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 					rwLayout snapToGrid gridX: 5.
 					rwLayout snapToGrid gridY: 5.
 					rwLayout snapToGrid active: true.
-					self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance.
+					self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance withLayout: rwLayout.
 					rwLayout snapToGrid active: false.
 					e signalUpdate ]).
 	b view

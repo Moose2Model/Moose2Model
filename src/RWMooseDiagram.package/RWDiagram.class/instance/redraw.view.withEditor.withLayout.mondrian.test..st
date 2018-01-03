@@ -7,5 +7,5 @@ redraw: aRWDiagramElementGroup view: e withEditor: rwEditor withLayout: aRWDiagr
 		withLayout: aRWDiagramLayout
 		withMondrian: b
 		test: isTest.
-	self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance.
+	self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance withLayout: aRWDiagramLayout.
 	^ e signalUpdate

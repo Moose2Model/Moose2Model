@@ -1,5 +1,5 @@
 reading
-readToRTView: aRTView messages: aBoolean
+readToRTView: aRTView layout: aRWDiagramLayout messages: aBoolean
 	"Apply directy to an RTView
    apply selv view on a RTMondrian to get this view"
 
@@ -9,14 +9,14 @@ readToRTView: aRTView messages: aBoolean
 		ifTrue: [ | lcLayers |
 			lcLayers := RWDiagramLCPLayers new.
 			lcLayers
-				currentLayout: self currentLayout;
+				currentLayout: aRWDiagramLayout;
 				offsetY: self settings offsetY;
 				readLayers: aRTView ]
 		ifFalse: [ self settings isReadingPosition
 				ifTrue: [ | lcp |
 					lcp := RWDiagramLCPositions new.
 					lcp
-						currentLayout2: self currentLayout;
+						currentLayout2: aRWDiagramLayout;
 						readPositions: aRTView ] ].
 	self settings preventOverlapping
 		ifTrue: [ | lcPO |
@@ -26,4 +26,4 @@ readToRTView: aRTView messages: aBoolean
 				repeat: self settings lCPORepeat;
 				maxChecks: self settings lCPOMaxChecks;
 				preventOverlappings: aRTView messages: aBoolean ].
-	self currentLayout processedRTView: aRTView
+	aRWDiagramLayout processedRTView: aRTView

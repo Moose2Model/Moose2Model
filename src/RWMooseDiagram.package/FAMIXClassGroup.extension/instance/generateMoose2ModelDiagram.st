@@ -19,6 +19,7 @@ generateMoose2ModelDiagram
 		ifNotNil: [ view inspect.
 			diagram
 				readToRTView: view
-				withEditor: RWDiagramEditor uniqueInstance.
+				withEditor: RWDiagramEditor uniqueInstance
+				withLayout: RWDiagramEditor uniqueInstance currentLayout.
 				    e := RWDiagramEditor uniqueInstance.
 				    e lastUsedView: view ]
