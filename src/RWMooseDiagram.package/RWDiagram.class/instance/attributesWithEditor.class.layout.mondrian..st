@@ -13,7 +13,7 @@ attributesWithEditor: rwEditor class: clsRWDiagramElement layout: rwLayout mondr
 		withText: #dName;
 		fontSize: 6;
 		withTextColor: Color black.
-	self addContextMenuAttributesMethods: b.
+	self addContextMenuAttributesMethodsToMondrian: b ofLayout: rwLayout.
 	b nodes: displayedAttributes.
 	b layout grid.
 	self

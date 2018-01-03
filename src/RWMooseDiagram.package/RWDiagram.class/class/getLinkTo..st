@@ -1,9 +1,8 @@
 sourceAnchor
 getLinkTo: aModelElement
-	| e aRWDiagramElement |
+	| e |
 
 	"Copies the link to a Model Element
 	into the clipboard"
-	aRWDiagramElement := self convertToRWDiagramElement: aModelElement.
 	e := RWDiagramEditor uniqueInstance.
-	e currentLayout getLinkTo: aRWDiagramElement
+	self getLinkTo: aModelElement ofLayout: e currentLayout

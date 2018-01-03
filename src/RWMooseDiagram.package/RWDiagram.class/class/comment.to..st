@@ -1,11 +1,10 @@
 commenting
 comment: aString to: aModelElement
-	| e aRWDiagramElement |
+	| e |
 	<RWDiaEdit_9>
 	<RWDiaEdit_10>
 	<RWDiaEdit_63>
 	"Add a comment to a Model Element
 	Overwrites an existing comment"
-	aRWDiagramElement := self convertToRWDiagramElement: aModelElement.
 	e := RWDiagramEditor uniqueInstance.
-	e currentLayout comment: aString to: aRWDiagramElement
+	self comment: aString to: aModelElement ofLayout: e currentLayout

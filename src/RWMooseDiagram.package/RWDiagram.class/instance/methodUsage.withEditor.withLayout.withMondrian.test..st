@@ -65,7 +65,7 @@ Handles the modifies DBTable to color database tables differently
 				fillColor: Color transparent;
 				borderColor: Color black ]
 		ifTrue: [ b shape rectangle noBorder fillColor: Color transparent ].
-	self addContextMenuClassesPackages: b.
+	self addContextMenuClassesPackagesToMondrian: b ofLayout: rwLayout.
 	rwLayout scope = rwLayout packageScope
 		ifTrue: [ b nodes: allPackages ]
 		ifFalse: [ b
@@ -83,7 +83,7 @@ Handles the modifies DBTable to color database tables differently
 						ifTrue: [ b shape box
 								noBorder;
 								fillColor: Color transparent ].
-					self addContextMenuClassesPackages: b.
+					self addContextMenuClassesPackagesToMondrian: b ofLayout: rwLayout.
 					rwLayout scope = rwLayout methodScope
 						ifTrue: [ displayedClasses := allClassesForPackage
 								select: [ :each | 
@@ -153,7 +153,7 @@ Handles the modifies DBTable to color database tables differently
 												withText: #dName;
 												fontSize: 6;
 												withTextColor: Color black.
-											self addContextMenuAttributesMethods: b.
+											self addContextMenuAttributesMethodsToMondrian: b ofLayout: rwLayout.
 											b nodes: displayedAttributes.
 											b layout grid.
 											self

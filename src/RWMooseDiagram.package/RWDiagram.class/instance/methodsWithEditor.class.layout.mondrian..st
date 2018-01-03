@@ -18,7 +18,7 @@ methodsWithEditor: rwEditor class: clsRWDiagramElement layout: rwLayout mondrian
 	rwEditor settings isReading
 		ifTrue: [ displayedMethods := displayedMethods
 				reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
-	self addContextMenuAttributesMethods: b.
+	self addContextMenuAttributesMethodsToMondrian: b ofLayout: rwLayout.
 	b nodes: displayedMethods.
 	b layout grid.
 	self

@@ -150,4 +150,4 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Remove all Highlighting' action: [ :e | RWDiagram removeTemporary ])
+				item: 'Remove all Highlighting' action: [ :e | RWDiagram removeTemporaryOfLayout: rwLayout ])

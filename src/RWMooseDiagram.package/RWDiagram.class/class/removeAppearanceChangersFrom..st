@@ -5,4 +5,4 @@ removeAppearanceChangersFrom: aModelElement
 	| e |
 	"Remove all Appearance changes to element (Temporary and permanent)"
 	e := RWDiagramEditor uniqueInstance.
-	e currentLayout removeAppearanceChangersFrom: aModelElement
+	self removeAppearanceChangersFrom: aModelElement ofLayout: e currentLayout
