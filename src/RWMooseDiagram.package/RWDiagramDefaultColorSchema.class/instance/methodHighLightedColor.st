@@ -1,3 +1,3 @@
 as yet unclassified
 methodHighLightedColor
-	^ Color red
+	^ Color orange
