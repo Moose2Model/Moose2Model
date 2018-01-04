@@ -1,10 +1,15 @@
 MethodUsage-calledFromMoose
-addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout withMondrian: b test: isTest
+addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout withMondrian: b ofMooseModel: aMooseModel test: isTest
 	b view
 		@
 			(RTMenuActivable
 				new;
 				item: 'Layout: ' , rwLayout name action: [ :e | self inform: rwLayout name ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Model: ' , aMooseModel name action: [ :e | self inform: aMooseModel name ]).
 	b view
 		@
 			(RTMenuActivable
@@ -18,6 +23,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -32,6 +38,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -60,6 +67,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -75,6 +83,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -90,6 +99,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -104,6 +114,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -118,6 +129,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@
@@ -132,6 +144,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
+						ofMooseModel: aMooseModel 
 						test: isTest ]).
 	b view
 		@

@@ -1,5 +1,5 @@
 *RWMooseDiagram
-generateMoose2ModelDiagram
+generateMoose2ModelDiagramOfMooseModel: aMooseModel
 	| aRWDElementGroup diagram view e |
 	diagram := RWDiagram new.
 	aRWDElementGroup := RWDiagramElementGroup new.
@@ -13,6 +13,7 @@ generateMoose2ModelDiagram
 		withEditor: RWDiagramEditor uniqueInstance
 		withLayout: nil
 		 withMondrian: nil
+		ofMooseModel: aMooseModel
 		test: false.
 	view
 		ifNil: [ self inform: 'Generation of View aborted due to user request' ]

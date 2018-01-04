@@ -15,4 +15,4 @@ testMethodUsageWithEditorWithMondrianTest
 			aRWDElementGroup add: anFElement ].
 	view := diagram
 		methodUsage: aRWDElementGroup
-		withEditor: RWDiagramEditor new withLayout: nil withMondrian: nil test: true.
+		withEditor: RWDiagramEditor new withLayout: nil withMondrian: nil ofMooseModel: MooseModel new test: true.

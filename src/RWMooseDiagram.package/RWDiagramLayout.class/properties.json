@@ -16,7 +16,8 @@
 		"readFileVersion",
 		"scope",
 		"lineStyle",
-		"snapToGrid"
+		"snapToGrid",
+		"mooseID"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"
