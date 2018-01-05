@@ -1,9 +1,8 @@
 *RWMooseDiagram
 moose2ModelReadLayout
 	<menuItem: 'Read Layout from path and display' category: 'Moose2Model'>
-	| layout working layouts index |
-	working := RWDiagram path asFileReference.
-	layouts := (working children select: [ :e | e extension = 'xml' ]) collect: [ :e | e base ].
+	| layout layouts index |
+	layouts := RWDiagramLayoutManager new layoutsOfCurrentPath.
 	index := UIManager default chooseFrom: layouts.
 	index > 0
 		ifTrue: [ layout := layouts at: index.
