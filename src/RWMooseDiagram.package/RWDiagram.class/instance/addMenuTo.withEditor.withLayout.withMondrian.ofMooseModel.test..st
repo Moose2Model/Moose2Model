@@ -14,6 +14,11 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
+				item: 'List elements of Layout to Transcript: ' action: [ :e | rwLayout list ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
 				item: 'Redraw in same Window'
 					action: [ :e | 
 					rwEditor settings displayFormatter: false.

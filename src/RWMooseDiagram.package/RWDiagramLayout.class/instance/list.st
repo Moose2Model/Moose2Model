@@ -41,8 +41,10 @@ list
 								ifTrue: [ | l |
 									l := self elementListLength - streamElement size.
 									l timesRepeat: [ streamElement nextPut: Character space ] ].
+							streamElement contents = 'nil                                               ' ifTrue:[stream
+								nextPutAll: 'Element in xml but not in Model:'; nextPutAll: each uniqueKey.] ifFalse:[stream
+								nextPutAll: streamElement contents].	
 							stream
-								nextPutAll: streamElement contents;
 								nextPutAll: streamInfos contents;
 								nextPutAll: return;
 								nextPutAll: return ] ] ].
