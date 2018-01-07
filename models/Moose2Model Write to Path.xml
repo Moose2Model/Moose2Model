@@ -1,12 +1,22 @@
 <?xml version="1.0"?>
-<!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
+<!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
+    <version>v1.0.0</version>
+    <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagramLayout</class>
-        <method>isDefined</method>
-        <x>-524.0</x>
-        <y>194.0</y>
+        <class>RWDiagramAbstractAttributesLayoutChanger</class>
+        <method>currentLayout</method>
+        <x>-215.0</x>
+        <y>104.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramEditor</class>
+        <method>uniqueInstance</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-293.0</x>
+        <y>213.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -16,36 +26,37 @@
         <y>113.0</y>
     </element>
     <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramLayout</class>
-        <x>-537.0</x>
-        <y>205.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramUndefinedLayout</class>
-        <x>-625.0</x>
-        <y>124.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
+        <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
-        <x>-299.0</x>
-        <y>232.0</y>
+        <method>currentLayout</method>
+        <x>-216.0</x>
+        <y>245.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>RWMooseDiagram</package>
+        <x>296.0</x>
+        <y>82.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
-        <method>rememberWrite:toPath:</method>
-        <x>-514.0</x>
-        <y>11.0</y>
+        <method>write:toPath:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-440.0</x>
+        <y>41.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramElement</class>
-        <method>=</method>
-        <x>-449.0</x>
-        <y>258.0</y>
+        <type>FAMIXClass</type>
+        <class>RWDiagram</class>
+        <x>-468.0</x>
+        <y>109.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -56,10 +67,30 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagramEditor</class>
+        <class>RWDiagramLayout</class>
+        <method>isDefined</method>
+        <x>-524.0</x>
+        <y>194.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramLayout</class>
+        <x>-537.0</x>
+        <y>205.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
         <method>writeToFile:</method>
-        <x>-410.0</x>
-        <y>212.0</y>
+        <hasClassScope>true</hasClassScope>
+        <x>-404.0</x>
+        <y>87.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramElement</class>
+        <x>-449.0</x>
+        <y>269.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -78,61 +109,17 @@
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
-        <method>currentLayout</method>
-        <x>-216.0</x>
-        <y>245.0</y>
+        <method>writeToFile:</method>
+        <x>-410.0</x>
+        <y>212.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
-        <method>currentLayoutName:</method>
-        <x>-513.0</x>
-        <y>99.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramEditor</class>
-        <method>uniqueInstance</method>
-        <x>-322.0</x>
-        <y>196.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAbstractAttributesLayoutChanger</class>
-        <method>currentLayout</method>
-        <x>-215.0</x>
-        <y>104.0</y>
-    </element>
-    <element>
-        <type>FAMIXPackage</type>
-        <package>RWMooseDiagram</package>
-        <x>296.0</x>
-        <y>82.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagram</class>
-        <x>-468.0</x>
-        <y>109.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramElement</class>
-        <x>-449.0</x>
-        <y>269.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagram</class>
-        <method>write:toPath:</method>
-        <x>-440.0</x>
-        <y>41.0</y>
-        <ACTSuppressOthers>
-            <type>ACDStandard</type>
-            <includeMe>true</includeMe>
-            <usedByLayers>1</usedByLayers>
-            <usingLayers>1</usingLayers>
-        </ACTSuppressOthers>
+        <method>rememberWrite:toPath:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-512.0</x>
+        <y>112.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -143,8 +130,36 @@
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
-        <method>writeToFile:</method>
-        <x>-370.0</x>
-        <y>95.0</y>
+        <method>currentLayoutName:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-517.0</x>
+        <y>87.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElement</class>
+        <method>=</method>
+        <x>-449.0</x>
+        <y>258.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramEditor</class>
+        <x>-299.0</x>
+        <y>232.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramUndefinedLayout</class>
+        <x>-625.0</x>
+        <y>124.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>rememberWrite:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-437.0</x>
+        <y>112.0</y>
     </element>
 </elements>

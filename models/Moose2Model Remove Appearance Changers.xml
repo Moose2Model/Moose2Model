@@ -1,82 +1,20 @@
 <?xml version="1.0"?>
-<!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
+<!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
+    <version>v1.0.0</version>
+    <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagramLayout</class>
-        <method>remember:ofModel:</method>
-        <x>-487.0</x>
-        <y>257.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramUndeterminedAttributeList</class>
-        <x>-402.0</x>
-        <y>383.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramUndeterminedAttributeList</class>
-        <method>attributeIsSpecified</method>
-        <x>-402.0</x>
-        <y>373.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramLayout</class>
-        <x>-590.0</x>
-        <y>214.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramEditor</class>
-        <x>-708.0</x>
-        <y>148.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramLayoutTest</class>
-        <x>-730.0</x>
-        <y>53.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramElement</class>
-        <method>asRWDiagramElement:</method>
-        <x>-692.0</x>
-        <y>302.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramGlobalAttributeList</class>
-        <method>attributeIsSpecified</method>
-        <x>-311.0</x>
-        <y>250.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayoutTest</class>
-        <method>testRemoveAppearanceChangersFrom</method>
-        <x>-730.0</x>
-        <y>43.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>MooseEntity</class>
-        <x>-836.0</x>
-        <y>341.0</y>
+        <class>RWDiagramAbstractAttributesLayoutChanger</class>
+        <method>currentLayout</method>
+        <x>-314.0</x>
+        <y>157.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
         <package>Moose-Core</package>
         <x>-837.0</x>
         <y>330.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramGlobalAttributeList</class>
-        <x>-311.0</x>
-        <y>260.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -86,11 +24,43 @@
         <y>138.0</y>
     </element>
     <element>
+        <type>FAMIXPackage</type>
+        <package>RWMooseDiagram</package>
+        <x>243.0</x>
+        <y>133.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagramEditor</class>
-        <method>uniqueInstance</method>
-        <x>-679.0</x>
-        <y>138.0</y>
+        <class>RWDiagramLayout</class>
+        <method>remember:ofModel:</method>
+        <x>-487.0</x>
+        <y>257.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAttributeList</class>
+        <x>-584.0</x>
+        <y>366.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagram</class>
+        <x>-513.0</x>
+        <y>91.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAttributeList</class>
+        <method>attributeIsSpecified</method>
+        <x>-523.0</x>
+        <y>355.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElement</class>
+        <method>asRWDiagramElement:</method>
+        <x>-692.0</x>
+        <y>302.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -106,29 +76,43 @@
         </ACTSuppressOthers>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAbstractAttributesLayoutChanger</class>
-        <method>currentLayout</method>
-        <x>-314.0</x>
-        <y>157.0</y>
+        <type>FAMIXClass</type>
+        <class>RWDiagramLayout</class>
+        <x>-590.0</x>
+        <y>214.0</y>
     </element>
     <element>
-        <type>FAMIXPackage</type>
-        <package>RWMooseDiagram</package>
-        <x>243.0</x>
-        <y>133.0</y>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>removeAppearanceChangersFrom:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-513.0</x>
+        <y>80.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
-        <class>RWDiagram</class>
-        <x>-513.0</x>
-        <y>91.0</y>
+        <class>RWDiagramLayoutTest</class>
+        <x>-730.0</x>
+        <y>53.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramUndeterminedAttributeList</class>
+        <x>-402.0</x>
+        <y>383.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElement</class>
         <x>-692.0</x>
         <y>313.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramUndeterminedAttributeList</class>
+        <method>attributeIsSpecified</method>
+        <x>-402.0</x>
+        <y>373.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -139,9 +123,28 @@
     </element>
     <element>
         <type>FAMIXClass</type>
-        <class>RWDiagramAttributeList</class>
-        <x>-584.0</x>
-        <y>366.0</y>
+        <class>RWDiagramAbstractAttributesLayoutChanger</class>
+        <x>-314.0</x>
+        <y>166.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramGlobalAttributeList</class>
+        <method>attributeIsSpecified</method>
+        <x>-311.0</x>
+        <y>250.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>MooseEntity</class>
+        <x>-836.0</x>
+        <y>341.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramGlobalAttributeList</class>
+        <x>-311.0</x>
+        <y>260.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -151,29 +154,16 @@
         <y>355.0</y>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAttributeList</class>
-        <method>attributeIsSpecified</method>
-        <x>-523.0</x>
-        <y>355.0</y>
-    </element>
-    <element>
         <type>FAMIXClass</type>
-        <class>RWDiagramAbstractAttributesLayoutChanger</class>
-        <x>-314.0</x>
-        <y>166.0</y>
+        <class>RWDiagramEditor</class>
+        <x>-708.0</x>
+        <y>148.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagram</class>
-        <method>removeAppearanceChangersFrom:</method>
-        <x>-514.0</x>
-        <y>81.0</y>
-        <ACTSuppressOthers>
-            <type>ACDStandard</type>
-            <includeMe>true</includeMe>
-            <usedByLayers>1</usedByLayers>
-            <usingLayers>1</usingLayers>
-        </ACTSuppressOthers>
+        <class>RWDiagramLayoutTest</class>
+        <method>testRemoveAppearanceChangersFrom</method>
+        <x>-730.0</x>
+        <y>43.0</y>
     </element>
 </elements>
