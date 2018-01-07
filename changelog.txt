@@ -38,6 +38,9 @@ Methods are now colored in orange. The red color that was used before looked alw
 + Snap Positions to Grid #48
 It is possible to rearange elements to a fixed grid with 5 point difference from line to line
 
++ Make working with path of working directory possible #54
+If an empty path is stored, the system uses automatically the working directory of the image
+
 * Diagrams become inconsistent if they are applied on an updated model #9
 Remove option to display diagram from Class Group (Add a statement to explain where to do it).
 Add a menu point in the context menu of the canvas that gives the name of the current Moose ID.
