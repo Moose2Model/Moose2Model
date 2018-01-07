@@ -4,5 +4,5 @@ moose2ModelSetPath
 	| path |
 	path := UIManager default request: 'Specify path where layouts are stored' initialAnswer: RWDiagram path.
 	path
-		ifNotNil: [ RWDiagram path: path.
+		ifNotNil: [ RWDiagram setPath: path.
 			self inform: 'New path' , path ]
