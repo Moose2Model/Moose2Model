@@ -8,6 +8,44 @@ Legend
 + : added
 - : removed
 
+
+07.01.2018 v1.0.0
+-----------------
++ Add context menus to the Moose Model #44
+There are now context menus in the MoosePanel and when a view is displayed on:
+1. The model
+2. FAMIX elements of type package, class, method and attribut in the MoosePanel or in the inspector
+3. Elements in a diagram (Except comments, comments are maintained on the assigned element)
+4. The canvas of a Layout (The white backgroun)
+6. The Layout of a diagram and the displayed Moose Model is shown in the Context Menu of the background of the diagram.
+It should be possible to work without sending program statements explicitely anymore
+
++ Manage Layouts #52
+It is now possible to choose from all xml files with Layout Informations that are specified in the preset path
+
++ Separate layouts #50
+It is now possible to work with multiple Layouts at the same time. The active Layout is displayed in the Simple Gui. If the context menu of elements in a diagram is choosen, the system automatically adds this informtion to the layout that is related to the element.
+
++ Rebuild diagram in same window #45
+It is now possible to change a diagram and see the changes in the same window by rebuilding it from the context menu
+
++ Alternative Line Styles #47
+It is now possible to use two new line styles whith only vertical and horizontal line segments. This setting is not stored to the file
+
+! Improve colors #51
+Methods are now colored in orange. The red color that was used before looked always a bit like symbolizing an error
+
++ Snap Positions to Grid #48
+It is possible to rearange elements to a fixed grid with 5 point difference from line to line
+
+* Diagrams become inconsistent if they are applied on an updated model #9
+Remove option to display diagram from Class Group (Add a statement to explain where to do it).
+Add a menu point in the context menu of the canvas that gives the name of the current Moose ID.
+Prevent errors when the MooseModel changed. In that case it is needed to read the data of a Layout again from file. The user is forced to do this explicitely.
+
++ Give a hint if an element is renamed that has a special function in a Layout #53
+If informations on a Layout are printed to the Transcript, a text is given if an element was specified in the file, that is not existing in the model anymore. The file can be edited manually to add the renamed element again to the model
+
 11.11.2017 v0.4.5
 -----------------
 
