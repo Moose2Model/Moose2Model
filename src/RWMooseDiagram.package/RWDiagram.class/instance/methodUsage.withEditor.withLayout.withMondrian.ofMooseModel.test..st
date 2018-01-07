@@ -22,8 +22,9 @@ Handles the modifies DBTable to color database tables differently
 	"Now assign the arrows after all nodes are calculated"
 	aRTMondrian ifNil: [ isRebuild := false ] ifNotNil: [ isRebuild := true ].
 	aRWDiagramLayout ifNil: [ rwLayout := rwEditor currentLayout ] ifNotNil: [ rwLayout := aRWDiagramLayout ].
+	rwLayout mooseID ifNil: [ "In a layout is new, the Moose ID is initial" rwLayout mooseID: aMooseModel mooseID ].
 	rwLayout mooseID = aMooseModel mooseID
-		ifFalse: [rwEditor refreshLayout: rwLayout. 
+		ifFalse: [ rwEditor refreshLayout: rwLayout.
 			rwLayout mooseID: aMooseModel mooseID ].
 	isTest
 		ifFalse: [ rwLayout scope = rwLayout methodScope
