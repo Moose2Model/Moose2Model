@@ -9,6 +9,11 @@ Legend
 - : removed
 
 
+09.01.2018 v1.0.1
+-----------------
+* If a comment is added an error message is shown while redrawing #56
+* Spelling errors in context menus #55
+
 07.01.2018 v1.0.0
 -----------------
 + Add context menus to the Moose Model #44
