@@ -107,7 +107,8 @@ Handles the modifies DBTable to color database tables differently
 						drawComments: b
 						modelElements: displayedClasses
 						editor: rwEditor
-						entity: self aFAMIXClass.
+						entity: self aFAMIXClass
+		            ofLayout: rwLayout.
 
 
 
@@ -147,7 +148,8 @@ Handles the modifies DBTable to color database tables differently
 												drawComments: b
 												modelElements: displayedAttributes
 												editor: rwEditor
-												entity: self aFAMIXAttribute.
+												entity: self aFAMIXAttribute
+												ofLayout: rwLayout.
 											b layout grid ].
 									b layout verticalLine ].
 							b layout grid ].
@@ -157,7 +159,8 @@ Handles the modifies DBTable to color database tables differently
 		drawComments: b
 		modelElements: allPackages
 		editor: rwEditor
-		entity: self aFAMIXPackage.
+		entity: self aFAMIXPackage
+		ofLayout: rwLayout.
 	b layout grid.
 	aRWDiagramElementGroup setConnections.
 	aRWDiagramElementGroup setAccesses.

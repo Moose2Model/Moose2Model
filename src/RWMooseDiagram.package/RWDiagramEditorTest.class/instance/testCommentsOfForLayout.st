@@ -1,5 +1,5 @@
 public
-testCommentsOf
+testCommentsOfForLayout
 	| b rwEditor comments element aRWDElement aRWDElements element2 aRWDElement2 elementM elementM2 |
 	b := RTMondrian new.
 	rwEditor := RWDiagramEditor new.
@@ -16,7 +16,7 @@ testCommentsOf
 	aRWDElements := OrderedCollection new.
 	aRWDElements add: aRWDElement2.
 	self assert: element mooseID = element2 mooseID equals: false.
-	comments := rwEditor commentsOf: aRWDElements.
+	comments := rwEditor commentsOf: aRWDElements forLayout: rwEditor currentLayout.
 	self assert: (comments select: [ :each | each text = 'Global' ]) size equals: 0.
 	self assert: (comments select: [ :each | each text = 'Test' ]) size equals: 1.
 	self assert: (comments select: [ :each | each text = 'Else' ]) size equals: 0.
@@ -38,7 +38,7 @@ testCommentsOf
 	aRWDElements := OrderedCollection new.
 	aRWDElements add: aRWDElement2.
 	self assert: elementM mooseID = elementM2 mooseID equals: false.
-	comments := rwEditor commentsOf: aRWDElements.
+	comments := rwEditor commentsOf: aRWDElements forLayout: rwEditor currentLayout.
 	self assert: (comments select: [ :each | each text = 'Global' ]) size equals: 0.
 	self assert: (comments select: [ :each | each text = 'Test' ]) size equals: 1.
 	self assert: (comments select: [ :each | each text = 'Else' ]) size equals: 0.

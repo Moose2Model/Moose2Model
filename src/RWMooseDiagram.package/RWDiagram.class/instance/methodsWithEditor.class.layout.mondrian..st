@@ -25,5 +25,6 @@ methodsWithEditor: rwEditor class: clsRWDiagramElement layout: rwLayout mondrian
 		drawComments: b
 		modelElements: displayedMethods
 		editor: rwEditor
-		entity: self aFAMIXMethod.
+		entity: self aFAMIXMethod
+		ofLayout: rwLayout.
 	^ b layout grid

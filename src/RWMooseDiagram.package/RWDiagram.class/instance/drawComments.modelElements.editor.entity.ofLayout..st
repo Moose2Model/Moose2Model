@@ -1,10 +1,10 @@
 MethodUsage-private
-drawComments: b modelElements: aMooseElements editor: rwEditor entity: aFAMIXEntity
+drawComments: b modelElements: aMooseElements editor: rwEditor entity: aFAMIXEntity ofLayout: aRWDiagramLayout
 	| comments globalComments relevantComments relevantGlobalComments allComments |
 	relevantComments := Bag new.
 	relevantGlobalComments := Bag new.
 
-	comments := rwEditor commentsOf: aMooseElements.	" Draw comments for packages"
+	comments := rwEditor commentsOf: aMooseElements forLayout: aRWDiagramLayout.	" Draw comments for packages"
 	comments
 		do: [ :c | 
 			aMooseElements
@@ -25,9 +25,9 @@ drawComments: b modelElements: aMooseElements editor: rwEditor entity: aFAMIXEnt
 		width: 60;
 		height: 20;
 		withText: #text;
-		fontSize: rwEditor currentLayout colorSchema commentFontSize;
+		fontSize: aRWDiagramLayout colorSchema commentFontSize;
 		withTextColor: Color black;
-		fillColor: rwEditor currentLayout commentColor;
+		fillColor: aRWDiagramLayout commentColor;
 		noBorder.
 	b nodes: relevantComments.
 	b shape

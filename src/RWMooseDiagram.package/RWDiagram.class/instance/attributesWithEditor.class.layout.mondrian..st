@@ -20,5 +20,6 @@ attributesWithEditor: rwEditor class: clsRWDiagramElement layout: rwLayout mondr
 		drawComments: b
 		modelElements: displayedAttributes
 		editor: rwEditor
-		entity: self aFAMIXAttribute.
+		entity: self aFAMIXAttribute
+		ofLayout: rwLayout.
 	^ b layout grid

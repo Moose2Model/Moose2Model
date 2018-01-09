@@ -25,7 +25,7 @@ testReadPositions
 
 		aRWDElements := OrderedCollection new.
 	aRWDElements add: method1RWDE.
-	localComments := editor commentsOf: aRWDElements.
+	localComments := editor commentsOf: aRWDElements forLayout: layout.
 	aRTElement := RTElement new.
 	aRTElement addShape: RTBox new.
 	aRTElement model: 	localComments first.
