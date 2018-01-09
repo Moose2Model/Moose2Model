@@ -19,7 +19,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Redraw in same Window'
+				item: 'Redraw in same window'
 					action: [ :e | 
 					rwEditor settings displayFormatter: false.
 					self
@@ -34,7 +34,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Redraw in same Window with formatting info'
+				item: 'Redraw in same window with formatting info'
 					action: [ :e | 
 					rwEditor settings displayFormatter: true.
 					self
@@ -49,7 +49,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Remember to File'
+				item: 'Remember to file'
 					action: [ :e | 
 					rwEditor rememberRTView: b view to: rwLayout.
 					RWDiagram write: b view toPath: RWDiagram path	"RWDiagram rememberWrite: e" ]).
@@ -155,7 +155,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Snapp to Grid'
+				item: 'Snap to grid'
 					action: [ :e | 
 					rwEditor rememberRTView: b view to: rwLayout.
 					rwLayout snapToGrid gridX: 5.
@@ -168,4 +168,4 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Remove all Highlighting' action: [ :e | RWDiagram removeTemporaryOfLayout: rwLayout ])
+				item: 'Remove all highlighting' action: [ :e | RWDiagram removeTemporaryOfLayout: rwLayout ])
