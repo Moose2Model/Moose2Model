@@ -1,24 +1,33 @@
 <?xml version="1.0"?>
-<!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
+<!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v0.4.3</version>
+    <version>v1.0.1</version>
     <scope>method</scope>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
-        <method>methodUsage:withEditor:test:</method>
-        <x>-333.0</x>
-        <y>99.0</y>
-        <comment><![CDATA[To change the text<br>of the legend accordingly]]>
-        </comment>
-        <commentx>-329.0</commentx>
-        <commenty>49.0</commenty>
+        <method>methodUsage:withEditor:withLayout:withMondrian:ofMooseModel:test:</method>
+        <x>-176.0</x>
+        <y>71.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose-Core</package>
+        <x>762.0</x>
+        <y>41.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>FAMIXClassGroup</class>
         <x>-573.0</x>
         <y>112.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelDependency</method>
+        <x>-457.0</x>
+        <y>-18.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -44,21 +53,23 @@
         <commenty>140.0</commenty>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>FAMIXClassGroup</class>
-        <method>viewRWDiagramDependency</method>
-        <x>-632.0</x>
-        <y>101.0</y>
-        <comment><![CDATA[Display diagram<br>without formatting informations]]>
-        </comment>
-        <commentx>-634.0</commentx>
-        <commenty>52.0</commenty>
-    </element>
-    <element>
         <type>FAMIXClass</type>
         <class>RWDiagram</class>
         <x>-334.0</x>
         <y>108.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelDependencyInfo</method>
+        <x>-354.0</x>
+        <y>-18.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>MooseModel</class>
+        <x>-403.0</x>
+        <y>-8.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -101,6 +112,13 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>addMenuTo:withEditor:withLayout:withMondrian:ofMooseModel:test:</method>
+        <x>-458.0</x>
+        <y>97.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramSettings</class>
         <method>displayFormatter</method>
         <x>-416.0</x>
@@ -111,17 +129,6 @@
             <usedByLayers>1</usedByLayers>
             <usingLayers>1</usingLayers>
         </ACTSuppressOthers>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>FAMIXClassGroup</class>
-        <method>viewRWDiagramDependencyInfo</method>
-        <x>-521.0</x>
-        <y>101.0</y>
-        <comment><![CDATA[Display diagram<br>with formatting informations]]>
-        </comment>
-        <commentx>-509.0</commentx>
-        <commenty>54.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
