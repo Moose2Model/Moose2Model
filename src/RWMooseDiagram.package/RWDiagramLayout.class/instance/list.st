@@ -13,40 +13,46 @@ list
 		nextPutAll: return;
 		nextPutAll: 'Diagram Layout View: ';
 		nextPutAll: self name;
+		nextPutAll: return;
 		nextPutAll: return.
-	elementGroup elementList
+	elementGroup elementList asSortedCollection
 		do: [ :each | 
 			each attributeList attributeIsSpecified
 				ifTrue: [ streamInfos := WriteStream on: String new.
 					each attributeList suppressWithChildren
-						ifTrue: [ streamInfos nextPutAll: ' suppressWithChildren' ].
+						ifTrue: [ streamInfos nextPutAll: ' Suppress with children ' ].
 					each attributeList appearanceChangerGroup appearanceChangers
 						do: [ :ac | 
 							streamInfos nextPut: Character space.
+							ac changeType class asString = 'RWDiagramACTSuppressOthers' ifTrue:[
+								ac changeDeterminer includeMe ifTrue:[streamInfos nextPutAll: 'Display '] ifFalse:[streamInfos nextPutAll: 'Neighbours displayed '].
+								streamInfos nextPutAll: 'used ', ac changeDeterminer usedByLayers asString, ' using ', ac changeDeterminer usingLayers asString, ' '.
+								] ifFalse:[
 							ac changeType printOn: streamInfos.
 							streamInfos nextPut: Character space.
-							ac changeDeterminer printOn: streamInfos ].
+							ac changeDeterminer printOn: streamInfos] ].
 					each attributeList comment exists
 						ifTrue: [ streamInfos
-								nextPutAll: return;
-								nextPutAll: ' Comment:'.
+								nextPutAll: 'Comment:'.
 							streamInfos nextPutAll: return.
 							streamInfos nextPutAll: each attributeList comment text ].
 					"Print element only if at least something is to be printed for it"
 					streamInfos size = 0
 						ifFalse: [ streamElement := WriteStream on: String new.
+							streamElement nextPutAll: '- '.
 							each famixElement printOn: streamElement.
 							"Position infos below each other for better readability"
 							streamElement size < self elementListLength
 								ifTrue: [ | l |
 									l := self elementListLength - streamElement size.
 									l timesRepeat: [ streamElement nextPut: Character space ] ].
-							streamElement contents = 'nil                                               ' ifTrue:[stream
-								nextPutAll: 'Element in xml but not in Model:'; nextPutAll: each uniqueKey.] ifFalse:[stream
-								nextPutAll: streamElement contents].	
+							streamElement contents = 'nil                                               '
+								ifTrue: [ stream
+										nextPutAll: 'Element in xml but not in Model:';
+										nextPutAll: each uniqueKey ]
+								ifFalse: [ stream nextPutAll: streamElement contents ].
 							stream
 								nextPutAll: streamInfos contents;
-								nextPutAll: return;
 								nextPutAll: return ] ] ].
 	stream size = 0
 		ifTrue: [ Transcript
