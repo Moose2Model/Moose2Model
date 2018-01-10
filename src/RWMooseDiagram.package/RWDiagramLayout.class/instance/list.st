@@ -24,16 +24,16 @@ list
 					each attributeList appearanceChangerGroup appearanceChangers
 						do: [ :ac | 
 							streamInfos nextPut: Character space.
-							ac changeType class asString = 'RWDiagramACTSuppressOthers' ifTrue:[
-								ac changeDeterminer includeMe ifTrue:[streamInfos nextPutAll: 'Display '] ifFalse:[streamInfos nextPutAll: 'Neighbours displayed '].
-								streamInfos nextPutAll: 'used ', ac changeDeterminer usedByLayers asString, ' using ', ac changeDeterminer usingLayers asString, ' '.
-								] ifFalse:[
-							ac changeType printOn: streamInfos.
-							streamInfos nextPut: Character space.
-							ac changeDeterminer printOn: streamInfos] ].
+							ac changeType class asString = 'RWDiagramACTSuppressOthers'
+								ifTrue: [ ac changeDeterminer includeMe
+										ifTrue: [ streamInfos nextPutAll: 'Display ' ]
+										ifFalse: [ streamInfos nextPutAll: 'Neighbours displayed ' ].
+									streamInfos nextPutAll: 'used ' , ac changeDeterminer usedByLayers asString , ' using ' , ac changeDeterminer usingLayers asString , ' ' ]
+								ifFalse: [ ac changeType printOn: streamInfos.
+									streamInfos nextPut: Character space.
+									ac changeDeterminer printOn: streamInfos ] ].
 					each attributeList comment exists
-						ifTrue: [ streamInfos
-								nextPutAll: 'Comment:'.
+						ifTrue: [ streamInfos nextPutAll: 'Comment:'.
 							streamInfos nextPutAll: return.
 							streamInfos nextPutAll: each attributeList comment text ].
 					"Print element only if at least something is to be printed for it"
@@ -46,11 +46,11 @@ list
 								ifTrue: [ | l |
 									l := self elementListLength - streamElement size.
 									l timesRepeat: [ streamElement nextPut: Character space ] ].
-							streamElement contents = '- nil                                               '
-								ifTrue: [ stream
+							each famixElement
+								ifNil: [ stream
 										nextPutAll: '- Element in xml but not in Model:';
 										nextPutAll: each uniqueKey ]
-								ifFalse: [ stream nextPutAll: streamElement contents ].
+								ifNotNil: [ stream nextPutAll: streamElement contents ].
 							stream
 								nextPutAll: streamInfos contents;
 								nextPutAll: return ] ] ].
