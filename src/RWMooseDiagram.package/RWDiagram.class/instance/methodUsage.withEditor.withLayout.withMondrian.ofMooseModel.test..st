@@ -271,7 +271,7 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 	lb view: b view.
 	rwEditor settings displayFormatter
 		ifFalse: [ lb addText: 'Dependency graph' ]
-		ifTrue: [ lb addText: 'Dependency graph - Elements without permanent appearance changers are highlighted' ].
+		ifTrue: [ lb addText: 'Dependency graph - Elements with permanent appearance changers are highlighted' ].
 	lb addText: 'Layout: ' , rwLayout name.
 	lb addColor: rwLayout colorSchema classColor text: 'Class or interface or a grouping that is mapped to class'.
 	"lb addColor: rwLayout colorSchema dataBaseTableColor text: 'Database table'."
