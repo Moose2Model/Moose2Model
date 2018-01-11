@@ -10,9 +10,14 @@ Legend
 
 
 
-10.01.2018 v1.1.0
+11.01.2018 v1.1.0
 -----------------
 ! Display with formatting - highlight elements with appearance changers #57
++ Allow suppressing attributes and methods with context menu #59
++ Allow suppressing classes and packages with context menu in Moose Panel #60
++ Make list of elements more readable #61
+* Remove duplicate appearance changers #63
++ Provide an option to list a Layout without comments #64
 
 09.01.2018 v1.0.1
 -----------------
