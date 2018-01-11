@@ -1,0 +1,3 @@
+comparing
+= aRWDiagramAppearanceChangeType
+	self subclassResponsibility

@@ -1,4 +1,5 @@
-as yet unclassified
+adding
 addAppearentChanger: aRWDiagramAppearanceChanger 
    appearanceChangers ifNil: [ appearanceChangers := OrderedCollection new ].
-	appearanceChangers add: aRWDiagramAppearanceChanger 
+   appearanceChangers do: [ :each | each = aRWDiagramAppearanceChanger ifTrue:[^self "Do not add a duplicate" ] ].
+	appearanceChangers add: aRWDiagramAppearanceChanger  

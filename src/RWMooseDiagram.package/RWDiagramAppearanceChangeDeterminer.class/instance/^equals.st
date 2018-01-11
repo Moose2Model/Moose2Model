@@ -1,0 +1,3 @@
+accessing
+= aRWDiagramAppearanceChangeType
+	self subclassResponsibility

@@ -6,6 +6,7 @@ addContextMenuClassesPackagesToMondrian: aRTMondrian ofLayout: aRWDiagramLayout
 		item: 'Comment'
 		action: [ :e | 
 			| c |
+			self halt.
 			c := UIManager default textEntry: 'Specify a new comment' title: '' entryText: e model attributeList comment text.
 			c ifNotNil: [ RWDiagram comment: c to: e model ofLayout: aRWDiagramLayout ] ].
 	aRTMenuActivable
