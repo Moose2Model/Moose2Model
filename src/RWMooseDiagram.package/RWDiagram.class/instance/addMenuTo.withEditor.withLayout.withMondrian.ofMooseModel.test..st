@@ -14,7 +14,12 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'List elements of Layout to Transcript: ' action: [ :e | rwLayout list ]).
+				item: 'List elements of Layout to Transcript' action: [ :e | rwLayout listWithComments: true ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'List elements of Layout to Transcript without comments' action: [ :e | rwLayout listWithComments: false ]).
 	b view
 		@
 			(RTMenuActivable

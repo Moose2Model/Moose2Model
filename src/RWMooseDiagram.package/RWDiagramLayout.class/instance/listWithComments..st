@@ -1,5 +1,5 @@
 list
-list
+listWithComments: withComment
 	"Write informations about the current diagram view to Transcript"
 
 	<RWDiaEdit_56>
@@ -32,10 +32,11 @@ list
 								ifFalse: [ ac changeType printOn: streamInfos.
 									streamInfos nextPut: Character space.
 									ac changeDeterminer printOn: streamInfos ] ].
-					each attributeList comment exists
-						ifTrue: [ streamInfos nextPutAll: 'Comment:'.
-							streamInfos nextPutAll: return.
-							streamInfos nextPutAll: each attributeList comment text ].
+					withComment
+						ifTrue: [ each attributeList comment exists
+								ifTrue: [ streamInfos nextPutAll: 'Comment:'.
+									streamInfos nextPutAll: return.
+									streamInfos nextPutAll: each attributeList comment text ] ].
 					"Print element only if at least something is to be printed for it"
 					streamInfos size = 0
 						ifFalse: [ streamElement := WriteStream on: String new.
