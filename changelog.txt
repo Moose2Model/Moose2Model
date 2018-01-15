@@ -10,6 +10,11 @@ Legend
 
 
 
+15.01.2018 v1.2.0
+-----------------
+! Change order of context menu for background #66
++ Set Current Layout always to the Layout that was processed last #65
+
 11.01.2018 v1.1.0
 -----------------
 ! Display with formatting - highlight elements with appearance changers #57
