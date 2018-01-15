@@ -4,28 +4,41 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Layout: ' , rwLayout name action: [ :e | self inform: rwLayout name ]).
+				item: 'Layout: ' , rwLayout name
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					self inform: rwLayout name ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
-				item: 'Model: ' , aMooseModel name action: [ :e | self inform: aMooseModel name ]).
+				item: 'Model: ' , aMooseModel name
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					self inform: aMooseModel name ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
-				item: 'List elements of Layout to Transcript' action: [ :e | rwLayout listWithComments: true ]).
+				item: 'List elements of Layout to Transcript'
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					rwLayout listWithComments: true ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
-				item: 'List elements of Layout to Transcript without comments' action: [ :e | rwLayout listWithComments: false ]).
+				item: 'List elements of Layout to Transcript without comments'
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					rwLayout listWithComments: false ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
 				item: 'Redraw in same window'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor settings displayFormatter: false.
 					self
 						redraw: aRWDiagramElementGroup
@@ -33,7 +46,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -41,6 +54,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Redraw in same window with formatting info'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor settings displayFormatter: true.
 					self
 						redraw: aRWDiagramElementGroup
@@ -48,7 +62,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -56,19 +70,24 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Remember to file'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor rememberRTView: b view to: rwLayout.
 					RWDiagram write: b view toPath: RWDiagram path	"RWDiagram rememberWrite: e" ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
-				item: 'Remember' action: [ :e | rwEditor rememberRTView: b view to: rwLayout	"RWDiagram rememberRTView: e" ]).
+				item: 'Remember'
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					rwEditor rememberRTView: b view to: rwLayout	"RWDiagram rememberRTView: e" ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
 				item: 'Lines straight'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor rememberRTView: b view to: rwLayout.
 					rwLayout lineStyle: rwLayout straightLineStyle.
 					self
@@ -77,7 +96,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -85,6 +104,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Lines multiline'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor rememberRTView: b view to: rwLayout.
 					rwLayout lineStyle: rwLayout multiLineStyle.
 					self
@@ -93,7 +113,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -101,6 +121,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Lines multiline (horizontal)'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor rememberRTView: b view to: rwLayout.
 					rwLayout lineStyle: rwLayout multiLineStyle2.
 					self
@@ -109,7 +130,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -117,6 +138,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Set mode to display methods, attributes, classes and packages (Default)'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwLayout scope: rwLayout methodScope.
 					self
 						redraw: aRWDiagramElementGroup
@@ -124,7 +146,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -132,6 +154,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Set mode to display classes and packages'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwLayout scope: rwLayout classScope.
 					self
 						redraw: aRWDiagramElementGroup
@@ -139,7 +162,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -147,6 +170,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Set mode to display only packages'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwLayout scope: rwLayout packageScope.
 					self
 						redraw: aRWDiagramElementGroup
@@ -154,7 +178,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withEditor: rwEditor
 						withLayout: rwLayout
 						mondrian: b
-						ofMooseModel: aMooseModel 
+						ofMooseModel: aMooseModel
 						test: isTest ]).
 	b view
 		@
@@ -162,6 +186,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				new;
 				item: 'Snap to grid'
 					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
 					rwEditor rememberRTView: b view to: rwLayout.
 					rwLayout snapToGrid gridX: 5.
 					rwLayout snapToGrid gridY: 5.
@@ -173,4 +198,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Remove all highlighting' action: [ :e | RWDiagram removeTemporaryOfLayout: rwLayout ])
+				item: 'Remove all highlighting'
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					RWDiagram removeTemporaryOfLayout: rwLayout ])

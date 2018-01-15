@@ -1,0 +1,4 @@
+MethodUsage-private
+setLayoutCurrent: aRWDiagramLayout
+	RWDiagramEditor uniqueInstance
+		currentLayoutName: aRWDiagramLayout name
