@@ -20,22 +20,6 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'List elements of Layout to Transcript'
-					action: [ :e | 
-					self setLayoutCurrent: rwLayout.
-					rwLayout listWithComments: true ]).
-	b view
-		@
-			(RTMenuActivable
-				new;
-				item: 'List elements of Layout to Transcript without comments'
-					action: [ :e | 
-					self setLayoutCurrent: rwLayout.
-					rwLayout listWithComments: false ]).
-	b view
-		@
-			(RTMenuActivable
-				new;
 				item: 'Redraw in same window'
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
@@ -201,4 +185,20 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				item: 'Remove all highlighting'
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
-					RWDiagram removeTemporaryOfLayout: rwLayout ])
+					RWDiagram removeTemporaryOfLayout: rwLayout ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'List elements of Layout to Transcript'
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					rwLayout listWithComments: true ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'List elements of Layout to Transcript without comments'
+					action: [ :e | 
+					self setLayoutCurrent: rwLayout.
+					rwLayout listWithComments: false ])
