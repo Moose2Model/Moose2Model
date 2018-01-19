@@ -1,8 +1,14 @@
 <?xml version="1.0"?>
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v1.0.0</version>
+    <version>v1.2.0</version>
     <scope>method</scope>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <x>488.0</x>
+        <y>20.0</y>
+    </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
@@ -10,6 +16,19 @@
         <hasClassScope>true</hasClassScope>
         <x>-615.0</x>
         <y>-95.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <method>=</method>
+        <x>-9.0</x>
+        <y>105.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACDStandard</class>
+        <x>61.0</x>
+        <y>200.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -74,10 +93,23 @@
         <y>-69.0</y>
     </element>
     <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACTHighlight</class>
+        <x>76.0</x>
+        <y>105.0</y>
+    </element>
+    <element>
         <type>FAMIXPackage</type>
         <package>RWMooseDiagram</package>
         <x>277.0</x>
         <y>110.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <method>=</method>
+        <x>488.0</x>
+        <y>20.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -194,6 +226,12 @@
     </element>
     <element>
         <type>FAMIXClass</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <x>-9.0</x>
+        <y>105.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
         <class>RWDiagramNoPackageTest</class>
         <x>-1020.0</x>
         <y>203.0</y>
@@ -299,6 +337,20 @@
         <class>RWDiagramPositionableComment</class>
         <x>-339.0</x>
         <y>121.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACDStandard</class>
+        <method>=</method>
+        <x>61.0</x>
+        <y>200.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTHighlight</class>
+        <method>=</method>
+        <x>76.0</x>
+        <y>105.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
