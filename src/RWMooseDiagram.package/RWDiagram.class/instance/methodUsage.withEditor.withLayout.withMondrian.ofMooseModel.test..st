@@ -56,7 +56,7 @@ Handles the modifies DBTable to color database tables differently
 				withMondrian: b
 				ofMooseModel: aMooseModel
 				test: isTest ].
-	rwEditor settings packageBoxSuppressed
+	rwLayout packageBoxSuppressed
 		ifFalse: [ b shape rectangle
 				withTextAbove: #dName;
 				withTextColor: Color black;
@@ -72,7 +72,7 @@ Handles the modifies DBTable to color database tables differently
 					"The following is problematic. dAllClasses should return correct RWDiagramElements, but pack famixElement ... asRWDiagramElement returns new RWDiagramElements that have no relation to the found connections."
 					"allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aRWDiagramElementGroup dAllClasses."
 					allClassesForPackage := aRWDiagramElementGroup dAllClassesOfPackage: pack.
-					rwEditor settings classBoxSuppressed
+					rwLayout classBoxSuppressed
 						ifFalse: [ b shape box noBorder
 								withTextBelow: #dName;
 								withTextColor: Color black;

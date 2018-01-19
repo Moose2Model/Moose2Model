@@ -139,6 +139,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				item: 'Set mode to display classes and packages'
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
+					rwLayout classBoxSuppressed: false.
 					rwLayout scope: rwLayout classScope.
 					self
 						redraw: aRWDiagramElementGroup
@@ -155,6 +156,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				item: 'Set mode to display only packages'
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
+					rwLayout packageBoxSuppressed: false.
 					rwLayout scope: rwLayout packageScope.
 					self
 						redraw: aRWDiagramElementGroup
@@ -201,4 +203,34 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				item: 'List elements of Layout to Transcript without comments'
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
-					rwLayout listWithComments: false ])
+					rwLayout listWithComments: false ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Toogle Package display'
+					action: [ :e | 
+					rwLayout packageBoxSuppressed: rwLayout packageBoxSuppressed not.
+					self
+						redraw: aRWDiagramElementGroup
+						view: e
+						withEditor: rwEditor
+						withLayout: rwLayout
+						mondrian: b
+						ofMooseModel: aMooseModel
+						test: isTest ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Toogle Class display'
+					action: [ :e | 
+					rwLayout classBoxSuppressed: rwLayout classBoxSuppressed not.
+					self
+						redraw: aRWDiagramElementGroup
+						view: e
+						withEditor: rwEditor
+						withLayout: rwLayout
+						mondrian: b
+						ofMooseModel: aMooseModel
+						test: isTest ])
