@@ -5,7 +5,7 @@ attributesWithEditor: rwEditor class: clsRWDiagramElement layout: rwLayout mondr
 	displayedAttributes := clsRWDiagramElement dAttributes collect: [ :each | each asRWDiagramElement: rwLayout ].
 	rwEditor settings isReading
 		ifTrue: [ displayedAttributes := displayedAttributes reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
-	b shape rectangle
+	b shape ellipse
 		if: [ :m | rwLayout highlight: m ] fillColor: rwLayout colorSchema attributeHighLightedColor;
 		if: [ :m | (rwLayout highlight: m) not ] fillColor: rwLayout colorSchema attributeColor;
 		width: 20;
