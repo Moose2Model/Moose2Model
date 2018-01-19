@@ -14,6 +14,8 @@ Legend
 -----------------
 ! Change order of context menu for background #66
 + Set Current Layout always to the Layout that was processed last #65
+* Fix wrong description for highlighting attributes #67
++ Add option to suppress package box to context menu #69
 
 11.01.2018 v1.1.0
 -----------------
