@@ -292,8 +292,8 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 	lb addColor: rwLayout colorSchema dataBaseAsAttributeColor text: 'Circle: DataBase Table'.
 	lb addLineColor: rwLayout colorSchema attributeLineColor text: 'Access to "Data" resp. attribute'.
 	rwLayout displayDependencies
-		ifTrue: [ lb addLineColor: rwLayout colorSchema methodLineColor text: 'Using' ]
-		ifFalse: [ lb addLineColor: rwLayout colorSchema methodLineColor text: 'Information flow' ].
+		ifTrue: [ lb addLineColor: rwLayout colorSchema methodLineColor text: 'Arrow points to used component' ]
+		ifFalse: [ lb addLineColor: rwLayout colorSchema methodLineColor text: 'Reverse arrow, points to using component' ].
 	lb build.
 	RWDiagramAnonymize anonymize: false.
 	^ b

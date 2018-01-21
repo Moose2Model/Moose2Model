@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 displayDependencies
-	displayDependencies ifNil:[displayDependencies := false].
+	displayDependencies ifNil:[displayDependencies := true].
 	^displayDependencies

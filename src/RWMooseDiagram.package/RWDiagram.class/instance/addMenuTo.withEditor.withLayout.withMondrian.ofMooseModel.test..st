@@ -238,7 +238,7 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Toogle display dependencies (not information flow, the option to display dependencies is obsolete)'
+				item: 'Toogle arrows (Point to using component)'
 					action: [ :e | 
 					rwLayout displayDependencies: rwLayout displayDependencies not.
 					self
