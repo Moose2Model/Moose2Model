@@ -13,7 +13,8 @@
 		"famixElement",
 		"uniqueKey",
 		"connectedTo",
-		"accessedTo"
+		"accessedTo",
+		"connectedFrom"
 	],
 	"name" : "RWDiagramElement",
 	"type" : "normal"

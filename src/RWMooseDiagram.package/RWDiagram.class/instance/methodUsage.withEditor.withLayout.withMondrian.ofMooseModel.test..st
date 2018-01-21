@@ -108,7 +108,7 @@ Handles the modifies DBTable to color database tables differently
 						modelElements: displayedClasses
 						editor: rwEditor
 						entity: self aFAMIXClass
-		            ofLayout: rwLayout.
+						ofLayout: rwLayout.
 
 
 
@@ -186,12 +186,20 @@ Handles the modifies DBTable to color database tables differently
 						orthoHorizontal.
 					b shape head color: rwLayout colorSchema methodLineColor ].
 			rwLayout scope = rwLayout packageScope
-				ifTrue: [ b edges
-						objects: aRWDiagramElementGroup dAllModelPackages;
-						connectToAll: [ :m | m connectedTo ] ]
-				ifFalse: [ b edges
-						objects: aRWDiagramElementGroup dAllClasses;
-						connectToAll: [ :m | m connectedTo ] ].
+				ifTrue: [ rwLayout displayDependencies
+						ifTrue: [ b edges
+								objects: aRWDiagramElementGroup dAllModelPackages;
+								connectToAll: [ :m | m connectedTo ] ]
+						ifFalse: [ b edges
+								objects: aRWDiagramElementGroup dAllModelPackages;
+								connectToAll: [ :m | m connectedFrom ] ] ]
+				ifFalse: [ rwLayout displayDependencies
+						ifTrue: [ b edges
+								objects: aRWDiagramElementGroup dAllClasses;
+								connectToAll: [ :m | m connectedTo ] ]
+						ifFalse: [ b edges
+								objects: aRWDiagramElementGroup dAllClasses;
+								connectToAll: [ :m | m connectedFrom ]  ] ].
 			"Draw access line for packages and classes"
 			rwLayout lineStyle = rwLayout straightLineStyle
 				ifTrue: [ b shape line
@@ -241,9 +249,13 @@ Handles the modifies DBTable to color database tables differently
 						withShorterDistanceAttachPoint;
 						orthoHorizontal.
 					b shape head color: rwLayout colorSchema methodLineColor ].
-			b edges
-				objects: allMethods;
-				connectToAll: [ :m | (m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod) collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ].	" "
+			rwLayout displayDependencies
+				ifTrue: [ b edges
+						objects: allMethods;
+						connectToAll: [ :m | (m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod) collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ] ]
+				ifFalse: [ b edges
+						objects: allMethods;
+						connectToAll: [ :m | (m famixElement queryAllIncomingInvocations atScope: FAMIXMethod) collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ] ].	" "
 			rwLayout lineStyle = rwLayout straightLineStyle
 				ifTrue: [ b shape line
 						color: rwLayout colorSchema attributeLineColor;
@@ -279,7 +291,9 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 	lb addColor: rwLayout colorSchema attributeColor text: 'Circle: Passive system component'.
 	lb addColor: rwLayout colorSchema dataBaseAsAttributeColor text: 'Circle: DataBase Table'.
 	lb addLineColor: rwLayout colorSchema attributeLineColor text: 'Access to "Data" resp. attribute'.
-	lb addLineColor: rwLayout colorSchema methodLineColor text: 'Invocation between "Coding" resp. methods, the arrow points to the used one'.
+	rwLayout displayDependencies
+		ifTrue: [ lb addLineColor: rwLayout colorSchema methodLineColor text: 'Using' ]
+		ifFalse: [ lb addLineColor: rwLayout colorSchema methodLineColor text: 'Information flow' ].
 	lb build.
 	RWDiagramAnonymize anonymize: false.
 	^ b

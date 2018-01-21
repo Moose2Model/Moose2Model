@@ -19,7 +19,8 @@
 		"snapToGrid",
 		"mooseID",
 		"classBoxSuppressed",
-		"packageBoxSuppressed"
+		"packageBoxSuppressed",
+		"displayDependencies"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"
