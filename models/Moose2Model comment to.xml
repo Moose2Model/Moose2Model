@@ -2,7 +2,7 @@
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
     <version>v1.2.0</version>
-    <scope>method</scope>
+    <scope>class</scope>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramAppearanceChanger</class>
@@ -164,8 +164,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagram</class>
-        <x>-680.0</x>
-        <y>-72.0</y>
+        <x>-663.0</x>
+        <y>-126.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -215,8 +215,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramUndeterminedAttributeList</class>
-        <x>489.0</x>
-        <y>108.0</y>
+        <x>347.0</x>
+        <y>332.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -291,8 +291,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>MooseEntity</class>
-        <x>-914.0</x>
-        <y>75.0</y>
+        <x>-1146.0</x>
+        <y>-26.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>

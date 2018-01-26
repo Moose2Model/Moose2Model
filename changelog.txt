@@ -17,6 +17,7 @@ Legend
 * Fix wrong description for highlighting attributes #67
 + Add option to suppress package box to context menu #69
 + Make diagrams compatible to the FMC Compositional Structure Diagram #68
+* Prevent dragging of invisible elements #70
 
 11.01.2018 v1.1.0
 -----------------
