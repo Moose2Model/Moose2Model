@@ -1,3 +1,4 @@
 connections
 refreshConnectedTo
-	connectedTo := Set new
+	connectedTo := Set new.
+	connectedFrom := Set new

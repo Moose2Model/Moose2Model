@@ -233,4 +233,19 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 						withLayout: rwLayout
 						mondrian: b
 						ofMooseModel: aMooseModel
+						test: isTest ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Toogle arrows (Point to using component)'
+					action: [ :e | 
+					rwLayout displayDependencies: rwLayout displayDependencies not.
+					self
+						redraw: aRWDiagramElementGroup
+						view: e
+						withEditor: rwEditor
+						withLayout: rwLayout
+						mondrian: b
+						ofMooseModel: aMooseModel
 						test: isTest ])

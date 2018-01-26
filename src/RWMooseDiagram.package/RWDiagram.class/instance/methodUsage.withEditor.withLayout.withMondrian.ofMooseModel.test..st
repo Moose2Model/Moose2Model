@@ -20,9 +20,15 @@ Handles the modifies DBTable to color database tables differently
 	"b edges objects: comments; connectToAll: #mooseID."
 	"b edges elements: b view elements; source: (aFAMIXGroup flatCollect: [:e | e mooseID ]) connectFrom: #mooseID to: #mooseID."
 	"Now assign the arrows after all nodes are calculated"
-	aRTMondrian ifNil: [ isRebuild := false ] ifNotNil: [ isRebuild := true ].
-	aRWDiagramLayout ifNil: [ rwLayout := rwEditor currentLayout ] ifNotNil: [ rwLayout := aRWDiagramLayout ].
-	rwLayout mooseID ifNil: [ "In a layout is new, the Moose ID is initial" rwLayout mooseID: aMooseModel mooseID ].
+	aRTMondrian
+		ifNil: [ isRebuild := false ]
+		ifNotNil: [ isRebuild := true ].
+	aRWDiagramLayout
+		ifNil: [ rwLayout := rwEditor currentLayout ]
+		ifNotNil: [ rwLayout := aRWDiagramLayout ].
+	rwLayout mooseID
+		ifNil:
+			[ "In a layout is new, the Moose ID is initial" rwLayout mooseID: aMooseModel mooseID ].
 	rwLayout mooseID = aMooseModel mooseID
 		ifFalse: [ rwEditor refreshLayout: rwLayout.
 			rwLayout mooseID: aMooseModel mooseID ].
@@ -31,7 +37,8 @@ Handles the modifies DBTable to color database tables differently
 				ifTrue: [ rwLayout elementGroup elementList size = 0
 						ifTrue: [ self popUpAllElementsDisplayed
 								ifFalse: [ "Warn that runtime can be long" ^ nil ] ]
-						ifFalse: [ [ rwLayout elementGroup elementList detect: [ :each | each attributeList attributeIsSpecified ] ]
+						ifFalse: [ [ rwLayout elementGroup elementList
+								detect: [ :each | each attributeList attributeIsSpecified ] ]
 								on: NotFound
 								do: [ self popUpAllElementsDisplayed
 										ifFalse: [ "Warn that runtime can be long" ^ nil ] ] ] ] ].
@@ -41,12 +48,14 @@ Handles the modifies DBTable to color database tables differently
 	rwLayout evaluateAppearance.
 	allPackages := aRWDiagramElementGroup dAllModelPackages.
 	rwEditor settings isReading
-		ifTrue: [ allPackages := allPackages reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
+		ifTrue: [ allPackages := allPackages
+				reject: [ :p | rwLayout isModelElementNotShownWithChildren: p ] ].
 	isRebuild
 		ifFalse: [ b := RTMondrian new ]
 		ifTrue: [ b := aRTMondrian ].
 	isRebuild
-		ifFalse: [ "Do not add more than a single time to prevent problems with too much zooming per step"
+		ifFalse:
+			[ "Do not add more than a single time to prevent problems with too much zooming per step"
 			"RWDiagram rememberRTView: e"
 			b view @ RTZoomableView.
 			self
@@ -71,7 +80,8 @@ Handles the modifies DBTable to color database tables differently
 				forEach: [ :pack | 
 					"The following is problematic. dAllClasses should return correct RWDiagramElements, but pack famixElement ... asRWDiagramElement returns new RWDiagramElements that have no relation to the found connections."
 					"allClassesForPackage := (pack famixElement classes collect: [ :each | each asRWDiagramElement: rwLayout ]) intersection: aRWDiagramElementGroup dAllClasses."
-					allClassesForPackage := aRWDiagramElementGroup dAllClassesOfPackage: pack.
+					allClassesForPackage := aRWDiagramElementGroup
+						dAllClassesOfPackage: pack.
 					rwLayout classBoxSuppressed
 						ifFalse: [ b shape box noBorder
 								withTextBelow: #dName;
@@ -80,12 +90,18 @@ Handles the modifies DBTable to color database tables differently
 						ifTrue: [ b shape box
 								noBorder;
 								fillColor: Color transparent ].
-					self addContextMenuClassesPackagesToMondrian: b ofLayout: rwLayout.
+					self
+						addContextMenuClassesPackagesToMondrian: b
+						ofLayout: rwLayout.
 					rwLayout scope = rwLayout methodScope
-						ifTrue: [ displayedClasses := allClassesForPackage select: [ :each | (each dModifiers includesAnyOf: #(#DBTable)) = false or: each dModifiers isEmpty ] ]
+						ifTrue: [ displayedClasses := allClassesForPackage
+								select: [ :each | 
+									(each dModifiers includesAnyOf: #(#DBTable)) = false
+										or: each dModifiers isEmpty ] ]
 						ifFalse: [ displayedClasses := allClassesForPackage ].
 					rwEditor settings isReading
-						ifTrue: [ displayedClasses := displayedClasses reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+						ifTrue: [ displayedClasses := displayedClasses
+								reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
 					rwLayout scope = rwLayout classScope
 						ifTrue: [ b nodes: displayedClasses forEach: [  ].
 							b layout grid ]
@@ -108,7 +124,7 @@ Handles the modifies DBTable to color database tables differently
 						modelElements: displayedClasses
 						editor: rwEditor
 						entity: self aFAMIXClass
-		            ofLayout: rwLayout.
+						ofLayout: rwLayout.
 
 
 
@@ -118,30 +134,38 @@ Handles the modifies DBTable to color database tables differently
 								box;
 								fillColor: Color transparent;
 								borderColor: Color transparent.
-							dataBaseTables := allClassesForPackage select: [ :each | each dModifiers includes: 'DBTable' ].
+							dataBaseTables := allClassesForPackage
+								select: [ :each | each dModifiers includes: 'DBTable' ].
 							rwEditor settings isReading
-								ifTrue: [ dataBaseTables := dataBaseTables reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+								ifTrue: [ dataBaseTables := dataBaseTables
+										reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
 							b
 								nodes: dataBaseTables
 								forEach: [ :cls | 
 									"This is duplicate coding:"
-									displayedAttributes := cls dAttributes collect: [ :each | each asRWDiagramElement: rwLayout ].
+									displayedAttributes := cls dAttributes
+										collect: [ :each | each asRWDiagramElement: rwLayout ].
 									rwEditor settings isReading
-										ifTrue: [ displayedAttributes := displayedAttributes reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
+										ifTrue: [ displayedAttributes := displayedAttributes
+												reject: [ :c | rwLayout isModelElementNotShownWithChildren: c ] ].
 									b shape box
 										noBorder;
 										fillColor: Color transparent.
 									b
-										node: 'attributes'
+										node: cls
 										forIt: [ b shape ellipse
-												if: [ :m | rwLayout highlight: m ] fillColor: rwLayout colorSchema dataBaseAsAttributeHighLighteColor;
-												if: [ :m | (rwLayout highlight: m) not ] fillColor: rwLayout colorSchema dataBaseAsAttributeColor;
+												if: [ :m | rwLayout highlight: m ]
+													fillColor: rwLayout colorSchema dataBaseAsAttributeHighLighteColor;
+												if: [ :m | (rwLayout highlight: m) not ]
+													fillColor: rwLayout colorSchema dataBaseAsAttributeColor;
 												width: 20;
 												height: 20;
 												withText: #dName;
 												fontSize: 6;
 												withTextColor: Color black.
-											self addContextMenuAttributesMethodsToMondrian: b ofLayout: rwLayout.
+											self
+												addContextMenuAttributesMethodsToMondrian: b
+												ofLayout: rwLayout.
 											b nodes: displayedAttributes.
 											b layout grid.
 											self
@@ -164,7 +188,8 @@ Handles the modifies DBTable to color database tables differently
 	b layout grid.
 	aRWDiagramElementGroup setConnections.
 	aRWDiagramElementGroup setAccesses.
-	(rwLayout scope = rwLayout packageScope or: [ rwLayout scope = rwLayout classScope ])
+	(rwLayout scope = rwLayout packageScope
+		or: [ rwLayout scope = rwLayout classScope ])
 		ifTrue: [ "Draw arrows for packages and classes"
 			rwLayout lineStyle = rwLayout straightLineStyle
 				ifTrue: [ b shape arrowedLine
@@ -186,12 +211,20 @@ Handles the modifies DBTable to color database tables differently
 						orthoHorizontal.
 					b shape head color: rwLayout colorSchema methodLineColor ].
 			rwLayout scope = rwLayout packageScope
-				ifTrue: [ b edges
-						objects: aRWDiagramElementGroup dAllModelPackages;
-						connectToAll: [ :m | m connectedTo ] ]
-				ifFalse: [ b edges
-						objects: aRWDiagramElementGroup dAllClasses;
-						connectToAll: [ :m | m connectedTo ] ].
+				ifTrue: [ rwLayout displayDependencies
+						ifTrue: [ b edges
+								objects: aRWDiagramElementGroup dAllModelPackages;
+								connectToAll: [ :m | m connectedTo ] ]
+						ifFalse: [ b edges
+								objects: aRWDiagramElementGroup dAllModelPackages;
+								connectToAll: [ :m | m connectedFrom ] ] ]
+				ifFalse: [ rwLayout displayDependencies
+						ifTrue: [ b edges
+								objects: aRWDiagramElementGroup dAllClasses;
+								connectToAll: [ :m | m connectedTo ] ]
+						ifFalse: [ b edges
+								objects: aRWDiagramElementGroup dAllClasses;
+								connectToAll: [ :m | m connectedFrom ] ] ].
 			"Draw access line for packages and classes"
 			rwLayout lineStyle = rwLayout straightLineStyle
 				ifTrue: [ b shape line
@@ -219,7 +252,8 @@ Handles the modifies DBTable to color database tables differently
 	"Draw arrows and lines"
 	allMethods := aRWDiagramElementGroup dAllMethods.
 	rwEditor settings isReading
-		ifTrue: [ allMethods := allMethods reject: [ :m | rwLayout isModelElementNotShownWithChildren: m ] ].
+		ifTrue: [ allMethods := allMethods
+				reject: [ :m | rwLayout isModelElementNotShownWithChildren: m ] ].
 	allPackages
 		do: [ :pack | 
 			rwLayout lineStyle = rwLayout straightLineStyle
@@ -241,9 +275,17 @@ Handles the modifies DBTable to color database tables differently
 						withShorterDistanceAttachPoint;
 						orthoHorizontal.
 					b shape head color: rwLayout colorSchema methodLineColor ].
-			b edges
-				objects: allMethods;
-				connectToAll: [ :m | (m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod) collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ].	" "
+			rwLayout displayDependencies
+				ifTrue: [ b edges
+						objects: allMethods;
+						connectToAll: [ :m | 
+							(m famixElement queryAllOutgoingInvocations atScope: FAMIXMethod)
+								collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ] ]
+				ifFalse: [ b edges
+						objects: allMethods;
+						connectToAll: [ :m | 
+							(m famixElement queryAllIncomingInvocations atScope: FAMIXMethod)
+								collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ] ].	" "
 			rwLayout lineStyle = rwLayout straightLineStyle
 				ifTrue: [ b shape line
 						color: rwLayout colorSchema attributeLineColor;
@@ -265,21 +307,44 @@ Handles the modifies DBTable to color database tables differently
 				"Use if allAccesses returns something: 
 source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 					"Use if allAccesses is not working:"
-					source: (RWDiagramElement new asRWDiagramElements: (pack famixElement classes flatCollect: [ :c | c incomingAccesses ])) connectFrom: #dFrom to: #dVariable ].	"Draw arrows"
+					source:
+					(RWDiagramElement new
+						asRWDiagramElements: (pack famixElement classes flatCollect: [ :c | c incomingAccesses ]))
+					connectFrom: #dFrom
+					to: #dVariable ].	"Draw arrows"
 	b build.
+	self handleInvisibleElementsForMondrian: b layout: rwLayout.
 	lb := RTLegendBuilder new.
 	lb view: b view.
 	rwEditor settings displayFormatter
 		ifFalse: [ lb addText: 'Dependency graph' ]
-		ifTrue: [ lb addText: 'Dependency graph - Elements with permanent appearance changers are highlighted' ].
+		ifTrue: [ lb
+				addText:
+					'Dependency graph - Elements with permanent appearance changers are highlighted' ].
 	lb addText: 'Layout: ' , rwLayout name.
-	lb addColor: rwLayout colorSchema classColor text: 'Class (Grouping level 1)'.
+	lb
+		addColor: rwLayout colorSchema classColor
+		text: 'Class (Grouping level 1)'.
 	"lb addColor: rwLayout colorSchema dataBaseTableColor text: 'Database table'."
-	lb addColor: rwLayout colorSchema methodColor text: 'Box: Active system component'.
-	lb addColor: rwLayout colorSchema attributeColor text: 'Circle: Passive system component'.
-	lb addColor: rwLayout colorSchema dataBaseAsAttributeColor text: 'Circle: DataBase Table'.
-	lb addLineColor: rwLayout colorSchema attributeLineColor text: 'Access to "Data" resp. attribute'.
-	lb addLineColor: rwLayout colorSchema methodLineColor text: 'Invocation between "Coding" resp. methods, the arrow points to the used one'.
+	lb
+		addColor: rwLayout colorSchema methodColor
+		text: 'Box: Active system component'.
+	lb
+		addColor: rwLayout colorSchema attributeColor
+		text: 'Circle: Passive system component'.
+	lb
+		addColor: rwLayout colorSchema dataBaseAsAttributeColor
+		text: 'Circle: DataBase Table'.
+	lb
+		addLineColor: rwLayout colorSchema attributeLineColor
+		text: 'Access to "Data" resp. attribute'.
+	rwLayout displayDependencies
+		ifTrue: [ lb
+				addLineColor: rwLayout colorSchema methodLineColor
+				text: 'Arrow points to used component' ]
+		ifFalse: [ lb
+				addLineColor: rwLayout colorSchema methodLineColor
+				text: 'Reverse arrow, points to using component' ].
 	lb build.
 	RWDiagramAnonymize anonymize: false.
 	^ b
