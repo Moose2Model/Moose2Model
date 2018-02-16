@@ -46,7 +46,7 @@ testEqual
 		usedByLayers: 1
 		usingLayers: 2
 		ofElement: method2RWDE.
-	self assert: acd = acd2 equals: false.
+	self assert: acd = acd2 equals: true. "As is written in the comment of the = method, it is not checked whether instances are equal"
 	
 	
 	
