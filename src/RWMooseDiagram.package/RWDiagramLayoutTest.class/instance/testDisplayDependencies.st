@@ -2,7 +2,7 @@ tests
 testDisplayDependencies
 	| l |
 	l := RWDiagramLayout new.
-	self assert: l displayDependencies equals: false.
+	self assert: l displayDependencies equals: true.
 	l displayDependencies: true.
 	self assert: l displayDependencies equals: true.
 	l displayDependencies: false.
