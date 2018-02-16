@@ -10,6 +10,13 @@ Legend
 
 
 
+
+16.02.2018 v1.3.0
+-----------------
++ Explain line breaks in comments #71
+* Fix broken unit test DisplayDependencies #72
+* Fix broken Unit Test ACDStandard #73
+
 15.01.2018 v1.2.0
 -----------------
 ! Change order of context menu for background #66
