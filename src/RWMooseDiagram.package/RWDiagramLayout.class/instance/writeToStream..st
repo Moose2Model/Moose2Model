@@ -10,6 +10,8 @@ writeToStream: aStream
 	writer tag
 		name: #elements;
 		with: [ writer tag: #version with: self actualVersion.
+			self packageBoxSuppressed
+				ifTrue: [ writer tag: #suppressed with: #packageBox ].
 			self scope = self packageScope
 				ifTrue: [ writer tag: #scope with: #package ]
 				ifFalse: [ self scope = self classScope

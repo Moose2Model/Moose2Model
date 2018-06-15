@@ -16,6 +16,8 @@ testReadFromStreamMessage
 		crlf;
 		nextPutAll: '    <scope>package</scope>';
 		crlf;
+		nextPutAll: '    <suppressed>packageBox</suppressed>';
+		crlf;
 		nextPutAll: '<element>';
 		crlf;
 		nextPutAll: '    <type>FAMIXClass</type>';
@@ -95,19 +97,22 @@ testReadFromStreamMessage
 		nextPutAll: '</elements>'.
 	aStream reset.
 	aRTElement := RTElement new.
-	aRTElement model: class1RWDE .
+	aRTElement model: class1RWDE.
 	layout suppressWithChildren: true to: class1RWDE.
 	layout readFromStream: aStream readStream message: false.
 	self assert: layout readFileVersion equals: 'v0.3.0'.
 	self assert: layout scope equals: layout packageScope.
+	self assert: layout packageBoxSuppressed equals: true.
 	layout replaceMooseEntities: true.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) position point equals: 10 @ 20.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) suppressWithChildren equals: false.
 	aRTElement := RTElement new.
-	aRTElement model: methodI0RWDE .
+	aRTElement model: methodI0RWDE.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) position point equals: 110 @ 120.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) suppressWithChildren equals: true.
-	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) comment text equals: 'A comment' , Character cr asString , Character lf asString , 'second line'.
+	self
+		assert: (layout readAttributesFromFAMIXElement: aRTElement model) comment text
+		equals: 'A comment' , Character cr asString , Character lf asString , 'second line'.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) comment position equals: 11 @ 23.
 	self
 		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeType class asString
@@ -115,40 +120,28 @@ testReadFromStreamMessage
 	self
 		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer class asString
 		equals: 'RWDiagramACDStandard'.
-	self
-		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer includeMe
-		equals: true.
-	self
-		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer usedByLayers
-		equals: 2.
-	self
-		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer usingLayers
-		equals: 1.
+	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer includeMe equals: true.
+	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer usedByLayers equals: 2.
+	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers first changeDeterminer usingLayers equals: 1.
 	self
 		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeType class asString
 		equals: 'RWDiagramACTSuppressOthers'.
 	self
 		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer class asString
 		equals: 'RWDiagramACDStandard'.
-	self
-		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer includeMe
-		equals: false.
-	self
-		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer usedByLayers
-		equals: 3.
-	self
-		assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer usingLayers
-		equals: 1.
+	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer includeMe equals: false.
+	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer usedByLayers equals: 3.
+	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) appearanceChangerGroup appearanceChangers second changeDeterminer usingLayers equals: 1.
 	layout evaluateAppearance.
 	self assert: layout suppressOthersActive equals: true.
 	layout replaceMooseEntities: true.
-	tempElement := (layout readAttributesFromFAMIXElement: methodI0M1RWDE ).
-	self assert: (layout readAttributesFromFAMIXElement: methodI0M1RWDE ) appearance othersAreSuppressed equals: true.	
-	self assert: (layout readAttributesFromFAMIXElement: methodI0M2RWDE ) appearance othersAreSuppressed equals: false.				
+	tempElement := layout readAttributesFromFAMIXElement: methodI0M1RWDE.
+	self assert: (layout readAttributesFromFAMIXElement: methodI0M1RWDE) appearance othersAreSuppressed equals: true.
+	self assert: (layout readAttributesFromFAMIXElement: methodI0M2RWDE) appearance othersAreSuppressed equals: false.
 	aRTElement := RTElement new.
-	aRTElement model: package2RWDE .
+	aRTElement model: package2RWDE.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) attributeIsSpecified equals: false.
-	aRTElement model: package1RWDE .
+	aRTElement model: package1RWDE.
 	self assert: (layout readAttributesFromFAMIXElement: aRTElement model) position point equals: 111 @ 121.
 	layout elementGroup elementList
 		do: [ :each | 

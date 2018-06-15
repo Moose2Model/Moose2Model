@@ -12,7 +12,8 @@ testWriteToStream
 	layout suppressWithChildren: true to: aRTElement model.
 	layout comment: 'A comment' , Character cr asString , Character lf asString , 'second line' to: aRTElement model.
 	layout replaceMooseEntities: true.
-	(layout readAttributesFromFAMIXElement: aRTElement model) comment position: 11 @ 12.	
+	layout packageBoxSuppressed: true.
+	(layout readAttributesFromFAMIXElement: aRTElement model) comment position: 11 @ 12.
 	layout
 		addAppearanceChanger:
 			(RWDiagramAppearanceChanger
@@ -40,7 +41,6 @@ testWriteToStream
 	layout remember: [ :attributeList | attributeList position: (3 / 2) @ (5 / 2) ] fromRTElement: aRTElement.
 	aRTElement model: nil.
 	layout remember: [ :attributeList | attributeList position: (3 / 2) @ (5 / 2) ] fromRTElement: aRTElement.
-	
 	aStream := ReadWriteStream on: String new.
 	layout writeToStream: aStream.
 	aExpectedClass1Stream := ReadWriteStream on: String new.
@@ -117,7 +117,9 @@ testWriteToStream
 		crlf;
 		nextPutAll: '<elements>';
 		crlf;
-      nextPutAll: '    <version>', layout actualVersion,'</version>';
+		nextPutAll: '    <version>' , layout actualVersion , '</version>';
+		crlf;
+		nextPutAll: '    <suppressed>packageBox</suppressed>';
 		crlf;
 		nextPutAll: '    <scope>method</scope>';
 		crlf.
@@ -125,16 +127,15 @@ testWriteToStream
 	aEndStream nextPutAll: '</elements>'.
 	aExpectedStream1 := ReadWriteStream on: String new.
 	aExpectedStream2 := ReadWriteStream on: String new.
-aExpectedStream1
-				nextPutAll: aStartStream contents;
-				nextPutAll: aExpectedClass1Stream contents;
-				nextPutAll: aExpectedMethod1Stream contents;
-				nextPutAll: aEndStream contents .
-		aExpectedStream2
-				nextPutAll: aStartStream contents;
-				nextPutAll: aExpectedMethod1Stream contents;
-				nextPutAll: aExpectedClass1Stream contents;
-				nextPutAll: aEndStream contents .
-	(aStream contents = aExpectedStream1 contents) | (aStream contents = aExpectedStream2 contents)
-	ifFalse:[self assert: aStream equals: aExpectedStream]
-	
+	aExpectedStream1
+		nextPutAll: aStartStream contents;
+		nextPutAll: aExpectedClass1Stream contents;
+		nextPutAll: aExpectedMethod1Stream contents;
+		nextPutAll: aEndStream contents.
+	aExpectedStream2
+		nextPutAll: aStartStream contents;
+		nextPutAll: aExpectedMethod1Stream contents;
+		nextPutAll: aExpectedClass1Stream contents;
+		nextPutAll: aEndStream contents.
+	aStream contents = aExpectedStream1 contents | (aStream contents = aExpectedStream2 contents)
+		ifFalse: [ self assert: aStream equals: aExpectedStream ]

@@ -1,6 +1,6 @@
 readFile
 readFromStreamXML: aReadStream
-	| famixType comp1 comp2 compClassScope anElementGroup parsed elements x y point supressWithChildren comment commentx commenty commentPoint actsos aAC versions scopeXML |
+	| famixType comp1 comp2 compClassScope anElementGroup parsed elements x y point supressWithChildren comment commentx commenty commentPoint actsos aAC versions scopeXML suppressedXML |
 	aReadStream reset.
 	anElementGroup := elementGroup.
 	parsed := (XMLDOMParser on: aReadStream)
@@ -23,6 +23,14 @@ readFromStreamXML: aReadStream
 						ifFalse: [ readScope = 'method'
 								ifTrue: [ self scope: self methodScope ]
 								ifFalse: [  ] ] ] ].
+	suppressedXML := parsed allElementsNamed: #suppressed.
+	suppressedXML
+		do: [ :s | 
+			| readScope |
+			readScope := s contentString.
+			readScope = 'packageBox'
+				ifTrue: [ self packageBoxSuppressed: true ]
+				ifFalse: [ self packageBoxSuppressed: false ] ].
 	elements := parsed allElementsNamed: #element.
 	elements
 		do: [ :element | 
@@ -118,7 +126,9 @@ readFromStreamXML: aReadStream
 					aAC := RWDiagramAppearanceChanger
 						changeDeterminer:
 							(RWDiagramACDStandard new
-								includeMe: (actso contentStringAt: #includeMe) = 'true' usedByLayers: (actso contentStringAt: #usedByLayers) asInteger usingLayers: (actso contentStringAt: #usingLayers) asInteger;
+								includeMe: (actso contentStringAt: #includeMe) = 'true'
+									usedByLayers: (actso contentStringAt: #usedByLayers) asInteger
+									usingLayers: (actso contentStringAt: #usingLayers) asInteger;
 								yourself)
 						changeType: RWDiagramACTSuppressOthers new.
 					self
