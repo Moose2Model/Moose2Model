@@ -9,7 +9,10 @@ Legend
 - : removed
 
 
-
+15.05.2018 v1.3.1
+-----------------
++Store packageBoxSuppressed on File #74
+The information whether the package box is suppressed or not is now stored and read to and from file.
 
 16.02.2018 v1.3.0
 -----------------
