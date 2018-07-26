@@ -20,8 +20,13 @@ addContextMenuClassesPackagesToMondrian: aRTMondrian ofLayout: aRWDiagramLayout
 		action: [ :e | 
 			self setLayoutCurrent: aRWDiagramLayout.
 			RWDiagram suppressWithChildren: false to: e model ofLayout: aRWDiagramLayout ].
+   aRTMenuActivable
+		item: 'Inspect coding element'
+		action: [ :e | 
+			self setLayoutCurrent: aRWDiagramLayout.
+			e model inspect ].
 	aRTMenuActivable
-		item: 'Inspect'
+		item: 'Inspect diagram element'
 		action: [ :e | 
 			self setLayoutCurrent: aRWDiagramLayout.
 			e inspect ].
