@@ -1,8 +1,28 @@
 <?xml version="1.0"?>
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v1.0.0</version>
+    <version>v1.3.0</version>
+    <suppressed>packageBox</suppressed>
     <scope>method</scope>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <x>-3.0</x>
+        <y>70.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <method>=</method>
+        <x>218.0</x>
+        <y>59.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACDStandard</class>
+        <x>318.0</x>
+        <y>232.0</y>
+    </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
@@ -20,13 +40,6 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>RWDiagramAbstractAttributesLayoutChanger</class>
-        <method>currentLayout</method>
-        <x>-285.0</x>
-        <y>450.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>elementGroup</method>
         <x>-595.0</x>
@@ -38,12 +51,6 @@
         <method>writeToStream:</method>
         <x>-635.0</x>
         <y>130.0</y>
-        <ACTSuppressOthers>
-            <type>ACDStandard</type>
-            <includeMe>true</includeMe>
-            <usedByLayers>1</usedByLayers>
-            <usingLayers>1</usingLayers>
-        </ACTSuppressOthers>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -114,10 +121,23 @@
         <y>140.0</y>
     </element>
     <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACTHighlight</class>
+        <x>585.0</x>
+        <y>70.0</y>
+    </element>
+    <element>
         <type>FAMIXPackage</type>
         <package>RWMooseDiagram</package>
         <x>285.0</x>
         <y>110.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <method>=</method>
+        <x>-3.0</x>
+        <y>59.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -200,6 +220,12 @@
         <method>attributeList</method>
         <x>-425.0</x>
         <y>170.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <x>218.0</x>
+        <y>70.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -308,10 +334,24 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramACDStandard</class>
+        <method>=</method>
+        <x>318.0</x>
+        <y>221.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>classScope</method>
         <x>-690.0</x>
         <y>100.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTHighlight</class>
+        <method>=</method>
+        <x>585.0</x>
+        <y>59.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>

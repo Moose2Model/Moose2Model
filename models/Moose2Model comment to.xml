@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v1.2.0</version>
+    <version>v1.3.1</version>
     <scope>class</scope>
     <element>
         <type>FAMIXClass</type>
@@ -76,8 +76,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramElementGroupTest</class>
-        <x>-18.0</x>
-        <y>108.0</y>
+        <x>223.0</x>
+        <y>83.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -95,8 +95,8 @@
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramACTHighlight</class>
-        <x>76.0</x>
-        <y>105.0</y>
+        <x>112.0</x>
+        <y>142.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
