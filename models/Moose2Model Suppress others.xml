@@ -1,74 +1,33 @@
 <?xml version="1.0"?>
-<!--Moose Diagram Layout data, see "https://github.com/RainerWinkler/Moose-FAMIX-SAP-Extractor" on how to use this file-->
+<!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v0.4.3</version>
+    <version>v1.3.2</version>
+    <suppressed>packageBox</suppressed>
     <scope>method</scope>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>FAMIXMethod</class>
+        <method>moose2ModelAddWithNeighbours</method>
+        <x>-380.0</x>
+        <y>179.0</y>
+        <comment><![CDATA[A comment]]>
+        </comment>
+        <commentx>-326.0</commentx>
+        <commenty>143.0</commenty>
+    </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramAppearanceChanger</class>
-        <x>-195.0</x>
-        <y>217.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramACDStandard</class>
-        <x>-342.0</x>
-        <y>102.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAbstractAttributesLayoutChanger</class>
-        <method>currentLayout</method>
-        <x>-185.0</x>
-        <y>125.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramEditor</class>
-        <method>uniqueInstance</method>
-        <hasClassScope>true</hasClassScope>
-        <x>-522.0</x>
-        <y>99.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayout</class>
-        <method>addAppearanceChanger:to:</method>
-        <x>-443.0</x>
-        <y>168.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramEditor</class>
-        <method>currentLayout</method>
-        <x>-579.0</x>
-        <y>99.0</y>
-    </element>
-    <element>
-        <type>FAMIXPackage</type>
-        <package>RWMooseDiagram</package>
-        <x>345.0</x>
-        <y>69.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagram</class>
-        <x>-389.0</x>
-        <y>1.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>RWDiagramLayout</class>
-        <x>-444.0</x>
-        <y>179.0</y>
+        <x>-620.0</x>
+        <y>232.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
-        <method>suppressOthersUsedByLayers:usingLayers:to:</method>
+        <method>suppressOthersUsedByLayers:usingLayers:to:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-334.0</x>
-        <y>-10.0</y>
+        <x>-516.0</x>
+        <y>-15.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -78,37 +37,260 @@
     </element>
     <element>
         <type>FAMIXClass</type>
+        <class>RWDiagramACDStandard</class>
+        <x>-608.0</x>
+        <y>90.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAppearanceChangerGroup</class>
+        <x>112.0</x>
+        <y>57.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Famix-Core</package>
+        <x>-314.0</x>
+        <y>179.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>FAMIXAttribute</class>
+        <method>moose2ModelAddWithNeighbours</method>
+        <x>-247.0</x>
+        <y>179.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramEditor</class>
+        <method>uniqueInstance</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-115.0</x>
+        <y>69.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>addAppearanceChanger:to:</method>
+        <x>-523.0</x>
+        <y>157.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramEditor</class>
+        <method>currentLayout</method>
+        <x>-172.0</x>
+        <y>69.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <method>changeType:</method>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>RWMooseDiagram</package>
+        <x>345.0</x>
+        <y>69.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>remember:ofModel:</method>
+        <x>-474.0</x>
+        <y>157.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAttributeList</class>
+        <x>-355.0</x>
+        <y>493.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagram</class>
+        <x>-389.0</x>
+        <y>1.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAttributeList</class>
+        <method>attributeIsSpecified</method>
+        <x>-403.0</x>
+        <y>483.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>highlightIncludingMe:usedByLayers:usingLayers:to:ofLayout:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-317.0</x>
+        <y>-7.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayoutTest</class>
+        <method>testWriteToStream</method>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramLayout</class>
+        <x>-525.0</x>
+        <y>168.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>suppressOthersUsedByLayers:usingLayers:to:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-211.0</x>
+        <y>-65.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramLayoutTest</class>
+        <supressWithChildren>true</supressWithChildren>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayoutTest</class>
+        <method>testEvaluateAppearance</method>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramUndeterminedAttributeList</class>
+        <x>-374.0</x>
+        <y>268.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChangerGroup</class>
+        <method>addAppearentChanger:</method>
+        <x>113.0</x>
+        <y>46.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>readFromStreamXML:</method>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramUndeterminedAttributeList</class>
+        <method>attributeIsSpecified</method>
+        <x>-422.0</x>
+        <y>257.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
         <class>RWDiagramAbstractAttributesLayoutChanger</class>
         <x>-185.0</x>
         <y>136.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramGlobalAttributeList</class>
+        <method>attributeIsSpecified</method>
+        <x>-534.0</x>
+        <y>386.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <method>changeDeterminer:</method>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayoutTest</class>
+        <method>testAddAppearanceChangerTo</method>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAttributeList</class>
+        <method>appearanceChangerGroup</method>
+        <x>-318.0</x>
+        <y>483.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>FAMIXMethod</class>
+        <x>-380.0</x>
+        <y>190.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramAppearanceChanger</class>
         <method>changeDeterminer:changeType:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-195.0</x>
-        <y>206.0</y>
+        <x>-620.0</x>
+        <y>221.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramGlobalAttributeList</class>
+        <x>-534.0</x>
+        <y>396.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>convertToRWDiagramElement:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-502.0</x>
-        <y>-2.0</y>
+        <x>-613.0</x>
+        <y>16.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramEditor</class>
-        <x>-549.0</x>
-        <y>110.0</y>
+        <x>-142.0</x>
+        <y>80.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>addContextMenuAttributesMethodsToMondrian:ofLayout:</method>
+        <x>-414.0</x>
+        <y>-73.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>FAMIXAttribute</class>
+        <x>-247.0</x>
+        <y>190.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramUndeterminedAttributeList</class>
+        <method>appearanceChangerGroup</method>
+        <x>-337.0</x>
+        <y>257.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayoutTest</class>
+        <method>testRemoveAppearanceChangersFrom</method>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramACDStandard</class>
         <method>includeMe:usedByLayers:usingLayers:ofElement:</method>
-        <x>-342.0</x>
-        <y>92.0</y>
+        <x>-608.0</x>
+        <y>80.0</y>
+        <comment><![CDATA[A Comment]]>
+        </comment>
+        <commentx>-623.0</commentx>
+        <commenty>48.0</commenty>
     </element>
 </elements>

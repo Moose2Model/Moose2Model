@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v1.3.0</version>
+    <version>v1.3.2</version>
     <suppressed>packageBox</suppressed>
     <scope>method</scope>
     <element>
@@ -79,6 +79,20 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChangerGroupTest</class>
+        <method>testAppearentChangersNoDuplicate</method>
+        <x>718.0</x>
+        <y>34.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAttributeListTest</class>
+        <method>testRemoveAppearanceChangerGroup</method>
+        <x>938.0</x>
+        <y>164.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>replaceMooseEntitiesUndefined</method>
         <hasClassScope>true</hasClassScope>
@@ -119,6 +133,20 @@
         <y>233.0</y>
     </element>
     <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChangerGroupTest</class>
+        <method>testAppearentChangers</method>
+        <x>698.0</x>
+        <y>59.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>addAppearanceChanger:to:</method>
+        <x>-738.0</x>
+        <y>82.0</y>
+    </element>
+    <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLocalComment</class>
         <x>-1100.0</x>
@@ -136,6 +164,13 @@
         <method>text:</method>
         <x>-419.0</x>
         <y>239.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChangerGroupTest</class>
+        <method>testRemoveTemporary</method>
+        <x>825.0</x>
+        <y>34.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
@@ -198,10 +233,30 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramAttributeListTest</class>
+        <method>testAppearanceChangerGroup</method>
+        <x>814.0</x>
+        <y>164.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>replaceMooseEntities:</method>
         <x>-781.0</x>
         <y>83.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramElementGroup</class>
+        <x>662.0</x>
+        <y>175.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramNoPackage</class>
+        <method>add:</method>
+        <x>696.0</x>
+        <y>-23.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -221,13 +276,26 @@
         <class>RWDiagram</class>
         <method>aFAMIXAttribute</method>
         <x>-549.0</x>
-        <y>-47.0</y>
+        <y>-77.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagramGlobalComment</class>
         <x>-324.0</x>
         <y>192.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAttributeListTest</class>
+        <x>883.0</x>
+        <y>175.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElementGroup</class>
+        <method>add:</method>
+        <x>662.0</x>
+        <y>164.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -247,6 +315,12 @@
         <method>addAppearentChanger:</method>
         <x>-458.0</x>
         <y>150.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -269,8 +343,8 @@
         <y>16.0</y>
         <comment><![CDATA[Here the XML is parsed]]>
         </comment>
-        <commentx>-701.0</commentx>
-        <commenty>-42.0</commenty>
+        <commentx>-697.0</commentx>
+        <commenty>-29.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -342,6 +416,12 @@
         <y>82.0</y>
     </element>
     <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAppearanceChangerGroupTest</class>
+        <x>761.0</x>
+        <y>56.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAppearanceChanger</class>
         <method>changeDeterminer:changeType:</method>
@@ -361,6 +441,13 @@
         <class>RWDiagramGlobalAttributeList</class>
         <x>-1075.0</x>
         <y>141.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>packageBoxSuppressed:</method>
+        <x>-789.0</x>
+        <y>107.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -390,6 +477,13 @@
         <y>239.0</y>
     </element>
     <element>
+        <type>FAMIXAttribute</type>
+        <class>RWDiagramAppearanceChangerGroup</class>
+        <attribute>appearanceChangers</attribute>
+        <x>-501.0</x>
+        <y>148.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramAttributeList</class>
         <method>comment:</method>
@@ -415,6 +509,12 @@
         <method>classScope</method>
         <x>-847.0</x>
         <y>93.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramNoPackage</class>
+        <x>696.0</x>
+        <y>-12.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
