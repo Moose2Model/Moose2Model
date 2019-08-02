@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
+<elements>
+    <version>v1.3.2</version>
+    <suppressed>packageBox</suppressed>
+    <scope>method</scope>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MMockColorSelectorDialogWindow</class>
+        <method>title:</method>
+        <x>-352.0</x>
+        <y>97.0</y>
+        <comment><![CDATA[Is not called here]]>
+        </comment>
+        <commentx>-289.0</commentx>
+        <commenty>66.0</commenty>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MMockColorSelectorDialogWindow</class>
+        <x>-352.0</x>
+        <y>108.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontend</class>
+        <method>initializePresenter</method>
+        <x>-315.0</x>
+        <y>-41.0</y>
+        <comment><![CDATA[Changes title for test when the selection changed]]>
+        </comment>
+        <commentx>-269.0</commentx>
+        <commenty>-86.0</commenty>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model-Mocks</package>
+        <x>134.0</x>
+        <y>41.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model-Frontend</package>
+        <x>354.0</x>
+        <y>41.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontend</class>
+        <method>changeMyTitle:</method>
+        <x>-309.0</x>
+        <y>-1.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontend</class>
+        <x>-305.0</x>
+        <y>9.0</y>
+    </element>
+</elements>

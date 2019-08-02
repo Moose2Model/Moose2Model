@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
+<elements>
+    <version>v1.3.2</version>
+    <scope>method</scope>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontendDemoEntry</class>
+        <method>menuCommandOn:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-1144.0</x>
+        <y>-37.0</y>
+        <comment><![CDATA[The World Menu entries are specified here]]>
+        </comment>
+        <commentx>-1127.0</commentx>
+        <commenty>-123.0</commenty>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model-Frontend</package>
+        <x>-1145.0</x>
+        <y>-37.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontendDemoEntry</class>
+        <x>-1145.0</x>
+        <y>-27.0</y>
+    </element>
+</elements>
