@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "Moose2Model-Frontend",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list",
+		"menu",
+		"pane",
+		"factory",
+		"new"
+	],
+	"name" : "M2MFrontend",
+	"type" : "normal"
+}

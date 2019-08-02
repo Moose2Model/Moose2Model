@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "ColorSelectorDialogWindow",
+	"category" : "Moose2Model-Mocks",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mockSelectedColor",
+		"mockTitle"
+	],
+	"name" : "M2MMockColorSelectorDialogWindow",
+	"type" : "normal"
+}
