@@ -1,7 +1,7 @@
 MethodUsage-private
 addContextMenuAttributesMethodsToMondrian: aRTMondrian ofLayout: aRWDiagramLayout
 	| aRTMenuActivable |
-	"Test connection 2"
+	"Test connection 3"
 	aRTMenuActivable := aRTMondrian interaction menu.	"Context menu attributes and methods"
 	aRTMenuActivable
 		item: 'Add with neighbours'
