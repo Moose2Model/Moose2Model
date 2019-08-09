@@ -18,7 +18,8 @@ initializeWidgets
 				cr;
 				show: 'Opened';
 				cr.
-			windowMorph extent: 400 @ 400.
+	windowMorph hResizing: #spaceFill.
+	windowMorph vResizing: #spaceFill.
 			"windowMorph extent: windowMorph extent asIntegerPoint."
 			windowMorph changed ].
 	pane widget surface

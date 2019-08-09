@@ -6,7 +6,8 @@ rtView: aRTView
 	
 	windowMorph := TRMorph new.
 	windowMorph canvas: rtView view canvas.
-	windowMorph extent: 800 @ 800.
+	windowMorph hResizing: #spaceFill.
+	windowMorph vResizing: #spaceFill.
 	windowMorph changed.
 	pane := windowMorph asSpecAdapter.
 	pane changed
