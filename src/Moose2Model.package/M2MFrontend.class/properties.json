@@ -10,7 +10,9 @@
 		"menu",
 		"pane",
 		"factory",
-		"new"
+		"new",
+		"rtView",
+		"myTitle"
 	],
 	"name" : "M2MFrontend",
 	"type" : "normal"

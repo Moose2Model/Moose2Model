@@ -1,3 +1,3 @@
 api
 title
-	^ 'Moose2Model'
+	^ myTitle

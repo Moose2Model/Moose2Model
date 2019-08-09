@@ -1,13 +1,16 @@
 accessing
 initializeWidgets
-	| windowMorph tRcanvas |
-	tRcanvas := TRCanvas new.
+	| windowMorph tRcanvas|
+	rtView ifNil:[
+	rtView := RTView new. rtView add: (RTLabel elementOn: 'Hello World').].
+	
+	"tRcanvas := TRCanvas new.
 	self makeZoomable: tRcanvas.
-	self makeCanvasDraggable: tRcanvas.
+	self makeCanvasDraggable: tRcanvas."
 
 	"tRcanvas addShape: (TRBoxShape new size: 2)."
 	windowMorph := TRMorph new.
-	windowMorph canvas: tRcanvas.
+	windowMorph canvas: rtView canvas.
 	pane := windowMorph asSpecAdapter.
 	pane
 		when: MorphOpened

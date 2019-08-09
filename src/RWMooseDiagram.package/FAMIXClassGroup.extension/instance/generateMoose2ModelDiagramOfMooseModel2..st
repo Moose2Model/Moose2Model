@@ -1,5 +1,6 @@
 *RWMooseDiagram
-generateMoose2ModelDiagramOfMooseModel: aMooseModel
+generateMoose2ModelDiagramOfMooseModel2: aMooseModel
+"Backup of old logic, calls the inspector of the view"
 	| aRWDElementGroup diagram view e |
 	diagram := RWDiagram new.
 	aRWDElementGroup := RWDiagramElementGroup new.
@@ -17,11 +18,7 @@ generateMoose2ModelDiagramOfMooseModel: aMooseModel
 		test: false.
 	view
 		ifNil: [ self inform: 'Generation of View aborted due to user request' ]
-		ifNotNil: [ 
-			|frontend|
-			frontend := M2MFrontend new.
-			frontend rtView: view.
-			frontend openWithSpec.
+		ifNotNil: [ view inspect.
 			diagram
 				readToRTView: view
 				withEditor: RWDiagramEditor uniqueInstance
