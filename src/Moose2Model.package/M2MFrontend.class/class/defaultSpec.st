@@ -7,8 +7,6 @@ defaultSpec
 		add:
 			(SpecRowLayout composed
 				"position: 200;"
-				add: #list;
-				addSplitter;
 				add: #pane;
 				yourself);
 		yourself
