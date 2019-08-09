@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v1.3.0</version>
+    <version>v1.3.2</version>
     <suppressed>packageBox</suppressed>
     <scope>method</scope>
     <element>
@@ -29,6 +29,13 @@
         <method>name:</method>
         <x>-565.0</x>
         <y>60.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>packageBoxSuppressed</method>
+        <x>-614.0</x>
+        <y>126.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -303,8 +310,8 @@
         <y>265.0</y>
         <comment><![CDATA[The general tags of the attributes of the element are written here]]>
         </comment>
-        <commentx>-527.0</commentx>
-        <commenty>306.0</commenty>
+        <commentx>-592.0</commentx>
+        <commenty>386.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
