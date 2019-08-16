@@ -5,6 +5,38 @@
     <suppressed>packageBox</suppressed>
     <scope>method</scope>
     <element>
+        <type>FAMIXAttribute</type>
+        <class>M2MFrontend</class>
+        <attribute>myTitle</attribute>
+        <x>-380.0</x>
+        <y>-22.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model</package>
+        <x>237.0</x>
+        <y>162.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MMockColorSelectorDialogWindow</class>
+        <x>-352.0</x>
+        <y>108.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontend</class>
+        <method>initialize</method>
+        <x>-371.0</x>
+        <y>-61.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>M2MMockColorSelectorDialogWindow</class>
         <method>title:</method>
@@ -14,12 +46,6 @@
         </comment>
         <commentx>-289.0</commentx>
         <commenty>66.0</commenty>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>M2MMockColorSelectorDialogWindow</class>
-        <x>-352.0</x>
-        <y>108.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -33,16 +59,36 @@
         <commenty>-86.0</commenty>
     </element>
     <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Mocks</package>
-        <x>134.0</x>
-        <y>41.0</y>
+        <type>FAMIXMethod</type>
+        <class>M2MMockColorSelectorDialogWindowTest</class>
+        <method>testSimple</method>
+        <x>-525.0</x>
+        <y>18.0</y>
     </element>
     <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Frontend</package>
-        <x>354.0</x>
-        <y>41.0</y>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontend</class>
+        <method>rtView:</method>
+        <x>-425.0</x>
+        <y>-46.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MMockColorSelectorDialogWindowTest</class>
+        <x>-526.0</x>
+        <y>28.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontend</class>
+        <x>-305.0</x>
+        <y>9.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -58,9 +104,16 @@
         </ACTSuppressOthers>
     </element>
     <element>
-        <type>FAMIXClass</type>
+        <type>FAMIXMethod</type>
         <class>M2MFrontend</class>
-        <x>-305.0</x>
-        <y>9.0</y>
+        <method>title</method>
+        <x>-390.0</x>
+        <y>12.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
 </elements>
