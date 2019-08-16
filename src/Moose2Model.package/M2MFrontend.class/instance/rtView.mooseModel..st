@@ -1,7 +1,7 @@
 accessing
-rtView: aRTView
+rtView: aRTView mooseModel: aMooseModel
 |windowMorph|
-   myTitle := RWDiagramEditor uniqueInstance currentLayoutName.
+   myTitle := ( RWDiagramEditor uniqueInstance currentLayoutName ) , ' - ' , aMooseModel name.
 	rtView := aRTView.
 	
 	windowMorph := TRMorph new.

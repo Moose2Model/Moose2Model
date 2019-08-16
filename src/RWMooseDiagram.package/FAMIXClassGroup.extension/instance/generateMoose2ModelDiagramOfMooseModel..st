@@ -20,7 +20,7 @@ generateMoose2ModelDiagramOfMooseModel: aMooseModel
 		ifNotNil: [ 
 			|frontend|
 			frontend := M2MFrontend new.
-			frontend rtView: view.
+			frontend rtView: view mooseModel: aMooseModel.
 			frontend openWithSpec.
 			diagram
 				readToRTView: view
