@@ -12,5 +12,5 @@ spec for: #'common' do: [
 		        className: #ConfigurationOfMoose;
 		        versionString: #'development' ]."
 		 
-	spec package: 'RWMooseDiagram' with: 'RWMooseDiagram-RainerWinkler.1565352280';
-	     package: 'Moose2Model' with: 'Moose2Model-RainerWinkler.1565352280' ].
+	spec package: 'RWMooseDiagram' with: 'RWMooseDiagram-RainerWinkler.1565973077';
+	     package: 'Moose2Model' with: 'Moose2Model-RainerWinkler.1565973077' ].
