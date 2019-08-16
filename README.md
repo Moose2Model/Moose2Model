@@ -2,6 +2,10 @@
 
 This is a software exploration tool to support developers during their work. 
 
+# Installation
+
+See the Wiki of this repository (Go to the tab "Wiki").
+
 # Documentation
 
 The documentation is in the Wiki of this repository (Go to the tab "Wiki").
@@ -22,7 +26,7 @@ It can generate diagrams like this:
 It is build on top of Pharo, Roassal and [Moose](http://www.moosetechnology.org/).
 
 # Compatibility
-Runs on Moose 6.
+Runs on Moose 6.1.
 
 Is currently tested on Moose 6.1. You might switch of the warning of deprecated methods under System->Settings.
 
