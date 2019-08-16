@@ -1,0 +1,1 @@
+This is the configuration needed to distribute Moose2Model via Monticello.

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "RainerWinkler 8/16/2019 11:40",
+	"super" : "Object",
+	"category" : "ConfigurationOfMoose2Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"LastVersionLoad"
+	],
+	"instvars" : [
+		"project"
+	],
+	"name" : "ConfigurationOfMoose2Model",
+	"type" : "normal"
+}
