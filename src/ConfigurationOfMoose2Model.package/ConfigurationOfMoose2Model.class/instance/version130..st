@@ -2,7 +2,8 @@ accessing
 version130: spec
 <version: '1.3.0'>
 
-spec for: #'pharo6.x' do: [ 
+
+spec for: #'common' do: [ 
 	spec repository: 'http://www.smalltalkhub.com/mc/RainerWinkler/RW-Moose-Diagram/main'.
 	"
 	Outcomment dependency from Moose Model as it is not loading
