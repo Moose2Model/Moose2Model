@@ -14,10 +14,7 @@ initializeWidgets
 	pane := windowMorph asSpecAdapter.
 	pane
 		when: MorphOpened
-		do: [ Transcript
-				cr;
-				show: 'Opened';
-				cr.
+		do: [ 
 	windowMorph hResizing: #spaceFill.
 	windowMorph vResizing: #spaceFill.
 			"windowMorph extent: windowMorph extent asIntegerPoint."

@@ -13,12 +13,12 @@ testSingleColorChoosedBox
 		select: [ :group | group menuItems first description = #White ])
 		first menuItems first.
 	greenButton performMenuActionWith: {}.
-	self assert: m2m pane widget trachelCanvas shapes size equals: 1.
+	self assert: m2m pane widget trachelCanvas shapes size equals: 2. "Expect 2 as there is now also a text in the Window"
 	self
-		assert: m2m pane widget trachelCanvas shapes first position
+		assert: m2m pane widget trachelCanvas shapes second position "The box is the second element"
 		equals: 5 @ 5.
 	self
-		assert: m2m pane widget trachelCanvas shapes first color
+		assert: m2m pane widget trachelCanvas shapes second color "The box is the second element"
 		equals: Color blue.
 	"m2m pane widget trachelCanvas shapes inspect."
 	m2m window close	"Not needed when test runs in background"
