@@ -2,6 +2,8 @@
 
 This is a software exploration tool to support developers during their work. 
 
+It is used very intensely by the main developer. But there are not many other users currently. Please contact the developer by opening an issue when you plan to use it to get support.
+
 # Documentation
 
 The documentation is in the Wiki of this repository (Go to the tab "Wiki").
