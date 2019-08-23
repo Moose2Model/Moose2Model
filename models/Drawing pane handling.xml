@@ -5,6 +5,33 @@
     <suppressed>packageBox</suppressed>
     <scope>method</scope>
     <element>
+        <type>FAMIXAttribute</type>
+        <class>M2MFrontend</class>
+        <attribute>list</attribute>
+        <x>-795.0</x>
+        <y>-4.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model</package>
+        <x>75.0</x>
+        <y>55.5</y>
+    </element>
+    <element>
+        <type>FAMIXAttribute</type>
+        <class>M2MFrontend</class>
+        <attribute>pane</attribute>
+        <x>-744.0</x>
+        <y>-4.0</y>
+    </element>
+    <element>
+        <type>FAMIXAttribute</type>
+        <class>M2MFrontend</class>
+        <attribute>menu</attribute>
+        <x>-769.0</x>
+        <y>-4.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>M2MFrontend</class>
         <method>mainMenu</method>
@@ -12,11 +39,49 @@
         <y>15.0</y>
     </element>
     <element>
+        <type>FAMIXPackage</type>
+        <package>RWMooseDiagram</package>
+        <x>330.0</x>
+        <y>30.5</y>
+    </element>
+    <element>
         <type>FAMIXClass</type>
-        <class>M2MAthensMorph</class>
-        <x>240.0</x>
-        <y>52.0</y>
-        <supressWithChildren>true</supressWithChildren>
+        <class>RWDiagramElementGroup</class>
+        <x>410.0</x>
+        <y>30.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramNoPackage</class>
+        <method>add:</method>
+        <x>-31.0</x>
+        <y>-121.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElementGroup</class>
+        <method>add:</method>
+        <x>410.0</x>
+        <y>20.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontend</class>
+        <x>-755.0</x>
+        <y>19.0</y>
+    </element>
+    <element>
+        <type>FAMIXAttribute</type>
+        <class>M2MFrontend</class>
+        <attribute>rtView</attribute>
+        <x>-808.0</x>
+        <y>9.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -36,49 +101,9 @@
         </ACTSuppressOthers>
     </element>
     <element>
-        <type>FAMIXAttribute</type>
-        <class>M2MFrontend</class>
-        <attribute>menu</attribute>
-        <x>-769.0</x>
-        <y>-4.0</y>
-    </element>
-    <element>
-        <type>FAMIXAttribute</type>
-        <class>M2MFrontend</class>
-        <attribute>list</attribute>
-        <x>-795.0</x>
-        <y>-4.0</y>
-    </element>
-    <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Athens</package>
-        <x>240.0</x>
-        <y>41.0</y>
-    </element>
-    <element>
-        <type>FAMIXAttribute</type>
-        <class>M2MFrontend</class>
-        <attribute>pane</attribute>
-        <x>-744.0</x>
-        <y>-4.0</y>
-    </element>
-    <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Frontend</package>
-        <x>81.0</x>
-        <y>54.0</y>
-    </element>
-    <element>
         <type>FAMIXClass</type>
-        <class>M2MFrontend</class>
-        <x>-755.0</x>
-        <y>19.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>M2MAthensMorph</class>
-        <method>surface</method>
-        <x>241.0</x>
-        <y>41.0</y>
+        <class>RWDiagramNoPackage</class>
+        <x>-31.0</x>
+        <y>-111.0</y>
     </element>
 </elements>
