@@ -1,16 +1,37 @@
 <?xml version="1.0"?>
 <!--Moose2Model Layout data, visit moose2model.org on how to use this file-->
 <elements>
-    <version>v1.3.1</version>
+    <version>v1.3.2</version>
     <suppressed>packageBox</suppressed>
     <scope>method</scope>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <x>1763.0</x>
+        <y>-23.0</y>
+    </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>suppressOthersUsedByLayers:usingLayers:to:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>536.0</x>
-        <y>419.0</y>
+        <x>3.0</x>
+        <y>655.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>refresh</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-366.0</x>
+        <y>642.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <method>=</method>
+        <x>1985.0</x>
+        <y>-33.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -20,11 +41,17 @@
         <y>607.0</y>
     </element>
     <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACDStandard</class>
+        <x>1188.0</x>
+        <y>245.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>methodUsage:withEditor:withLayout:withMondrian:ofMooseModel:test:</method>
-        <x>880.0</x>
-        <y>369.0</y>
+        <x>347.0</x>
+        <y>605.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -37,15 +64,15 @@
         <class>RWDiagram</class>
         <method>comment:to:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>864.0</x>
-        <y>394.0</y>
+        <x>330.0</x>
+        <y>630.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>readToRTView:withEditor:withLayout:</method>
-        <x>246.0</x>
-        <y>369.0</y>
+        <x>-288.0</x>
+        <y>605.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -73,8 +100,46 @@
         <class>RWDiagram</class>
         <method>path</method>
         <hasClassScope>true</hasClassScope>
-        <x>191.0</x>
-        <y>444.0</y>
+        <x>-343.0</x>
+        <y>680.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelSetMethodScope</method>
+        <x>-376.0</x>
+        <y>353.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose-Core</package>
+        <x>523.5</x>
+        <y>383.5</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelSetCurrent</method>
+        <x>-441.0</x>
+        <y>328.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model</package>
+        <x>1351.5</x>
+        <y>474.5</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -85,19 +150,40 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelSetPackageScope</method>
+        <x>-263.0</x>
+        <y>353.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>removeTemporaryOfLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>460.0</x>
-        <y>444.0</y>
+        <x>-74.0</x>
+        <y>680.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>setMethodScope</method>
+        <hasClassScope>true</hasClassScope>
+        <x>125.0</x>
+        <y>667.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>suppressWithChildren:to:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>265.0</x>
-        <y>444.0</y>
+        <x>-268.0</x>
+        <y>680.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -108,11 +194,17 @@
         <y>652.0</y>
     </element>
     <element>
+        <type>FAMIXClass</type>
+        <class>FAMIXClassGroup</class>
+        <x>892.0</x>
+        <y>358.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>setLayoutCurrent:</method>
-        <x>592.0</x>
-        <y>394.0</y>
+        <x>59.0</x>
+        <y>630.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -129,6 +221,51 @@
         <y>627.0</y>
     </element>
     <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramEditor</class>
+        <method>currentLayout</method>
+        <x>1260.0</x>
+        <y>626.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACTHighlight</class>
+        <x>1358.0</x>
+        <y>33.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelSetPath</method>
+        <x>-191.0</x>
+        <y>378.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelDependency</method>
+        <x>-347.0</x>
+        <y>328.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Famix-Extensions</package>
+        <x>891.5</x>
+        <y>358.5</y>
+    </element>
+    <element>
         <type>FAMIXPackage</type>
         <package>RWMooseDiagram</package>
         <x>1710.5</x>
@@ -136,11 +273,31 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelOpenSimpleGui</method>
+        <x>-513.0</x>
+        <y>378.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <method>=</method>
+        <x>1763.0</x>
+        <y>-33.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>write:toPath:</method>
         <hasClassScope>true</hasClassScope>
-        <x>415.0</x>
-        <y>419.0</y>
+        <x>-119.0</x>
+        <y>655.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -171,6 +328,19 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelRefresh</method>
+        <x>-526.0</x>
+        <y>328.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>scope:</method>
         <x>451.0</x>
@@ -180,16 +350,16 @@
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>methodsWithEditor:class:layout:mondrian:</method>
-        <x>254.0</x>
-        <y>394.0</y>
+        <x>-279.0</x>
+        <y>630.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>openLinkTo:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>368.0</x>
-        <y>444.0</y>
+        <x>-166.0</x>
+        <y>680.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -203,22 +373,89 @@
         <class>RWDiagram</class>
         <method>getLinkTo:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>826.0</x>
-        <y>419.0</y>
+        <x>292.0</x>
+        <y>655.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>RWDiagram</class>
-        <x>669.0</x>
-        <y>416.0</y>
+        <x>135.0</x>
+        <y>652.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayout</class>
+        <method>mooseID</method>
+        <x>409.0</x>
+        <y>122.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramLayoutManager</class>
+        <method>layoutsOfCurrentPath</method>
+        <x>2081.0</x>
+        <y>104.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelDependencyInfo</method>
+        <x>-405.0</x>
+        <y>378.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>highlightIncludingMe:usedByLayers:usingLayers:to:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>284.0</x>
-        <y>419.0</y>
+        <x>-250.0</x>
+        <y>655.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelInfo</method>
+        <x>-172.0</x>
+        <y>353.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>FAMIXClassGroup</class>
+        <method>generateMoose2ModelDiagramOfMooseModel:</method>
+        <x>892.0</x>
+        <y>348.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelSetCurrentLayoutName</method>
+        <x>-499.0</x>
+        <y>353.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramNoPackage</class>
+        <method>mooseID</method>
+        <x>1867.0</x>
+        <y>23.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -231,8 +468,26 @@
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>redraw:view:withEditor:withLayout:mondrian:ofMooseModel:test:</method>
-        <x>444.0</x>
-        <y>394.0</y>
+        <x>-89.0</x>
+        <y>630.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>rememberLastUsedDiagram</method>
+        <hasClassScope>true</hasClassScope>
+        <x>208.0</x>
+        <y>667.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>MooseModel</class>
+        <x>-301.0</x>
+        <y>363.0</y>
+        <comment><![CDATA[Context Menus at the MooseModel in the Moose Panel]]>
+        </comment>
+        <commentx>-287.0</commentx>
+        <commenty>266.0</commenty>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -240,13 +495,6 @@
         <method>straightLineStyle</method>
         <x>568.0</x>
         <y>47.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagram</class>
-        <method>attributesWithEditor:class:layout:mondrian:</method>
-        <x>1082.0</x>
-        <y>369.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -258,10 +506,25 @@
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
+        <method>attributesWithEditor:class:layout:mondrian:</method>
+        <x>548.0</x>
+        <y>605.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>removeTemporary</method>
+        <hasClassScope>true</hasClassScope>
+        <x>39.0</x>
+        <y>642.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
         <method>removeAppearanceChangersFrom:ofLayout:</method>
         <hasClassScope>true</hasClassScope>
-        <x>710.0</x>
-        <y>419.0</y>
+        <x>177.0</x>
+        <y>655.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -269,6 +532,18 @@
         <method>rememberRTView:to:</method>
         <x>1222.0</x>
         <y>627.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramSimpleGui</class>
+        <x>1499.0</x>
+        <y>114.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontendDemo</class>
+        <x>1302.0</x>
+        <y>474.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -292,10 +567,37 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>M2MFrontendDemo</class>
+        <method>menu</method>
+        <x>1302.0</x>
+        <y>464.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>classBoxSuppressed</method>
         <x>664.0</x>
         <y>72.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontend</class>
+        <method>menu</method>
+        <x>1422.0</x>
+        <y>464.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelReadLayout</method>
+        <x>-251.0</x>
+        <y>328.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -311,10 +613,32 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>setPath:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>91.0</x>
+        <y>642.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramElement</class>
         <method>attributeList</method>
         <x>1032.0</x>
         <y>223.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <x>1985.0</x>
+        <y>-23.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>setPackageScope</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-106.0</x>
+        <y>642.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -325,6 +649,48 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>readLayout:ofMooseModel:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>312.0</x>
+        <y>617.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>setClassScope</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-353.0</x>
+        <y>692.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontend</class>
+        <x>1422.0</x>
+        <y>474.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramEditor</class>
+        <method>lastUsedClassGroup:</method>
+        <x>1194.0</x>
+        <y>626.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelRemoveTemporary</method>
+        <x>-291.0</x>
+        <y>378.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>name</method>
         <x>493.0</x>
@@ -332,10 +698,30 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelRememberLastUsedLayout</method>
+        <x>-130.0</x>
+        <y>328.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>actualVersion</method>
+        <x>471.0</x>
+        <y>592.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>addMenuTo:withEditor:withLayout:withMondrian:ofMooseModel:test:</method>
-        <x>652.0</x>
-        <y>344.0</y>
+        <x>118.0</x>
+        <y>580.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -368,14 +754,29 @@
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>addContextMenuClassesPackagesToMondrian:ofLayout:</method>
-        <x>904.0</x>
-        <y>325.0</y>
+        <x>371.0</x>
+        <y>561.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
             <usedByLayers>1</usedByLayers>
             <usingLayers>1</usingLayers>
         </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>currentLayoutName:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-35.0</x>
+        <y>642.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElement</class>
+        <method>=</method>
+        <x>1008.0</x>
+        <y>224.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -391,10 +792,29 @@
         <y>166.0</y>
     </element>
     <element>
+        <type>FAMIXMethod</type>
+        <class>MooseModel</class>
+        <method>moose2ModelSetClassScope</method>
+        <x>-86.0</x>
+        <y>353.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
         <type>FAMIXClass</type>
         <class>RWDiagramEditor</class>
         <x>1204.0</x>
         <y>649.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramLayoutManager</class>
+        <x>2080.0</x>
+        <y>114.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -412,8 +832,8 @@
         <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>addContextMenuAttributesMethodsToMondrian:ofLayout:</method>
-        <x>412.0</x>
-        <y>335.0</y>
+        <x>-121.0</x>
+        <y>571.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -423,10 +843,30 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>RWDiagramACDStandard</class>
+        <method>=</method>
+        <x>1188.0</x>
+        <y>235.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>RWDiagramLayout</class>
         <method>classScope</method>
         <x>469.0</x>
         <y>72.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramNoPackage</class>
+        <x>1867.0</x>
+        <y>33.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTHighlight</class>
+        <method>=</method>
+        <x>1358.0</x>
+        <y>23.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -434,5 +874,13 @@
         <method>displayDependencies</method>
         <x>531.0</x>
         <y>72.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramSimpleGui</class>
+        <method>open</method>
+        <hasClassScope>true</hasClassScope>
+        <x>1499.0</x>
+        <y>104.0</y>
     </element>
 </elements>
