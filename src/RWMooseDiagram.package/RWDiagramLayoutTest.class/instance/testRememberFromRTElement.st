@@ -3,7 +3,7 @@ testRememberFromRTElement
 	| layout aTRShape aRTElement aString |
 	layout := RWDiagramLayout new.
 	layout replaceMooseEntities: true.
-	layout name: 'test'.
+	layout moose2ModelName: 'test'.
 	aTRShape := TRShape new.
 	aRTElement := RTElement new.
 

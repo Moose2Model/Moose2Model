@@ -3,7 +3,7 @@ testAddAppearanceChangerTo
 	| l aAppearanceChanger attributeList |
 	l := RWDiagramLayout new.
 	l replaceMooseEntities: true.
-	l name: 'test'.
+	l moose2ModelName: 'test'.
 	aAppearanceChanger := RWDiagramAppearanceChanger new.
 	l addAppearanceChanger: aAppearanceChanger to: class1RWDE.
 	l replaceMooseEntities: true.

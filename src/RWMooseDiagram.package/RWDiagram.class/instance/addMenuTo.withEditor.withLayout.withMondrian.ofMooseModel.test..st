@@ -4,18 +4,18 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Layout: ' , rwLayout name
+				item: 'Layout: ' , rwLayout moose2ModelName
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
-					self inform: rwLayout name ]).
+					self inform: rwLayout moose2ModelName ]).
 	b view
 		@
 			(RTMenuActivable
 				new;
-				item: 'Model: ' , aMooseModel name
+				item: 'Model: ' , aMooseModel moose2ModelName
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
-					self inform: aMooseModel name ]).
+					self inform: aMooseModel moose2ModelName ]).
 	b view
 		@
 			(RTMenuActivable

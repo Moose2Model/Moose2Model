@@ -4,6 +4,6 @@ initialize
 	globalElementGroup := RWDiagramElementGroup new.
 	currentLayoutName := 'First'.
 	currentLayout := RWDiagramLayout new.
-	currentLayout name: currentLayoutName.
+	currentLayout moose2ModelName: currentLayoutName.
 	layouts := Dictionary new.
 	settings := RWDiagramSettings new

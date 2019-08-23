@@ -1,6 +1,6 @@
 comparing
 = anInstance
-	self class name = anInstance class name
+	self class moose2ModelName = anInstance class moose2ModelName
 		ifFalse: [ ^ false ].
 	^ true
 	

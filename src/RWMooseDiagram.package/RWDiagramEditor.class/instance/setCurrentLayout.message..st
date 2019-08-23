@@ -1,12 +1,12 @@
 as yet unclassified
 setCurrentLayout: aRTView message: aBoolean
-	| layout name oldName |
+	| layout moose2ModelName oldName |
 	oldName := self currentLayoutName.
 	layout := self layoutForRTView: aRTView message: aBoolean.
 	layout isDefined
-		ifTrue: [ name := layout name.
-			oldName = name
-				ifTrue: [ self inform: 'Layout not changed: ' , name ]
-				ifFalse: [ self currentLayoutName: name.
-					self inform: 'Old layout: ' , oldName , ' New layout: ' , name ] ]
+		ifTrue: [ moose2ModelName := layout moose2ModelName.
+			oldName = moose2ModelName
+				ifTrue: [ self inform: 'Layout not changed: ' , moose2ModelName ]
+				ifFalse: [ self currentLayoutName: moose2ModelName.
+					self inform: 'Old layout: ' , oldName , ' New layout: ' , moose2ModelName ] ]
 		ifFalse: [ UIManager default alert: 'Current layout is not changed' ]

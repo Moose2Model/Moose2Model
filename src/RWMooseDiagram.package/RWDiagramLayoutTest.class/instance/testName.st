@@ -1,5 +1,5 @@
 as yet unclassified
 testName
 |layout|
-layout := RWDiagramLayout new name: 'T1'.
-self assert: layout name equals: 'T1'.
+layout := RWDiagramLayout new moose2ModelName: 'T1'.
+self assert: layout moose2ModelName equals: 'T1'.

@@ -12,7 +12,7 @@ listLayouts
 	layouts asSortedCollection
 		do: [ :each | 
 			stream
-				nextPutAll: each name;
+				nextPutAll: each moose2ModelName;
 				nextPutAll: return ].
 	Transcript
 		cr;

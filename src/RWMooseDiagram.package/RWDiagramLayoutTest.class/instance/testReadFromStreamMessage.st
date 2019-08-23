@@ -3,7 +3,7 @@ testReadFromStreamMessage
 	| layout aRTElement aStream tempElement |
 	layout := RWDiagramLayout new.
 	layout replaceMooseEntities: false.
-	layout name: 'test1'.
+	layout moose2ModelName: 'test1'.
 	aStream := ReadWriteStream on: String new.
 	aStream
 		nextPutAll: '<?xml version="1.0"?>';
@@ -146,5 +146,5 @@ testReadFromStreamMessage
 	layout elementGroup elementList
 		do: [ :each | 
 			each famixElement class asString = 'FAMIXMethod'
-				ifTrue: [ self assert: each famixElement name equals: each famixElement signature ] ].
+				ifTrue: [ self assert: each famixElement moose2ModelName equals: each famixElement signature ] ].
 	layout replaceMooseEntities: RWDiagramLayout replaceMooseEntitiesUndefined

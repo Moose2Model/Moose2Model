@@ -1,4 +1,4 @@
 MethodUsage-private
 setLayoutCurrent: aRWDiagramLayout
 	RWDiagramEditor uniqueInstance
-		currentLayoutName: aRWDiagramLayout name
+		currentLayoutName: aRWDiagramLayout moose2ModelName

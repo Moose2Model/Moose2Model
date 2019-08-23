@@ -7,5 +7,5 @@ dAllClassesOfPackage: aRWDiagramElementTypePackage
 	classes := elementList
 		select: [ :each | 
 			each famixElement class asString = self aFAMIXClass
-				and: [ each dParentPackage name = aRWDiagramElementTypePackage famixElement name or: [ each dParentPackage isNil and: [ aRWDiagramElementTypePackage isNoPackage ] ] ] ].
+				and: [ each dParentPackage moose2ModelName = aRWDiagramElementTypePackage famixElement moose2ModelName or: [ each dParentPackage isNil and: [ aRWDiagramElementTypePackage isNoPackage ] ] ] ].
 	^ classes

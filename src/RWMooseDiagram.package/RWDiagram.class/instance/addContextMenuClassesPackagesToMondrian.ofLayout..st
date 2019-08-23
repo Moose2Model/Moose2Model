@@ -13,7 +13,7 @@ addContextMenuClassesPackagesToMondrian: aRTMondrian ofLayout: aRWDiagramLayout
 		item: 'Suppress with all contained classes, methods and attributes'
 		action: [ :e | 
 			self setLayoutCurrent: aRWDiagramLayout.
-			(UIManager default question: 'Do you want to suppress element ' , e model name , 'with all contained elements')
+			(UIManager default question: 'Do you want to suppress element ' , e model moose2ModelName , 'with all contained elements')
 				ifTrue: [ RWDiagram suppressWithChildren: true to: e model ofLayout: aRWDiagramLayout ] ].
 	aRTMenuActivable
 		item: 'Redo suppress with all contained classes, methods and attributes'

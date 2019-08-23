@@ -73,7 +73,7 @@ addContextMenuAttributesMethodsToMondrian: aRTMondrian ofLayout: aRWDiagramLayou
 		item: 'Suppress'
 		action: [ :e | 
 			self setLayoutCurrent: aRWDiagramLayout.
-			(UIManager default question: 'Do you want to suppress element ' , e model name , ' ?')
+			(UIManager default question: 'Do you want to suppress element ' , e model moose2ModelName , ' ?')
 				ifTrue: [ RWDiagram suppressWithChildren: true to: e model ofLayout: aRWDiagramLayout ] ].
 	aRTMenuActivable
 		item: 'Redo suppress'

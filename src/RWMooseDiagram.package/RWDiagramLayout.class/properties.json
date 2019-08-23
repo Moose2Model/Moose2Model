@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"elementGroup",
-		"name",
 		"commentColor",
 		"colorSchema",
 		"processedRTView",
@@ -20,7 +19,9 @@
 		"mooseID",
 		"classBoxSuppressed",
 		"packageBoxSuppressed",
-		"displayDependencies"
+		"displayDependencies",
+		"moose2ModelName",
+		"name"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"

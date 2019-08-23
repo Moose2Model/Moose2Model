@@ -321,7 +321,7 @@ source: aFAMIXGroup allAccesses connectFrom: #from to: #variable."
 		ifTrue: [ lb
 				addText:
 					'Dependency graph - Elements with permanent appearance changers are highlighted' ].
-	lb addText: 'Layout: ' , rwLayout name.
+	lb addText: 'Layout: ' , rwLayout moose2ModelName.
 	lb
 		addColor: rwLayout colorSchema classColor
 		text: 'Class (Grouping level 1)'.

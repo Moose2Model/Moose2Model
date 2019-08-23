@@ -12,7 +12,7 @@ listWithComments: withComment
 		nextPutAll: '--------------------------------------------------------------------';
 		nextPutAll: return;
 		nextPutAll: 'Diagram Layout View: ';
-		nextPutAll: self name;
+		nextPutAll: self moose2ModelName;
 		nextPutAll: return;
 		nextPutAll: return.
 	elementGroup elementList asSortedCollection

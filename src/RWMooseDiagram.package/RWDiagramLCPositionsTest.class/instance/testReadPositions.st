@@ -37,13 +37,13 @@ testReadPositions
 	count := 0.
 	view elements
 		do: [ :e | 
-			e model name = 'a RWDiagramLocalComment' ifTrue: [ count := count + 1.
+			e model moose2ModelName = 'a RWDiagramLocalComment' ifTrue: [ count := count + 1.
 					self assert: e model position equals: (11@12) ]
 				ifFalse:[
-			e model famixElement name = 'class1'
+			e model famixElement moose2ModelName = 'class1'
 				ifTrue: [ count := count + 1.
 					self assert: e position equals: (15 / 2) @ (179 / 2) ].
-			e model famixElement name = 'method1'
+			e model famixElement moose2ModelName = 'method1'
 				ifTrue: [ count := count + 1.
 					self assert: e position equals: (3 / 2) @ (5 / 2) ] ]
 			].

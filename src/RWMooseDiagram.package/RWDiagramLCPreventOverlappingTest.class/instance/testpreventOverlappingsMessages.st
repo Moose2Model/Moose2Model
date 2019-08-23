@@ -21,7 +21,7 @@ testpreventOverlappingsMessages
 		height: 10.
 	e addShape: s.
 	e model: (RWDiagramElement famixElement: (FAMIXAttribute new)).
-	e model famixElement name: 'B'.
+	e model famixElement moose2ModelName: 'B'.
 	e translateTo: 10 @ 20.
 	v add: e.
 	"Adapt position"
@@ -34,7 +34,7 @@ testpreventOverlappingsMessages
 	"Move higher by half of the first heigt (20/2), half of the second heigt (10/2) and by the required space (3)"
 	movedElements
 		do: [ :each | 
-			each model famixElement name = 'B'
+			each model famixElement moose2ModelName = 'B'
 				ifTrue: [ self assert: each position equals: 10 @ 28 ]
 				ifFalse: [ self assert: each position equals: 10 @ 38 ] ].
 	"Do not move if the elements are in X-direction sufficiently separated"
@@ -47,7 +47,7 @@ testpreventOverlappingsMessages
 		height: 20.
 	e addShape: s.
 	e model: (RWDiagramElement famixElement: (FAMIXMethod new)).
-	e model famixElement name: 'A'.
+	e model famixElement moose2ModelName: 'A'.
 	e translateTo: 10 @ 10.
 	v add: e.
 	"Second element on same position"
@@ -58,7 +58,7 @@ testpreventOverlappingsMessages
 		height: 10.
 	e addShape: s.
 	e model: (RWDiagramElement famixElement: (FAMIXAttribute new)).
-	e model famixElement name: 'B'.
+	e model famixElement moose2ModelName: 'B'.
 	e translateTo: 116 @ 20.
 	v add: e.
 	"Adapt position"

@@ -2,7 +2,7 @@ tests
 testWriteToStream
 	| layout aRTElement aStream aExpectedStream aExpectedClass1Stream aExpectedMethod1Stream aStartStream aEndStream aExpectedStream1 aExpectedStream2 |
 	layout := RWDiagramLayout new.
-	layout name: 'test1'.
+	layout moose2ModelName: 'test1'.
 	aRTElement := RTElement new.
 	aRTElement model: class1RWDE.
 	layout remember: [ :attributeList | attributeList position: (15 / 2) @ (179 / 2) ] fromRTElement: aRTElement.

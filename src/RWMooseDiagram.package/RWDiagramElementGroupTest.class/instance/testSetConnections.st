@@ -8,11 +8,11 @@ testSetConnections
 	eg setConnections.
 	eg elementList
 		do: [ :el | 
-			el famixElement name = 'class1'
+			el famixElement moose2ModelName = 'class1'
 				ifTrue: [ self assert: el connectedTo size equals: 1 ].
-			el famixElement name = 'class2'
+			el famixElement moose2ModelName = 'class2'
 				ifTrue: [ self assert: el connectedTo size equals: 0 ] .
-			el famixElement name = 'method1'
+			el famixElement moose2ModelName = 'method1'
 				ifTrue: [ self assert: el connectedTo size equals: 0 ] .
-			el famixElement name = 'method2'
+			el famixElement moose2ModelName = 'method2'
 				ifTrue: [ self assert: el connectedTo size equals: 0 ]  ]

@@ -10,7 +10,7 @@ remember: aBlock FAMIXType: aFAMIXTypeString comp1: aComp1 comp2: aComp2 compCla
 	aFAMIXTypeString = self aFAMIXMethod
 		ifTrue: [ newFAMIXElement := FAMIXMethod new.
 			newFAMIXElement name: aComp2.
-			newFAMIXElement signature: newFAMIXElement name.
+			newFAMIXElement signature: newFAMIXElement moose2ModelName.
 			newFAMIXElement hasClassScope: aCompClassScope.
 			newFAMIXParentElement := FAMIXClass new.
 			newFAMIXParentElement name: aComp1.

@@ -10,6 +10,6 @@ testAccessedTo
 	self assert: e accessedTo size equals: 1.
 	e accessedTo: e2.
 	self assert: e accessedTo size equals: 1.
-	e accessedTo do: [ :e3 | self assert: e3 famixElement name equals: 'class2' ].
+	e accessedTo do: [ :e3 | self assert: e3 famixElement moose2ModelName equals: 'class2' ].
 	e refreshAccessedTo.
 	self assert: e accessedTo size equals: 0

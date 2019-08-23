@@ -9,8 +9,8 @@ editor currentLayoutName: 'B'.
 view2 := RTView new.
 editor currentLayout processedRTView: view2.
 self assert: view1 == view2 equals: false.
-self assert: (editor layoutForRTView: view1 message: false) name equals: 'A'.
-self assert: (editor layoutForRTView: view2 message: false) name equals: 'B'.
+self assert: (editor layoutForRTView: view1 message: false) moose2ModelName equals: 'A'.
+self assert: (editor layoutForRTView: view2 message: false) moose2ModelName equals: 'B'.
 
 self assert: (editor layoutForRTView: view2 message: false) isDefined equals: true.
 view3 := RTView new.

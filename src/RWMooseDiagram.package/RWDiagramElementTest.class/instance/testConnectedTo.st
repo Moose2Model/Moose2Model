@@ -10,6 +10,6 @@ testConnectedTo
 	self assert: e connectedTo size equals: 1.
 	e connectedTo: e2.
 	self assert: e connectedTo size equals: 1.
-	e connectedTo do: [ :e3 | self assert: e3 famixElement name equals: 'class2' ].
+	e connectedTo do: [ :e3 | self assert: e3 famixElement moose2ModelName equals: 'class2' ].
 	e refreshConnectedTo.
 	self assert: e connectedTo size equals: 0

@@ -3,6 +3,6 @@ testCurrentLayout
 	| lc l |
 	lc := RWDiagramAbstractAttributesLayoutChanger new.
 	l := RWDiagramLayout new.
-	l name: 'Test'.
+	l moose2ModelName: 'Test'.
 	lc currentLayout2: l.
-	self assert: lc currentLayout2 name equals: 'Test'
+	self assert: lc currentLayout2 moose2ModelName equals: 'Test'

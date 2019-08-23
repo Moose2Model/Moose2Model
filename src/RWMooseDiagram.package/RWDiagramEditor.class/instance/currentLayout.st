@@ -4,6 +4,6 @@ currentLayout
 
 	| layout |
 	layouts ifNil: [ layouts := Dictionary new ].
-	layout := layouts at: currentLayoutName ifAbsentPut: [ RWDiagramLayout new name: currentLayoutName ].
+	layout := layouts at: currentLayoutName ifAbsentPut: [ RWDiagramLayout new moose2ModelName: currentLayoutName ].
 	currentLayout := layout.
 	^ layout

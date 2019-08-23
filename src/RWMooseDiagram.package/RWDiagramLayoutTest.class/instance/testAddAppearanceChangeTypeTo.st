@@ -3,7 +3,7 @@ testAddAppearanceChangeTypeTo
 	| l aAppearanceChangeType attributeList |
 	l := RWDiagramLayout new.
 	l replaceMooseEntities: true.
-	l name: 'test'.
+	l moose2ModelName: 'test'.
 	aAppearanceChangeType := RWDiagramAppearanceChangeType new.
 	l addAppearanceChangeType: aAppearanceChangeType to: methodI0RWDE.
 	l replaceMooseEntities: true.

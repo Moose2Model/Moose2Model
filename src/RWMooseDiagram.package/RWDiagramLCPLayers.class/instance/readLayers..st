@@ -8,9 +8,9 @@ readLayers: aRTView
 			(element1 model famixElement class asString = self aFAMIXMethod
 				or: [ element1 model famixElement class asString = self aFAMIXAttribute ])
 				ifTrue: [ Transcript
-						show: element1 model famixElement parentType name;
+						show: element1 model famixElement parentType moose2ModelName;
 						show: ' ';
-						show: element1 model famixElement name;
+						show: element1 model famixElement moose2ModelName;
 						show: ' '.
 					attributeList := self currentLayout
 						readAttributesFromFAMIXElement: element1 model.
