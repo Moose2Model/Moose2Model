@@ -11,5 +11,6 @@ readFromPath: aPath expliciteStream: aStream
 	aPath last = delimiter
 		ifTrue: [ localPath := aPath ]
 		ifFalse: [ localPath := aPath , delimiter asString ].
+	
 	filename := localPath , self currentLayoutName , '.xml'.
 	e readFromFile: filename expliciteStream: aStream
