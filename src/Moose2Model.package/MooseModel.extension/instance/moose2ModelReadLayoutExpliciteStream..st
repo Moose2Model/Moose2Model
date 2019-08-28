@@ -1,6 +1,7 @@
 *Moose2Model
 moose2ModelReadLayoutExpliciteStream: aStream
 	| layout layouts index frontend |
+	"Supports automatic tests"
 	layouts := RWDiagramLayoutManager new layoutsOfCurrentPath.
 	index := UIManager default chooseFrom: layouts.
 	index > 0

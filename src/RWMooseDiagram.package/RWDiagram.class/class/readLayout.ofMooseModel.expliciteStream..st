@@ -1,6 +1,7 @@
 as yet unclassified
 readLayout: aString ofMooseModel: aMooseModel expliciteStream: aStream
 	| e |
+	"Supports automatic tests"
 	e := RWDiagramEditor uniqueInstance.
 	"Specify the Layout to be processed"
 	e currentLayoutName: aString.
