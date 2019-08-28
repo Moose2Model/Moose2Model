@@ -5,38 +5,58 @@
     <suppressed>packageBox</suppressed>
     <scope>method</scope>
     <element>
-        <type>FAMIXMethod</type>
-        <class>M2MFrontend</class>
-        <method>mainMenu</method>
-        <x>-547.0</x>
-        <y>109.0</y>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <x>1318.0</x>
+        <y>142.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>M2MMockColorSelectorDialogWindow</class>
-        <method>title:</method>
-        <x>-219.0</x>
-        <y>93.0</y>
+        <class>ManifestRWMooseDiagram</class>
+        <method>description</method>
+        <hasClassScope>true</hasClassScope>
+        <x>1457.0</x>
+        <y>76.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>M2MFactory</class>
-        <method>colorChooser</method>
-        <x>-415.0</x>
-        <y>134.0</y>
+        <class>RWDiagramACTSuppressOthers</class>
+        <method>=</method>
+        <x>1254.0</x>
+        <y>76.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
-        <class>M2MMockColorSelectorDialogWindowTest</class>
-        <x>-196.0</x>
-        <y>-11.0</y>
+        <class>RWDiagramACDStandard</class>
+        <x>1057.0</x>
+        <y>30.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>M2MMockColorSelectorDialogWindow</class>
-        <method>mockSelectedColor:</method>
-        <x>-266.0</x>
-        <y>70.0</y>
+        <class>M2MFrontendDemo</class>
+        <method>factory</method>
+        <x>279.0</x>
+        <y>-137.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontendDemo</class>
+        <method>title</method>
+        <x>307.0</x>
+        <y>-137.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>Moose2Model</package>
+        <x>481.0</x>
+        <y>83.5</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAttributeList</class>
+        <method>position</method>
+        <x>1372.0</x>
+        <y>20.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -46,21 +66,15 @@
         <y>134.0</y>
     </element>
     <element>
-        <type>FAMIXClass</type>
-        <class>M2MMockColorSelectorDialogWindow</class>
-        <x>-220.0</x>
-        <y>101.0</y>
-    </element>
-    <element>
         <type>FAMIXMethod</type>
         <class>M2MMainTest</class>
-        <method>testSingleRedBox</method>
-        <x>-580.0</x>
+        <method>testSingleColorChoosedBox</method>
+        <x>-496.0</x>
         <y>-25.0</y>
-        <comment><![CDATA[Contains coding to check what is written to the pane]]>
+        <comment><![CDATA[Contains a mock for a class that chooses the color]]>
         </comment>
-        <commentx>-607.0</commentx>
-        <commenty>-89.0</commenty>
+        <commentx>-478.0</commentx>
+        <commenty>-59.0</commenty>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -86,17 +100,17 @@
         </ACTSuppressOthers>
     </element>
     <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Athens</package>
-        <x>303.0</x>
-        <y>153.0</y>
-        <supressWithChildren>true</supressWithChildren>
+        <type>FAMIXClass</type>
+        <class>M2MMockColorSelectorDialogWindow</class>
+        <x>-220.0</x>
+        <y>101.0</y>
     </element>
     <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Mocks</package>
-        <x>614.0</x>
-        <y>54.0</y>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontendDemo</class>
+        <method>pane</method>
+        <x>276.0</x>
+        <y>-162.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -106,16 +120,49 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>M2MFrontendAthens</class>
-        <method>title</method>
-        <x>325.0</x>
-        <y>153.0</y>
+        <class>M2MFrontend</class>
+        <method>mainMenu</method>
+        <x>-547.0</x>
+        <y>109.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
-        <class>M2MMainTest</class>
-        <x>-530.0</x>
-        <y>-3.0</y>
+        <class>RWDiagramACTHighlight</class>
+        <x>1057.0</x>
+        <y>86.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MMockColorSelectorDialogWindow</class>
+        <method>title:</method>
+        <x>-219.0</x>
+        <y>93.0</y>
+    </element>
+    <element>
+        <type>FAMIXPackage</type>
+        <package>RWMooseDiagram</package>
+        <x>1259.5</x>
+        <y>86.5</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramAppearanceChanger</class>
+        <method>=</method>
+        <x>1318.0</x>
+        <y>132.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramAttributeList</class>
+        <x>1372.0</x>
+        <y>30.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontend</class>
+        <method>factory</method>
+        <x>-578.0</x>
+        <y>134.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -125,59 +172,10 @@
         <y>78.0</y>
     </element>
     <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Test</package>
-        <x>227.0</x>
-        <y>49.0</y>
-    </element>
-    <element>
         <type>FAMIXClass</type>
-        <class>M2MFrontendAthens</class>
-        <x>303.0</x>
-        <y>164.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>M2MFrontend</class>
-        <method>title</method>
-        <x>-550.0</x>
-        <y>134.0</y>
-    </element>
-    <element>
-        <type>FAMIXPackage</type>
-        <package>Moose2Model-Frontend</package>
-        <x>111.0</x>
-        <y>166.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>M2MMainTest</class>
-        <method>testSingleColorChoosedBox</method>
-        <x>-496.0</x>
-        <y>-25.0</y>
-        <comment><![CDATA[Contains a mock for a class that chooses the color]]>
-        </comment>
-        <commentx>-478.0</commentx>
-        <commenty>-59.0</commenty>
-        <ACTSuppressOthers>
-            <type>ACDStandard</type>
-            <includeMe>true</includeMe>
-            <usedByLayers>1</usedByLayers>
-            <usingLayers>1</usingLayers>
-        </ACTSuppressOthers>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
-        <class>M2MFrontend</class>
-        <x>-560.0</x>
-        <y>131.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>M2MFrontendAthens</class>
-        <method>mainMenu</method>
-        <x>291.0</x>
-        <y>153.0</y>
+        <class>M2MFrontendDemo</class>
+        <x>297.0</x>
+        <y>-139.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -195,15 +193,123 @@
     <element>
         <type>FAMIXMethod</type>
         <class>M2MFrontend</class>
-        <method>factory</method>
-        <x>-578.0</x>
-        <y>134.0</y>
+        <method>pane</method>
+        <x>-581.0</x>
+        <y>109.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MMockColorSelectorDialogWindowTest</class>
+        <x>-196.0</x>
+        <y>-11.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramElement</class>
+        <x>1216.0</x>
+        <y>30.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramACTSuppressOthers</class>
+        <x>1254.0</x>
+        <y>86.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MFrontend</class>
+        <x>-560.0</x>
+        <y>131.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramPositionableComment</class>
+        <method>position</method>
+        <x>1088.0</x>
+        <y>132.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MMainTest</class>
+        <method>testSingleRedBox</method>
+        <x>-580.0</x>
+        <y>-25.0</y>
+        <comment><![CDATA[Contains coding to check what is written to the pane]]>
+        </comment>
+        <commentx>-607.0</commentx>
+        <commenty>-89.0</commenty>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>M2MMainTest</class>
+        <x>-530.0</x>
+        <y>-3.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramElement</class>
+        <method>=</method>
+        <x>1216.0</x>
+        <y>20.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramPositionableComment</class>
+        <x>1088.0</x>
+        <y>142.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MMockColorSelectorDialogWindow</class>
+        <method>mockSelectedColor:</method>
+        <x>-266.0</x>
+        <y>70.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACDStandard</class>
+        <method>=</method>
+        <x>1057.0</x>
+        <y>20.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>ManifestRWMooseDiagram</class>
+        <x>1457.0</x>
+        <y>86.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagramACTHighlight</class>
+        <method>=</method>
+        <x>1057.0</x>
+        <y>76.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>M2MFrontend</class>
-        <method>pane</method>
-        <x>-581.0</x>
-        <y>109.0</y>
+        <method>title</method>
+        <x>-550.0</x>
+        <y>134.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFrontendDemo</class>
+        <method>mainMenu</method>
+        <x>310.0</x>
+        <y>-162.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>M2MFactory</class>
+        <method>colorChooser</method>
+        <x>-415.0</x>
+        <y>134.0</y>
     </element>
 </elements>

@@ -19,13 +19,6 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
-        <class>MooseModel</class>
-        <method>moose2ModelReadLayout2</method>
-        <x>-570.0</x>
-        <y>281.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
         <class>RWDiagram</class>
         <method>refresh</method>
         <hasClassScope>true</hasClassScope>
@@ -70,24 +63,14 @@
         <class>RWDiagram</class>
         <method>readLayout:ofMooseModel:expliciteStream:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-381.0</x>
-        <y>162.0</y>
+        <x>-437.0</x>
+        <y>176.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
             <usedByLayers>1</usedByLayers>
             <usingLayers>1</usingLayers>
         </ACTSuppressOthers>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagram</class>
-        <method>readFromPath:</method>
-        <hasClassScope>true</hasClassScope>
-        <x>-474.0</x>
-        <y>152.0</y>
-        <comment><![CDATA[Obsolete]]>
-        </comment>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -115,23 +98,6 @@
     <element>
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
-        <method>readFromFile:</method>
-        <x>-325.0</x>
-        <y>345.0</y>
-        <comment><![CDATA[Obsolete]]>
-        </comment>
-        <commentx>-256.0</commentx>
-        <commenty>506.0</commenty>
-        <ACTSuppressOthers>
-            <type>ACDStandard</type>
-            <includeMe>true</includeMe>
-            <usedByLayers>1</usedByLayers>
-            <usingLayers>1</usingLayers>
-        </ACTSuppressOthers>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramEditor</class>
         <method>uniqueInstance</method>
         <hasClassScope>true</hasClassScope>
         <x>-123.0</x>
@@ -143,6 +109,14 @@
         <method>refresh</method>
         <x>38.0</x>
         <y>52.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>RWDiagram</class>
+        <method>readLayout:</method>
+        <hasClassScope>true</hasClassScope>
+        <x>-356.0</x>
+        <y>162.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -224,10 +198,12 @@
         <type>FAMIXMethod</type>
         <class>RWDiagramEditor</class>
         <method>readFromFile:expliciteStream:</method>
-        <x>-250.0</x>
-        <y>350.0</y>
+        <x>-288.0</x>
+        <y>354.0</y>
         <comment><![CDATA[Reads filestream, uses stream provided when not nil<br>This is needed for tests]]>
         </comment>
+        <commentx>-233.0</commentx>
+        <commenty>420.0</commenty>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -309,15 +285,15 @@
     </element>
     <element>
         <type>FAMIXClass</type>
-        <class>RWDiagramSimpleGui</class>
-        <x>86.0</x>
-        <y>310.0</y>
-    </element>
-    <element>
-        <type>FAMIXClass</type>
         <class>M2MFrontendDemo</class>
         <x>135.0</x>
         <y>383.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>RWDiagramSimpleGui</class>
+        <x>86.0</x>
+        <y>310.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -387,20 +363,6 @@
         <y>140.0</y>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagram</class>
-        <method>readLayout:ofMooseModel:</method>
-        <hasClassScope>true</hasClassScope>
-        <x>-307.0</x>
-        <y>193.0</y>
-        <ACTSuppressOthers>
-            <type>ACDStandard</type>
-            <includeMe>true</includeMe>
-            <usedByLayers>1</usedByLayers>
-            <usingLayers>1</usingLayers>
-        </ACTSuppressOthers>
-    </element>
-    <element>
         <type>FAMIXClass</type>
         <class>M2MFrontend</class>
         <x>293.0</x>
@@ -433,16 +395,6 @@
         <method>lastUsedClassGroup:</method>
         <x>-148.0</x>
         <y>283.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagram</class>
-        <method>readFromFile:</method>
-        <hasClassScope>true</hasClassScope>
-        <x>-458.0</x>
-        <y>192.0</y>
-        <comment><![CDATA[Obsolete]]>
-        </comment>
     </element>
     <element>
         <type>FAMIXMethod</type>

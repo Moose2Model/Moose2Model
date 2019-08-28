@@ -89,11 +89,6 @@
         <y>69.0</y>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAppearanceChanger</class>
-        <method>changeType:</method>
-    </element>
-    <element>
         <type>FAMIXPackage</type>
         <package>RWMooseDiagram</package>
         <x>345.0</x>
@@ -134,11 +129,6 @@
         <y>-7.0</y>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayoutTest</class>
-        <method>testWriteToStream</method>
-    </element>
-    <element>
         <type>FAMIXClass</type>
         <class>RWDiagramLayout</class>
         <x>-525.0</x>
@@ -149,8 +139,8 @@
         <class>RWDiagram</class>
         <method>suppressOthersUsedByLayers:usingLayers:to:</method>
         <hasClassScope>true</hasClassScope>
-        <x>-211.0</x>
-        <y>-65.0</y>
+        <x>-241.0</x>
+        <y>-52.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -164,11 +154,6 @@
         <supressWithChildren>true</supressWithChildren>
     </element>
     <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayoutTest</class>
-        <method>testEvaluateAppearance</method>
-    </element>
-    <element>
         <type>FAMIXClass</type>
         <class>RWDiagramUndeterminedAttributeList</class>
         <x>-374.0</x>
@@ -180,11 +165,6 @@
         <method>addAppearentChanger:</method>
         <x>113.0</x>
         <y>46.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayout</class>
-        <method>readFromStreamXML:</method>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -205,16 +185,6 @@
         <method>attributeIsSpecified</method>
         <x>-534.0</x>
         <y>386.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramAppearanceChanger</class>
-        <method>changeDeterminer:</method>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayoutTest</class>
-        <method>testAddAppearanceChangerTo</method>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -276,11 +246,6 @@
         <method>appearanceChangerGroup</method>
         <x>-337.0</x>
         <y>257.0</y>
-    </element>
-    <element>
-        <type>FAMIXMethod</type>
-        <class>RWDiagramLayoutTest</class>
-        <method>testRemoveAppearanceChangersFrom</method>
     </element>
     <element>
         <type>FAMIXMethod</type>
