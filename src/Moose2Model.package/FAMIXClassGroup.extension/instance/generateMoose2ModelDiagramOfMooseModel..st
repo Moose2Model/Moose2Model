@@ -27,4 +27,5 @@ generateMoose2ModelDiagramOfMooseModel: aMooseModel
 				withEditor: RWDiagramEditor uniqueInstance
 				withLayout: RWDiagramEditor uniqueInstance currentLayout.
 				    e := RWDiagramEditor uniqueInstance.
-				    e lastUsedView: view ]
+				    e lastUsedView: view.
+				^frontend "Return instance to simplify testing" ]
