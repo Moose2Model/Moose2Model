@@ -13,6 +13,9 @@ testFullDisplayOfMooseModel
    RWDiagram automaticTestIsRunning: true.
 
 	model := MooseModel new.
+	
+	model name: 'A MooseModel for a Unit Test'.
+	
 	package1 := FAMIXPackage new name: 'package1'; mooseModel: model.
 	package1RWDE := RWDiagramElement famixElement: package1.
 	package2 := FAMIXPackage new name: 'package2'; mooseModel: model.
@@ -69,7 +72,13 @@ testFullDisplayOfMooseModel
 	"So that printing methods works correctly"
    model allMethods do: [ :m | m signature: m name ].
    model moose2ModelRefresh.
+
+   model moose2ModelSetCurrentLayoutName: 'LayoutUsedByAutomaticTests'.
+
    frontend := model moose2ModelDependency.
+
+   self assert: frontend title equals: 'LayoutUsedByAutomaticTests - A MooseModel for a Unit Test'.
+
    self assert: frontend rtView view elements size equals: 34.
 "Use in an inspector on frontend:
 self rtView view elements do:[:each|Transcript show: each model asString; cr ].
