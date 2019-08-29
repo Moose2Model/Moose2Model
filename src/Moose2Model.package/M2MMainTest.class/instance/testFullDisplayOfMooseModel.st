@@ -1,6 +1,11 @@
 tests
 testFullDisplayOfMooseModel
-	"This tests that an explicitely created Moose Model is displayed correctly"
+	"This tests that an explicitely created Moose Model is displayed correctly.
+	1. Create a Moosemode
+	2. Display it completely in the forntend
+	3. Search for a certain method and add it and only neighbours to diagram
+	4. Clear the frontend and open the diagram again (Do not read from file but from the remembered informations)
+	5. CHeck that now only a restricted number of elements is shown"
 
 |model package1 package2 namespace class1 class2 inh method1 method2 method3 methodExt var1 var2 var3 access acc1 inv1 inv2 inv3 ref1 methodI0P2 methodI0P1 inv0P2 methodI0 inv0P1 methodI0M1 inv0 methodI0M2 inv0M1 methodA0 attributeA0 accA0 accI0 package1RWDE package2RWDE class1RWDE class2RWDE method1RWDE method2RWDE method3RWDE var1RWDE var2RWDE var3RWDE methodI0RWDE methodI0P2RWDE methodI0P1RWDE methodI0M1RWDE methodI0M2RWDE attributeA0RWDE classNopackage classNopackageRWDE frontend count|
 
@@ -68,7 +73,9 @@ testFullDisplayOfMooseModel
    self assert: frontend rtView view elements size equals: 34.
 "Use in an inspector on frontend:
 self rtView view elements do:[:each|Transcript show: each model asString; cr ].
-to get a list of all elements"
+to get a list of all elements
+self rtView view edges do:[:each|Transcript show: each model asString; cr ].
+to get a list of edges"
 
 "Check all elements"
 count  := 0.
@@ -180,5 +187,78 @@ count  := 0.
 frontend rtView view edges do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0 (Method)->a RWDiagramElement class1.attributeA0 (Attribute)' ifTrue:[count := count + 1 ]].
 self assert: count equals: 1. 
 
+"Navigate to methodI0 and perform a right mouseclick on 'Add with neighbours'."
+
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0 (Method)' ifTrue:[ each announcer subscriptions subscriptions do: [ :each2 | each2 announcementClass asString = #TRMouseRightClick ifTrue:[each2 subscriber actionsToTestMoose2Model do:[:each3|each3 key = 'Add with neighbours' ifTrue:[ each3 value cull: each ] ] ]   ] ] ].
+
+"Close the frontend"
+
+frontend window close.
+
+"Open it again"
+
+frontend := model moose2ModelDependency.
+
+"Now only a restricted list of elements is displayed"
+
 "frontend inspect."
+
+"Check elements"
+
+self assert: frontend rtView view elements size equals: 22.
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement package1 (Package)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement a RWDiagramNoPackage' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement class1 in Smalltalk (Class)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement class1.attributeA0 (Attribute)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0P1 (Method)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0 (Method)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0M1 (Method)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+"The legend"
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'Class (Grouping level 1)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'Box: Active system component' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'Circle: Passive system component' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'Circle: DataBase Table' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'Access to "Data" resp. attribute' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view elements do:[:each| each model asString = 'Arrow points to used component' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+
+"Check edges"
+
+self assert: frontend rtView view edges size equals: 3.
+
+count  := 0.
+frontend rtView view edges do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0 (Method)->a RWDiagramElement class1>>methodI0M1 (Method)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view edges do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0P1 (Method)->a RWDiagramElement class1>>methodI0 (Method)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+count  := 0.
+frontend rtView view edges do:[:each| each model asString = 'a RWDiagramElement class1>>methodI0 (Method)->a RWDiagramElement class1.attributeA0 (Attribute)' ifTrue:[count := count + 1 ]].
+self assert: count equals: 1. 
+
 frontend window close
