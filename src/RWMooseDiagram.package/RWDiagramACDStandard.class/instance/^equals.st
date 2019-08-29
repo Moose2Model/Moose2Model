@@ -1,6 +1,6 @@
 accessing
 = anInstance
-	self class moose2ModelName = anInstance class moose2ModelName
+	self class moose2ModelName asLowercase = anInstance class moose2ModelName asLowercase 
 		ifFalse: [ ^ false ].
 	self includeMe = anInstance includeMe
 		ifFalse: [ ^ false ].
