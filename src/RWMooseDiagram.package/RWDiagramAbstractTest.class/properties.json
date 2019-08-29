@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "",
-	"super" : "RWDiagramAbstractTest",
+	"commentStamp" : "RainerWinkler 8/29/2019 08:31",
+	"super" : "TestCase",
 	"category" : "RWMooseDiagram-test",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "RWDiagramAbstractAttributesLayoutChangerTest",
+	"name" : "RWDiagramAbstractTest",
 	"type" : "normal"
 }

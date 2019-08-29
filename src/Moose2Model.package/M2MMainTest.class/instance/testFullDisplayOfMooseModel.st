@@ -1,7 +1,11 @@
-initialization
-setUp
-	super setUp.
-	"! Do not format this methods, because it is easier to read with manual formatting !"
+tests
+testFullDisplayOfMooseModel
+	"This tests that an explicitely created Moose Model is displayed correctly"
+
+|model package1 package2 namespace class1 class2 inh method1 method2 method3 methodExt var1 var2 var3 access acc1 inv1 inv2 inv3 ref1 methodI0P2 methodI0P1 inv0P2 methodI0 inv0P1 methodI0M1 inv0 methodI0M2 inv0M1 methodA0 attributeA0 accA0 accI0 package1RWDE package2RWDE class1RWDE class2RWDE method1RWDE method2RWDE method3RWDE var1RWDE var2RWDE var3RWDE methodI0RWDE methodI0P2RWDE methodI0P1RWDE methodI0M1RWDE methodI0M2RWDE attributeA0RWDE classNopackage classNopackageRWDE frontend|
+
+
+   RWDiagram automaticTestIsRunning: true.
 
 	model := MooseModel new.
 	package1 := FAMIXPackage new name: 'package1'; mooseModel: model.
@@ -58,4 +62,8 @@ setUp
 	accA0 := FAMIXAccess new accessor: methodA0; variable: attributeA0; mooseModel: model.
 	
 	"So that printing methods works correctly"
-   model allMethods do: [ :m | m signature: m name ]
+   model allMethods do: [ :m | m signature: m name ].
+   model moose2ModelRefresh.
+   frontend := model moose2ModelDependency.
+"frontend inspect."
+frontend window close

@@ -1,0 +1,1 @@
+This is the main super class for tests in the old namespace. It sets and unsets the flag that automatic tests are active.

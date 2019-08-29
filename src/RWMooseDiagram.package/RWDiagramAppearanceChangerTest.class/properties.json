@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "RWDiagramAbstractTest",
 	"category" : "RWMooseDiagram-test",
 	"classinstvars" : [ ],
 	"pools" : [ ],

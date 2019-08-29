@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "M2MMainSuperclassTest",
 	"category" : "Moose2Model-Test",
 	"classinstvars" : [ ],
 	"pools" : [ ],
