@@ -5,23 +5,12 @@ testFullDisplayOfMooseModel
 	2. Display it completely in the forntend
 	3. Search for a certain method and add it and only neighbours to diagram
 	4. Clear the frontend and open the diagram again (Do not read from file but from the remembered informations)
-	5. CHeck that now only a restricted number of elements is shown"
+	5. Check that now only a restricted number of elements is shown
+	6. Refresh again
+	7. Read diagram information from file
+	8. Check that the diagram is restricted as specified in the file"
 
 	| model frontend |
-
-	"Check all elements"
-	"There has to be at least a single correctly named element"
-	"The next elements belong to the legend"
-	"Check all edges"
-	"Remember diagram to file"
-	"Close the frontend"
-	"Open it again"
-	"Now only a restricted list of elements is displayed"
-	"frontend inspect."
-	"Check elements"
-	"The legend"
-	"Check edges"
-	"RWDiagram automaticTestIsRunning: true."
 	model := self makeTestMooseModel.
 	model moose2ModelRefresh.
 	model moose2ModelSetCurrentLayoutName: 'LayoutUsedByAutomaticTests'.
@@ -40,8 +29,9 @@ testFullDisplayOfMooseModel
 	frontend := model moose2ModelDependency.
 	"Check the now restricted diagram"
 	self checkRestricted: frontend.
+	frontend window close.
+	"Now refresh and try to load again from file"
+	model moose2ModelRefresh.
+	frontend := model moose2ModelReadLayoutExpliciteFile: 'LayoutUsedByAutomaticTests'.
+	self checkRestricted: frontend.
 	frontend window close
-   "Now refresh and try to load again from file"	
-   model moose2ModelRefresh.
-
- 
