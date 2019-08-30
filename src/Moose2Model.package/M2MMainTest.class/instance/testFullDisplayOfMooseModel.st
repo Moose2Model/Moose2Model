@@ -9,6 +9,7 @@ testFullDisplayOfMooseModel
 	6. Refresh again
 	7. Read diagram information from file
 	8. Check that the diagram is restricted as specified in the file"
+	
 
 	| model frontend |
 	model := self makeTestMooseModel.
