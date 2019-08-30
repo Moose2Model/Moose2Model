@@ -1,3 +1,3 @@
 naming
 moose2ModelName
-	^self name
+	^self asString
