@@ -13,6 +13,6 @@ version131: spec
 		        versionString: #'development' ]."
 			spec
 				package: 'RWMooseDiagram'
-					with: 'RWMooseDiagram-RainerWinkler.1567165087';
+					with: 'RWMooseDiagram-RainerWinkler.1567165088';
 				package: 'Moose2Model'
 					with: 'Moose2Model-RainerWinkler.1567165088' ]
