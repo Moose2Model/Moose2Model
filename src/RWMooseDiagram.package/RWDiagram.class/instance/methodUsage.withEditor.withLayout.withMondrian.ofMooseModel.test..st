@@ -34,10 +34,10 @@ Handles the modifies DBTable to color database tables differently
 			rwLayout mooseID: aMooseModel mooseID ].
 	isTest
 		ifFalse: [ isRebuild
-				ifFalse: [ aMooseModel sourceLanguage name = 'Smalltalk'
+				ifFalse: [ aMooseModel sourceLanguage ifNotNil: [ aMooseModel sourceLanguage name = 'Smalltalk'
 						ifTrue: [ (('Pharo7.*' match: SmalltalkImage current version)
 								or: ('Pharo8.*' match: SmalltalkImage current version))
-								ifTrue: [ "Inform that Smalltalk is not supported"self popUpSmalltalkNotSupported ifFalse: [ "Leave processing" ^ nil ] ] ] ] ].
+								ifTrue: [ "Inform that Smalltalk is not supported"self popUpSmalltalkNotSupported ifFalse: [ "Leave processing" ^ nil ] ] ] ] ] ].
 	isTest
 		ifFalse: [ rwLayout scope = rwLayout methodScope
 				ifTrue: [ rwLayout elementGroup elementList size = 0
