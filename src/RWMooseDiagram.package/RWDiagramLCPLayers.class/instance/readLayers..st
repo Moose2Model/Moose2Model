@@ -5,8 +5,8 @@ readLayers: aRTView
 	aRTView elements
 		do: [ :element1 | 
 			element1 model class = RWDiagramElement ifTrue:[
-			(element1 model famixElement class asString = self aFAMIXMethod
-				or: [ element1 model famixElement class asString = self aFAMIXAttribute ])
+			( ( self isFAMIXMethod: element1 model famixElement )
+				or: [ self isFAMIXAttribute: element1 model famixElement ])
 				ifTrue: [ Transcript
 						show: element1 model famixElement parentType moose2ModelName;
 						show: ' ';

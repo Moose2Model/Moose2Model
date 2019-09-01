@@ -4,5 +4,5 @@ dAllClasses
 
 	| classes |
 	classes := Set new.
-	classes := elementList select: [ :each | each famixElement class asString = self aFAMIXClass ].
+	classes := elementList select: [ :each |  self isFAMIXClass: each famixElement ].
 	^ classes

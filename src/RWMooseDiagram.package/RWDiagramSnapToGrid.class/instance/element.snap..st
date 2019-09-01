@@ -1,7 +1,7 @@
 as yet unclassified
 element: aFAMIXElement snap: aPoint 
-   aFAMIXElement class moose2ModelName = self aFAMIXMethod ifTrue:[
+    ( self isFAMIXMethod: aFAMIXElement ) ifTrue:[
 	^self snap: aPoint].
-   aFAMIXElement class moose2ModelName = self aFAMIXAttribute ifTrue:[
+    ( self isFAMIXAttribute: aFAMIXElement ) ifTrue:[
 	^self snap: aPoint].
    ^aPoint

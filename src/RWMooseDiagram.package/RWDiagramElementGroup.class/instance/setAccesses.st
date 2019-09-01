@@ -3,7 +3,7 @@ setAccesses
 	| pe1 ce1 pe2 ce2 |
 	self elementList
 		do: [ :el | 
-			el famixElement class asString = self aFAMIXClass
+			 ( self isFAMIXClass: el famixElement )
 				ifTrue: [ el famixElement methods
 						do: [ :me | 
 							me accesses
@@ -11,7 +11,7 @@ setAccesses
 									| accessed elParent aParent |
 									elParent := el famixElement m2mParentPackage.
 									accessed := a variable.
-									accessed class asString = self aFAMIXAttribute
+									 ( self isFAMIXAttribute: accessed )
 										ifTrue: [ aParent := accessed parentType m2mParentPackage.	"Ignore cases when there are no parent packages"
 											elParent
 												ifNotNil: [ aParent

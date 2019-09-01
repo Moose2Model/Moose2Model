@@ -35,4 +35,5 @@ testFullDisplayOfMooseModel
 	model moose2ModelRefresh.
 	frontend := model moose2ModelReadLayoutExpliciteFile: 'LayoutUsedByAutomaticTests'.
 	self checkRestricted: frontend.
+	"frontend inspect."
 	frontend window close

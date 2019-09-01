@@ -33,15 +33,21 @@ Handles the modifies DBTable to color database tables differently
 		ifFalse: [ rwEditor refreshLayout: rwLayout.
 			rwLayout mooseID: aMooseModel mooseID ].
 	isTest
+		ifFalse: [ isRebuild
+				ifFalse: [ aMooseModel sourceLanguage name = 'Smalltalk'
+						ifTrue: [ (('Pharo7.*' match: SmalltalkImage current version)
+								or: ('Pharo8.*' match: SmalltalkImage current version))
+								ifTrue: [ "Inform that Smalltalk is not supported"self popUpSmalltalkNotSupported ifFalse: [ "Leave processing" ^ nil ] ] ] ] ].
+	isTest
 		ifFalse: [ rwLayout scope = rwLayout methodScope
 				ifTrue: [ rwLayout elementGroup elementList size = 0
-						ifTrue: [ self popUpAllElementsDisplayed
-								ifFalse: [ "Warn that runtime can be long" ^ nil ] ]
+						ifTrue: [ "Warn that runtime can be long" self popUpAllElementsDisplayed
+								ifFalse: [ "Leave processing" ^ nil ] ]
 						ifFalse: [ [ rwLayout elementGroup elementList
 								detect: [ :each | each attributeList attributeIsSpecified ] ]
 								on: NotFound
-								do: [ self popUpAllElementsDisplayed
-										ifFalse: [ "Warn that runtime can be long" ^ nil ] ] ] ] ].
+								do: [ "Warn that runtime can be long" self popUpAllElementsDisplayed
+										ifFalse: [ "Leave processing" ^ nil ] ] ] ] ].
 	rwLayout refresh.
 	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
 	rwLayout resetAppearance.
