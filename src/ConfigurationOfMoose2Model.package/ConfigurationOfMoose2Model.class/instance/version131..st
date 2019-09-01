@@ -15,4 +15,4 @@ version131: spec
 				package: 'RWMooseDiagram'
 					with: 'RWMooseDiagram-RainerWinkler.1567165087';
 				package: 'Moose2Model'
-					with: 'Moose2Model-RainerWinkler.1567165087' ]
+					with: 'Moose2Model-RainerWinkler.1567165088' ]
