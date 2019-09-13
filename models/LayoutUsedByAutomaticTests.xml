@@ -11,34 +11,34 @@
     <element>
         <type>FAMIXClass</type>
         <class>class1</class>
-        <x>77.0</x>
+        <x>185.0</x>
         <y>77.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>class1</class>
         <method>methodI0P2</method>
-        <x>115.0</x>
+        <x>223.0</x>
         <y>41.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>class2</class>
         <attribute>var1</attribute>
-        <x>180.0</x>
+        <x>21.0</x>
         <y>41.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>class1</class>
         <method>methodI0P1</method>
-        <x>32.0</x>
+        <x>140.0</x>
         <y>66.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
         <package>package1</package>
-        <x>77.0</x>
+        <x>185.0</x>
         <y>66.0</y>
     </element>
     <element>
@@ -46,7 +46,7 @@
         <class>class1</class>
         <method>methodI0</method>
         <hasClassScope>true</hasClassScope>
-        <x>76.0</x>
+        <x>184.0</x>
         <y>66.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
@@ -59,34 +59,34 @@
         <type>FAMIXMethod</type>
         <class>class2</class>
         <method>method2</method>
-        <x>236.0</x>
+        <x>77.0</x>
         <y>41.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>class2</class>
         <attribute>var2</attribute>
-        <x>205.0</x>
+        <x>46.0</x>
         <y>41.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>class2</class>
-        <x>211.0</x>
+        <x>52.0</x>
         <y>64.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>class1</class>
         <method>methodI0M1</method>
-        <x>121.0</x>
+        <x>229.0</x>
         <y>66.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>class1</class>
         <method>methodI0M2</method>
-        <x>32.0</x>
+        <x>140.0</x>
         <y>91.0</y>
     </element>
     <element>
@@ -99,34 +99,34 @@
         <type>FAMIXMethod</type>
         <class>class2</class>
         <method>methodExt</method>
-        <x>228.0</x>
+        <x>69.0</x>
         <y>66.0</y>
     </element>
     <element>
         <type>FAMIXPackage</type>
         <package>package2</package>
-        <x>210.0</x>
+        <x>51.0</x>
         <y>53.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>class2</class>
         <method>method3</method>
-        <x>186.0</x>
+        <x>27.0</x>
         <y>66.0</y>
     </element>
     <element>
         <type>FAMIXAttribute</type>
         <class>class1</class>
         <attribute>attributeA0</attribute>
-        <x>30.0</x>
+        <x>138.0</x>
         <y>41.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>class1</class>
         <method>methodA0</method>
-        <x>78.0</x>
+        <x>186.0</x>
         <y>91.0</y>
     </element>
     <element>
@@ -134,7 +134,7 @@
         <class>class1</class>
         <method>method1</method>
         <hasClassScope>true</hasClassScope>
-        <x>71.0</x>
+        <x>179.0</x>
         <y>41.0</y>
     </element>
 </elements>
