@@ -7,6 +7,6 @@ version132: spec
 				repository: 'http://www.smalltalkhub.com/mc/RainerWinkler/RW-Moose-Diagram/main'.
 			spec
 				package: 'RWMooseDiagram'
-					with: 'RWMooseDiagram-RainerWinkler.1567165089';
+					with: 'RWMooseDiagram-RainerWinkler.1567165090'; "Includes also fix #93"
 				package: 'Moose2Model'
 					with: 'Moose2Model-RainerWinkler.1567165088' ]
