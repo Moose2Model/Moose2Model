@@ -1,3 +1,4 @@
 as yet unclassified
 automaticTestIsRunning
-	^automaticTestIsRunning
+	automaticTestIsRunning ifNil: [ automaticTestIsRunning := false ].
+	^ automaticTestIsRunning
