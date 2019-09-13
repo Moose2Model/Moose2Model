@@ -8,7 +8,7 @@ dAllModelPackages
 	elementList
 		do: [ :each | 
 			each famixElement
-				ifNotNil: [ ( self isFAMIXClass: each famixElement )
+				ifNotNil: [ each famixElement class asString = self aFAMIXClass
 						ifTrue: [ each dParentPackage
 								ifNotNil: [ packages add: (each dParentPackage asRWDiagramElement: self) ]
 								ifNil: [ noPackage add: each.

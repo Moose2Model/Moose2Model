@@ -5,11 +5,11 @@ actualizeTemporaryAppearacenceInView: aRTView
 <duplicate_database_attr_color>
 	aRTView elements
 		do: [ :each | each model class = RWDiagramElement ifTrue:[
-			( self isFAMIXMethod: each model famixElement )
+			each model famixElement class asString = self aFAMIXMethod
 				ifTrue: [ (self highlight: each model)
 						ifTrue: [ each color: self colorSchema methodHighLightedColor ]
 						ifFalse: [ each color: self colorSchema methodColor ] ].
-			 ( self isFAMIXAttribute: each model famixElement )
+			each model famixElement class asString = self aFAMIXAttribute
 				ifTrue: [ (each model famixElement parentType modifiers includes: 'DBTable')
 						ifTrue: [ (self highlight: each model)
 								ifTrue: [ each color: self colorSchema dataBaseAsAttributeHighLighteColor ]

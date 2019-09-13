@@ -4,7 +4,7 @@ setConnections
 	"Refresh all connections before settings"
 	self elementList
 		do: [ :el | 
-			 ( self isFAMIXClass: el famixElement )
+			el famixElement class asString = self aFAMIXClass
 				ifTrue: [ el famixElement methods
 						do: [ :me | 
 							(me queryAllOutgoingInvocations atScope: FAMIXMethod) storage

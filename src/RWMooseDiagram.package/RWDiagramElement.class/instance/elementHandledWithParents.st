@@ -1,3 +1,3 @@
 as yet unclassified
 elementHandledWithParents
-	^  (self isFAMIXMethod: self famixElement) | ( self isFAMIXAttribute: self famixElement)
+	^ self famixElement class asString = self aFAMIXMethod | (self famixElement class asString = self aFAMIXAttribute)

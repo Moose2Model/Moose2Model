@@ -5,15 +5,11 @@ preventOverlappings: aRTView messages: aBoolean
 	es2 := Set new.
 	counter := self maxChecks.
 	aRTView elements
-		do: [ :element | 
-			element model class = RWDiagramElement
-				ifTrue: [ (((self isFAMIXMethod: element model famixElement)
-						or: [ self isFAMIXAttribute: element model famixElement ])
-						or: [ element model famixElement class
-								inheritsFrom: RWDiagramAbstractComment ])
-						ifTrue: [ es add: element.
-							es2 add: element ]
- ] ].
+		do: [ :element | element model class = RWDiagramElement ifTrue:[
+			(({self aFAMIXMethod.
+			self aFAMIXAttribute} includes: element model famixElement class asString) or:[element model famixElement class inheritsFrom: RWDiagramAbstractComment])
+				ifTrue: [ es add: element.
+					es2 add: element ] ] ].
 	self repeat
 		timesRepeat: [ somethingDone := false.
 			es
@@ -31,22 +27,10 @@ preventOverlappings: aRTView messages: aBoolean
 											dy abs < minDy
 												ifTrue: [ e translateTo: e position x @ (e2 position y + minDy).
 													somethingDone := true ] ] ].
-							counter := counter - 1.
-							counter < 0
-								ifTrue: [ UIManager default
-										alert:
-											'prevent Overlapping stoped after ' , self maxChecks asString
-												,
-													' steps. Call RWDiagram lCPOMaxChecks: x. where x is a higher number if needed. Runtime may be long!'.
-									^ self ] ] ].
+							counter := counter - 1. counter < 0 ifTrue:[UIManager default alert: 'prevent Overlapping stoped after ', self maxChecks asString , ' steps. Call RWDiagram lCPOMaxChecks: x. where x is a higher number if needed. Runtime may be long!'. ^ self] ] ].
 			somethingDone
 				ifFalse: [ aBoolean
 						ifTrue: [ self inform: 'prevent Overlapping finished' ].
 					^ self ] ].
 	aBoolean
-		ifTrue: [ UIManager default
-				alert:
-					'Not all overlapping elements might be moved after '
-						, self repeat asString
-						,
-							'loops, you may call RWDiagram lCPORepeat: x where x is a higher number of loops.' ]
+		ifTrue: [ UIManager default alert: 'Not all overlapping elements might be moved after ', self repeat asString , 'loops, you may call RWDiagram lCPORepeat: x where x is a higher number of loops.' ]
