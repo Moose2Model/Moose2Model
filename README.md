@@ -24,9 +24,7 @@ It can generate diagrams like this:
 It is build on top of Pharo, Roassal and [Moose](http://www.moosetechnology.org/).
 
 # Compatibility
-Runs on Moose 6.
-
-Is currently tested on Moose 6.1. You might switch of the warning of deprecated methods under System->Settings.
+Runs on Moose 6 and 7. Smalltalk models can currently only be analyzed on Moose 6.
 
 # Supported languages
 
@@ -40,7 +38,7 @@ Other computer languages can be extracted to Moose, please check whether there i
 
 # Where is the coding
 
-The original coding is hosted in this repository. A copy is stored on Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram (The link may work only in Firefox). This simplifies getting the code.
+The original coding is hosted in this repository. A copy is stored on Smalltalkhub http://www.smalltalkhub.com/#!/~RainerWinkler/RW-Moose-Diagram (The link may work only in Firefox). This simplifies getting the code. See wiki under installation how to get and install (https://github.com/Moose2Model/Moose2Model/wiki/Installation)
 
 # Thanks
 
