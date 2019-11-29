@@ -1,0 +1,9 @@
+ifdef::env-github[]
+:imagesdir: https://github.com/Moose2Model/Moose2Model/blob/master/Documentation/images/
+endif::[]
+
+:toc:
+:toc-placement!:
+toc::[]
+Introduction and Goals
+======================
