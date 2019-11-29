@@ -5,6 +5,9 @@ endif::[]
 :toc:
 :toc-placement!:
 toc::[]
+
+This documentation follows the arc42 template for architecture documentation (https://arc42.org/).
+
 Introduction and Goals
 ======================
 
@@ -13,6 +16,7 @@ Requirements Overview
 - Provide diagrams for developers that can be easily kept correct
 - Reduces the cognitive load of developers who work in complex software systems
 - Supports only diagram that show the dependencies between components of a software
+- Supports dependencies between entities of code that are more detailed then a class (method, attribute, ...)
 - Works in the moment best with models that are extracted by the SAP2Moose project
 - Shall support all models that are compatible with Moose (http://moosetechnology.org/)
 
@@ -20,4 +24,18 @@ Quality Goals
 -------------
 - Shows all dependencies between elements in a diagram
 - Shows all elements that should be in a diagram
+
+Stake Holders
+-------------
+
+.Stake Holders
+|===
+| Role/Name |Expectations
+
+|Developer
+|Build diagrams where the customiziation is not lost when they are regenerated with new informations. Build diagrams that are sufficiently detailed to support the development.
+
+|Software Architect
+|Have a tool to compare the planned architecture with the realized architecture
+|===
 
