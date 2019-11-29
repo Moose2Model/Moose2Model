@@ -15,3 +15,9 @@ Requirements Overview
 - Supports only diagram that show the dependencies between components of a software
 - Works in the moment best with models that are extracted by the SAP2Moose project
 - Shall support all models that are compatible with Moose (http://moosetechnology.org/)
+
+Quality Goals
+-------------
+- Shows all dependencies between elements in a diagram
+- Shows all elements that should be in a diagram
+
