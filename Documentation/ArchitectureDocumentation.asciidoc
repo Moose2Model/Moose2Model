@@ -7,3 +7,11 @@ endif::[]
 toc::[]
 Introduction and Goals
 ======================
+
+Requirements Overview
+---------------------
+- Provide diagrams for developers that can be easily kept correct
+- Reduces the cognitive load of developers who work in complex software systems
+- Supports only diagram that show the dependencies between components of a software
+- Works in the moment best with models that are extracted by the SAP2Moose project
+- Shall support all models that are compatible with Moose (http://moosetechnology.org/)
