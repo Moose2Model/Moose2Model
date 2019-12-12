@@ -8,11 +8,11 @@ toc::[]
 
 This documentation follows the arc42 template for architecture documentation (https://arc42.org/).
 
-Introduction and Goals
-======================
+1 Introduction and Goals
+========================
 
-Requirements Overview
----------------------
+1.1 Requirements Overview
+-------------------------
 - Provide diagrams for developers that can be easily kept correct
 - Reduces the cognitive load of developers who work in complex software systems
 - Supports only diagram that show the dependencies between components of a software
@@ -20,13 +20,13 @@ Requirements Overview
 - Works in the moment best with models that are extracted by the SAP2Moose project
 - Shall support all models that are compatible with Moose (http://moosetechnology.org/)
 
-Quality Goals
--------------
+1.2 Quality Goals
+-----------------
 - Shows all dependencies between elements in a diagram
 - Shows all elements that should be in a diagram
 
-Stake Holders
--------------
+1.3 Stake Holders
+-----------------
 
 .Stake Holders
 |===
@@ -38,4 +38,14 @@ Stake Holders
 |Software Architect
 |Have a tool to compare the planned architecture with the realized architecture
 |===
+
+2 Architecture Constraints
+==========================
+- Easy to install
+
+3 System Scope and Context
+==========================
+Components of SAP2Moose. Contains also components to maintain, test and documentate (including images used to documentate).
+
+image::Moose2Model Components.png[Moose2Model Components]
 
