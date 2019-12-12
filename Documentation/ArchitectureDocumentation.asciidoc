@@ -53,6 +53,9 @@ image::Moose2Model Components.png[Moose2Model Components]
 |===
 |Component |Explanation
 
+|Stored parameters of SAP2Moose report
+|It is currently not possible to store the information what elements are to be extracted in Moose2Model and report it to the extractor. In case of SAP2Moose a SAP standard feature is used. Variants for reports are stored in the system that select the corrects packages together with other needed settings.
+
 |Other applications
 |Currently Moose2Model is mostly used for SAP and Smalltalk. As different extractors provide different FAMIX models, there will be problems when a new extractor is used. Moose2Model may work with some elements. But other elements may require an adaption in Moose2Model or in the extractor.
 
@@ -78,6 +81,6 @@ image::Moose2Model Components.png[Moose2Model Components]
 |Use the Moose framework as a basis
 
 |Make it possible to build diagrams that work like floor plans or circuit diagrams and can be easily kept actual.
-|Use Roassal to adapt diagrams with stored informations about positions and comments of elements. Store diagram informations on file.
+|Use Roassal to adapt diagrams with stored informations about positions and comments of elements. Store diagram informations in a file.
 
 |===
