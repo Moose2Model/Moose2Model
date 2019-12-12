@@ -87,3 +87,9 @@ image::Moose2Model Components.png[Moose2Model Components]
 |Use Roassal to adapt diagrams with stored informations about positions and comments of elements. Store diagram informations in a file.
 
 |===
+
+5 Building Block View
+=====================
+The following diagram visualizes the main components that are called when an extraction is done.
+
+image::Moose2Model Block Level 1.png[Block diagram level 1]
