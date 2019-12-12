@@ -63,7 +63,10 @@ image::Moose2Model Components.png[Moose2Model Components]
 |Moose2Model is able to analyze Smalltalk models that are created with the build in Moose extractor. Due to changes Smalltalk systems can currently be analyzed only with older Moose2Model releases (The internal class structure changed for Smalltalk). A general problem in Smalltalk is, that it is not easy to see which class will implement a message. Therefore diagrams for Smalltalk show often usages of messages simply because they have a similar name.
 
 |Github
-|This contains sub components to explain better how texts and images of the documentation are maintained
+|The application is developed in a repository on Github. Contained are sub components to explain better how texts and images of the documentation are maintained.
+
+|Smalltalkhub
+|The distribution and update is done via a Smalltalkhub repository.
 
 |png file
 |The information how the png file is build is part of the image file. This is an option when it is exported from draw.io. Open the file with draw.io to be able to edit it and include a copy of the diagram when you export it.
