@@ -42,6 +42,7 @@ This documentation follows the arc42 template for architecture documentation (ht
 2 Architecture Constraints
 ==========================
 - Easy to install
+- Correct, Show all elements and connections that should be shown
 
 3 System Scope and Context
 ==========================
