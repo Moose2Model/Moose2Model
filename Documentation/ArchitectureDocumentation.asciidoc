@@ -67,3 +67,17 @@ image::Moose2Model Components.png[Moose2Model Components]
 
 |===
 
+4 Solution Strategy
+===================
+
+.Solution Strategy
+|===
+|Challenge |Solution
+
+|Simplify effort to implement a model and infrastructure to work with models of code
+|Use the Moose framework as a basis
+
+|Make it possible to build diagrams that work like floor plans or circuit diagrams and can be easily kept actual.
+|Use Roassal to adapt diagrams with stored informations about positions and comments of elements. Store diagram informations on file.
+
+|===
