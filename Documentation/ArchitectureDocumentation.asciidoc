@@ -39,3 +39,8 @@ This documentation follows the arc42 template for architecture documentation (ht
 |Have a tool to compare the planned architecture with the realized architecture
 |===
 
+2 Architecture Constraints
+==========================
+- Easy to install
+
+
