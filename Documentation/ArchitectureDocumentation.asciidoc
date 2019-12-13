@@ -93,3 +93,23 @@ image::Moose2Model Components.png[Moose2Model Components]
 The following diagram visualizes the main components that are called when an extraction is done.
 
 image::Moose2Model Block Level 1.png[Block diagram level 1]
+
+6 Design Decisions
+==================
+
+6.1 Read system informations
+----------------------------
+.Decision Strategy reading
+|===
+| |
+
+|Criteria
+|Model information is to be read and stored
+
+|Alternatives
+|1. Use Moose as framework 2. Develop an own framework
+
+|Decision
+|1. Moose provides most required functionality. The groupings by Moose do not fit well to Moose2Model. But the effort to implement an own framework appears to be to costly.
+
+|===
