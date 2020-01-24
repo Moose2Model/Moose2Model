@@ -113,3 +113,26 @@ image::Moose2Model Block Level 1.png[Block diagram level 1]
 |1. Moose provides most required functionality. The groupings by Moose do not fit well to Moose2Model. But the effort to implement an own framework appears to be to costly.
 
 |===
+
+7 Risks and Technical Debts
+===========================
+
+7.1 Documentation insufficient
+------------------------------
+The documentation is sometimes confusing. There may be old informations. The installation is not completely explained.
+
+7.2 No proper communication about the benefits and need for the tool
+--------------------------------------------------------------------
+Due to a failure to communicate the benefits and need for the tool, there is no community big enough to maintain and support the project in the long range.
+
+7.3 Too much dependencies from the Moose classes
+------------------------------------------------
+This makes migrating to a new release problematic. It also complicates the coding.
+
+7.4 Diagrams confusing
+----------------------
+It is difficult to understand what is meant by a diagram. Different kind of objects are visualized with the same symbol.
+
+7.5 Technical names can be duplicates
+-------------------------------------
+The type of an element is not part of the internally used key. This should cause problems when different elements have same names. Currently the type of an element is often coded by adding a prefix by the extractor.
