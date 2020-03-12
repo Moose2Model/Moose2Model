@@ -6,6 +6,56 @@ See video [Software Exploration with Moose2Model](https://www.youtube.com/watch?
 
 Please contact the developer by opening an issue when you plan to use it to get support.
 
+See [YouTube video on how to install this application](https://youtu.be/r75XnhwiXHA) for a short explanation on how to install and run.
+
+# Installation
+
+## By using the Pharo Launcher
+
+Install the Pharo Launcher from http://pharo.org/download
+When the installation is done, choose a Moose 7.0 image.
+Use Moose 6.1 or 6.0 when you want to display Smalltalk Models, see issue #91.
+
+## Download Moose 7.0 (Alternative to Pharo Launcher)
+Use Moose 6.1 or 6.0 when you want to display Smalltalk Models, see issue #91.
+Go to [Moose Analysis Installation](http://www.moosetechnology.org/#install) and download an image for Moose 7.0. Extract the zip file, no installer is needed.
+Moose 7.0 is based on Pharo 7.0.
+
+## Add the logic for Moose2Model
+
+Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground. Paste the following code into the Playground:
+
+    Metacello new
+        smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
+        configuration: 'Moose2Model';
+        version: #stable ;
+        load.
+
+To get the development version use (You need it to install for experiments on Moose Suite 8):
+
+    Metacello new
+        smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
+        configuration: 'Moose2Model';
+        version: #development ;
+        load.
+
+Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. 
+
+## Enable links to ABAP Eclipse
+
+To use links to external application, OSProcess needs to be installed. You may install it using:
+
+    Gofer new squeaksource: 
+        'OSProcess'; package: 'OSProcess'; load.
+
+### Older Moose releases
+Moose2Model should also work on the following older releases:
+Moose 6.0 (based on Pharo 5.0) and Moose 6.1 (based on Pharo 6.0).
+
+## Check for updates
+
+Follow [Get-updates](https://github.com/Moose2Model/Moose2Model/wiki/Get-updates) to see whether there are code improvements you want to install
+
 # Documentation
 
 The documentation is in the Wiki of this repository (Go to the tab "Wiki").
