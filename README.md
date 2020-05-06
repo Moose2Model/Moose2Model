@@ -1,4 +1,4 @@
-<code>This project is actively maintained and used. Please open an issue to get support :-)</code>
+<code>This project is actively maintained and used (May 2020). Please open an issue to get support :-)</code>
 
 # Moose2Model
 
