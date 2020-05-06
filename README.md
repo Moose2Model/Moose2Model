@@ -1,3 +1,5 @@
+<mark>This project is actively maintained and used. Please open an issue to get support :-)</mark>
+
 # Moose2Model
 
 This is a software exploration tool to support developers during their work. It provides "Circuit Diagrams" for Software that can be easily kept up do date. 
