@@ -25,7 +25,7 @@ Moose 7.0 is based on Pharo 7.0.
 
 ## Add the logic for Moose2Model
 
-Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground. Paste the following code into the Playground:
+Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground (in sub menu Tools). Paste the following code into the Playground:
 
     Metacello new
         smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
@@ -45,7 +45,7 @@ Select the complete coding with the mouse. This is mandatory because the Playgro
 
 ## Enable links to ABAP Eclipse
 
-To use links to external application, OSProcess needs to be installed. You may install it using:
+To use links to external application, OSProcess needs to be installed. Copy the following text into the same playground and execute in the same way:
 
     Gofer new squeaksource: 
         'OSProcess'; package: 'OSProcess'; load.
