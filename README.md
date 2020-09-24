@@ -10,7 +10,7 @@ Please contact the developer by opening an issue when you plan to use it to get 
 
 # Installation
 
-## By using the Pharo Launcher
+## Get Moose 7.0 by using the Pharo Launcher
 
 Install the Pharo Launcher from http://pharo.org/download
 When the installation is done, choose a Moose 7.0 image. You may find it by clicking on New under "Official distributions".
@@ -23,7 +23,9 @@ Moose 7.0 is based on Pharo 7.0.
 
 ## Add the logic for Moose2Model
 
-Execute the Pharo.exe in the extracted folder. Make a left mouseclick into the Pharo desktop and select Playground (in sub menu Tools). Paste the following code into the Playground:
+Please follow this description carefully. The playground and Pharo have some different behaviour compared to other operation systems.
+
+Execute the Pharo.exe in the extracted folder. Go to the menu under Tools and open the Playground. Paste the following code into the Playground:
 
     Metacello new
         smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
@@ -47,6 +49,10 @@ To use links to external application, OSProcess needs to be installed. Copy the 
 
     Gofer new squeaksource: 
         'OSProcess'; package: 'OSProcess'; load.
+        
+## First Steps  
+
+These are described in [First Steps](https://github.com/Moose2Model/Moose2Model/wiki/First-steps).
 
 ### Older Moose releases
 Moose2Model should also work on the following older releases:
