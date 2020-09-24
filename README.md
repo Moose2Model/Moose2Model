@@ -8,8 +8,6 @@ See video [Software Exploration with Moose2Model](https://www.youtube.com/watch?
 
 Please contact the developer by opening an issue when you plan to use it to get support.
 
-See [YouTube video on how to install this application](https://youtu.be/r75XnhwiXHA) for a short explanation on how to install and run.
-
 # Installation
 
 ## By using the Pharo Launcher
