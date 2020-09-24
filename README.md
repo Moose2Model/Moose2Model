@@ -13,7 +13,7 @@ Please contact the developer by opening an issue when you plan to use it to get 
 ## By using the Pharo Launcher
 
 Install the Pharo Launcher from http://pharo.org/download
-When the installation is done, choose a Moose 7.0 image.
+When the installation is done, choose a Moose 7.0 image. You may find it by clicking on New under "Official distributions".
 Use Moose 6.1 or 6.0 when you want to display Smalltalk Models, see issue #91.
 
 ## Download Moose 7.0 (Alternative to Pharo Launcher)
