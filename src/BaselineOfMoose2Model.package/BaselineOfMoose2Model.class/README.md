@@ -1,0 +1,1 @@
+See https://github.com/pharo-open-documentation/pharo-wiki/blob/master/General/Baselines.md how to maintain this

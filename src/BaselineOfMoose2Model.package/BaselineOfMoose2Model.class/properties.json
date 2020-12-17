@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "RainerWinkler 12/17/2020 10:56",
+	"super" : "BaselineOf",
+	"category" : "BaselineOfMoose2Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "BaselineOfMoose2Model",
+	"type" : "normal"
+}
