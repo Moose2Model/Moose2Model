@@ -9,4 +9,4 @@ version140: spec
 					with: 'RWMooseDiagram-RainerWinkler.1567165091';
 				"Includes also fix #93"
 					package: 'Moose2Model'
-					with: 'Moose2Model-RainerWinkler.1567165090' ]
+					with: 'Moose2Model-RainerWinkler.1567165091' ]
