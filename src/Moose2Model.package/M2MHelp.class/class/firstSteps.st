@@ -10,7 +10,7 @@ You might set an alternative path to store and read diagram informations.
 Specify a new diagram name (Otherwise you use a default name).
 Select elements of a FAMIX model to add elements to a diagram. This will only work for some elements (Mostly packages, classes, attributes and methods).
 Draw a diagram.
-Rearange elements as needed. Do a right mouse click to see what is possible.
+Rearange elements as needed. Do a right mouse click to see what is possible. Click on the background to reposition the diagram. Use the scroll wheel of the mouse to zoom in and out.
 Redraw when needed.
 Store diagram informations to a file. You may use these later, when the application changed to draw actual diagrams even though the coding changed.
 
