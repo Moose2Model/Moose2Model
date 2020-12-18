@@ -35,8 +35,8 @@ Execute the Pharo.exe in the extracted folder. Go to the menu under Tools and op
 
 To get the development version use (You need it to install for experiments on Moose Suite 8):
 
-    Metacello new
-        smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
+    Metacello new 
+        repository: 'http://ss3.gemstone.com/ss/Moose2Model';
         configuration: 'Moose2Model';
         version: #development ;
         load.
