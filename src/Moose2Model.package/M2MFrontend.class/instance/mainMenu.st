@@ -9,30 +9,30 @@ mainMenu
 						name: nil;
 						description: 'Open Help';
 						icon: ( Smalltalk ui icons iconNamed: #help "Replace in Pharo 7 with: self iconNamed:");
-						action: [ HelpBrowser openOn: M2MHelp ] ] ];
+						action: [ HelpBrowser openOn: M2MHelp ] ] ].";"
 
-		addGroup: [ :group | 
+		" addGroup: [ :group | 
 			group
 				addItem: [ :item | 
 					item
 						name: nil;
 						description: 'Green';
 						icon: (Smalltalk ui icons iconNamed: #glamorousGreenCircle);
-						action: [ self draw2: #Green ] ] ];
-		addGroup: [ :group | 
+						action: [ self draw2: #Green ] ] ];"
+		"addGroup: [ :group | 
 			group
 				addItem: [ :item | 
 					item
 						name: nil;
 						description: 'Red';
 						icon: (Smalltalk ui icons iconNamed: #glamorousRedCircle);
-						action: [ self draw2: #Red ] ] ];
-		addGroup: [ :group | 
+						action: [ self draw2: #Red ] ] ];"
+		"addGroup: [ :group | 
 			group
 				addItem: [ :item | 
 					item
 						name: nil;
 						description: 'White';
 						icon: (Smalltalk ui icons iconNamed: #glamorousAdd);
-						action: [ self draw2: #ChooseColor ] ] ].
+						action: [ self draw2: #ChooseColor ] ] ]."
 	^ aMenu
