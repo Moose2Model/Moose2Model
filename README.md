@@ -2,7 +2,7 @@
 
 # Moose2Model
 
-This is a software exploration tool to support developers during their work. It provides "Circuit Diagrams for Software" that can be easily kept up do date. 
+This is a software exploration tool to support developers during their work. It provides "Circuit Diagram for Software" that can be easily kept up do date. 
 
 See video [Software Exploration with Moose2Model](https://www.youtube.com/watch?v=k8RkDwlXKmg).
 
