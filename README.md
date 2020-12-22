@@ -30,7 +30,8 @@ Execute the Pharo.exe in the extracted folder. Go to the menu under Tools and op
     Metacello new
         smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
         configuration: 'Moose2Model';
-        version: #stable ;
+        version: #stable;
+        get;
         load.
 
 To get the development version use (You need it to install for experiments on Moose Suite 8):
@@ -38,10 +39,11 @@ To get the development version use (You need it to install for experiments on Mo
     Metacello new 
         repository: 'http://ss3.gemstone.com/ss/Moose2Model';
         configuration: 'Moose2Model';
-        version: #development ;
+        version: #development;
+        get;
         load.
 
-Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. 
+Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. You can use the same statements to get the most actual coding. This is due to the get statements which are not required when the coding is read the first time.
 
 ## Enable links to ABAP Eclipse
 
