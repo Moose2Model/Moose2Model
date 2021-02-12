@@ -27,8 +27,8 @@ Please follow this description carefully. The playground and Pharo have some dif
 
 Execute the Pharo.exe in the extracted folder. Go to the menu under Tools and open the Playground. Paste the following code into the Playground:
 
-    Metacello new
-        smalltalkhubUser: 'RainerWinkler' project: 'RW-Moose-Diagram';
+    Metacello new 
+        repository: 'http://ss3.gemstone.com/ss/Moose2Model';
         configuration: 'Moose2Model';
         version: #stable;
         get;
