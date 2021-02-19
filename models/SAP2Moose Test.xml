@@ -5,14 +5,14 @@
     <scope>method</scope>
     <element>
         <type>RWDiagramNoPackage</type>
-        <x>84.0</x>
-        <y>158.0</y>
+        <x>2481.0</x>
+        <y>785.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>Z2MSE_TEST_CL_A</class>
-        <x>508.0</x>
-        <y>108.0</y>
+        <x>266.0</x>
+        <y>254.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -20,12 +20,38 @@
         <method>METHOD_A</method>
         <x>357.0</x>
         <y>41.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>Z2MSE_TEST_CL_A</class>
+        <method>CONSTRUCTOR</method>
+        <x>370.0</x>
+        <y>232.0</y>
+    </element>
+    <element>
+        <type>FAMIXAttribute</type>
+        <class>Z2MSE_TEST_CL_A</class>
+        <attribute>Z2MSE_TEST_IF_A_00000000000000~ATTRIBUTE_A_000000000000000000</attribute>
+        <x>-18.0</x>
+        <y>213.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
         <class>Z2MSE_TEST_CL_A2</class>
-        <x>648.0</x>
-        <y>108.0</y>
+        <x>622.0</x>
+        <y>155.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>Z2MSE_TEST_IF_A_00000000000000</class>
+        <x>138.0</x>
+        <y>24.0</y>
     </element>
     <element>
         <type>FAMIXMethod</type>
@@ -47,6 +73,12 @@
         <y>41.0</y>
     </element>
     <element>
+        <type>FAMIXClass</type>
+        <class>Z2MSE_TEST_CL_A3</class>
+        <x>437.0</x>
+        <y>16.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>FGR-Z2MSE_TEST_FGR_A</class>
         <method>F-Z2MSE_TEST_FUNCTION_A</method>
@@ -64,15 +96,21 @@
         <type>FAMIXMethod</type>
         <class>Z2MSE_TEST_CL_A2</class>
         <method>METHOD_A</method>
-        <x>649.0</x>
-        <y>97.0</y>
+        <x>623.0</x>
+        <y>144.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
     </element>
     <element>
         <type>FAMIXMethod</type>
         <class>Z2MSE_TEST_CL_A</class>
         <method>EVENT_A</method>
-        <x>531.0</x>
-        <y>97.0</y>
+        <x>408.0</x>
+        <y>282.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -81,11 +119,45 @@
         <y>52.0</y>
     </element>
     <element>
+        <type>FAMIXAttribute</type>
+        <class>Z2MSE_TEST_IF_A_00000000000000</class>
+        <attribute>ATTRIBUTE_A_000000000000000000</attribute>
+        <x>72.0</x>
+        <y>13.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>Z2MSE_TEST_CL_B2</class>
+        <method>METHOD_A</method>
+        <x>357.0</x>
+        <y>69.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>FGR-Z2MSE_TEST_FGR_A</class>
+        <method>LZ2MSE_TEST_FGR_AF01</method>
+        <x>920.0</x>
+        <y>42.0</y>
+    </element>
+    <element>
         <type>FAMIXMethod</type>
         <class>Z2MSE_TEST_CL_A</class>
         <method>METHOD_A</method>
-        <x>488.0</x>
-        <y>97.0</y>
+        <x>250.0</x>
+        <y>203.0</y>
+        <ACTSuppressOthers>
+            <type>ACDStandard</type>
+            <includeMe>true</includeMe>
+            <usedByLayers>1</usedByLayers>
+            <usingLayers>1</usingLayers>
+        </ACTSuppressOthers>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>Z2MSE_TEST_CL_B1</class>
+        <method>METHOD_B</method>
+        <x>438.0</x>
+        <y>-10.0</y>
         <ACTSuppressOthers>
             <type>ACDStandard</type>
             <includeMe>true</includeMe>
@@ -97,8 +169,8 @@
         <type>FAMIXAttribute</type>
         <class>Z2MSE_TEST_A</class>
         <attribute>Z2MSE_TEST_A</attribute>
-        <x>760.0</x>
-        <y>102.0</y>
+        <x>356.0</x>
+        <y>157.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -111,6 +183,12 @@
         <class>Z2MSE_TEST_WDY_A</class>
         <x>514.0</x>
         <y>52.0</y>
+    </element>
+    <element>
+        <type>FAMIXClass</type>
+        <class>Z2MSE_TEST_CL_B2</class>
+        <x>357.0</x>
+        <y>80.0</y>
     </element>
     <element>
         <type>FAMIXClass</type>
@@ -132,9 +210,30 @@
     </element>
     <element>
         <type>FAMIXMethod</type>
+        <class>Z2MSE_TEST_IF_A_00000000000000</class>
+        <method>METHOD_A_000000000000000000000</method>
+        <x>203.0</x>
+        <y>13.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
         <class>BW-ODSO-Z2MSET001-CUBE-Z2MSET002</class>
         <method>BW-ODSO-Z2MSET001-CUBE-Z2MSET002</method>
         <x>19.0</x>
         <y>-85.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>Z2MSE_TEST_CL_A3</class>
+        <method>METHOD_A</method>
+        <x>438.0</x>
+        <y>6.0</y>
+    </element>
+    <element>
+        <type>FAMIXMethod</type>
+        <class>Z2MSE_TEST_CL_A</class>
+        <method>Z2MSE_TEST_IF_A_00000000000000~METHOD_A_000000000000000000000</method>
+        <x>279.0</x>
+        <y>262.0</y>
     </element>
 </elements>
