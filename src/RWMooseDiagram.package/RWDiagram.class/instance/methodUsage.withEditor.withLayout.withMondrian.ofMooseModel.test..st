@@ -34,19 +34,24 @@ Handles the modifies DBTable to color database tables differently
 			rwLayout mooseID: aMooseModel mooseID ].
 	isTest
 		ifFalse: [ isRebuild
-				ifFalse: [ aMooseModel sourceLanguage ifNotNil: [ aMooseModel sourceLanguage name = 'Smalltalk'
-						ifTrue: [ (('Pharo7.*' match: SmalltalkImage current version)
-								or: ('Pharo8.*' match: SmalltalkImage current version))
-								ifTrue: [ "Inform that Smalltalk is not supported"self popUpSmalltalkNotSupported ifFalse: [ "Leave processing" ^ nil ] ] ] ] ] ].
+				ifFalse: [ aMooseModel sourceLanguage
+						ifNotNil: [ aMooseModel sourceLanguage name = 'Smalltalk'
+								ifTrue: [ (('Pharo7.*' match: SmalltalkImage current version)
+										or: ('Pharo8.*' match: SmalltalkImage current version))
+										ifTrue: [ "Inform that Smalltalk is not supported"
+											self popUpSmalltalkNotSupported
+												ifFalse: [ "Leave processing" ^ nil ] ] ] ] ] ].
 	isTest
 		ifFalse: [ rwLayout scope = rwLayout methodScope
 				ifTrue: [ rwLayout elementGroup elementList size = 0
-						ifTrue: [ "Warn that runtime can be long" self popUpAllElementsDisplayed
+						ifTrue: [ "Warn that runtime can be long"
+							self popUpAllElementsDisplayed
 								ifFalse: [ "Leave processing" ^ nil ] ]
 						ifFalse: [ [ rwLayout elementGroup elementList
 								detect: [ :each | each attributeList attributeIsSpecified ] ]
 								on: NotFound
-								do: [ "Warn that runtime can be long" self popUpAllElementsDisplayed
+								do: [ "Warn that runtime can be long"
+									self popUpAllElementsDisplayed
 										ifFalse: [ "Leave processing" ^ nil ] ] ] ] ].
 	rwLayout refresh.
 	rwLayout replaceElementsFromFAMIXGroup: aRWDiagramElementGroup.
@@ -233,18 +238,26 @@ Handles the modifies DBTable to color database tables differently
 								connectToAll: [ :m | m connectedFrom ] ] ].
 			"Draw access line for packages and classes"
 			rwLayout lineStyle = rwLayout straightLineStyle
-				ifTrue: [ b shape line
+				ifTrue: [ rwLayout accessesWithArrows
+						ifTrue: [ b shape arrowedLine ]
+						ifFalse: [ b shape line ].
+					b shape
 						color: rwLayout colorSchema attributeLineColor;
-						withShorterDistanceAttachPoint ].
+						"line"
+							withShorterDistanceAttachPoint ].
 			rwLayout lineStyle = rwLayout multiLineStyle
 				ifTrue: [ b shape: RTStyledMultiLine new.
-					b shape arrowHead
+					rwLayout accessesWithArrows
+						ifTrue: [ b shape arrowHead ].
+					b shape
 						color: rwLayout colorSchema attributeLineColor;
 						withShorterDistanceAttachPoint;
 						orthoVertical ].
 			rwLayout lineStyle = rwLayout multiLineStyle2
 				ifTrue: [ b shape: RTStyledMultiLine new.
-					b shape arrowHead
+					rwLayout accessesWithArrows
+						ifTrue: [ b shape arrowHead ].
+					b shape
 						color: rwLayout colorSchema attributeLineColor;
 						withShorterDistanceAttachPoint;
 						orthoHorizontal ].
@@ -293,17 +306,24 @@ Handles the modifies DBTable to color database tables differently
 							(m famixElement queryAllIncomingInvocations atScope: FAMIXMethod)
 								collect: [ :m2 | m2 asRWDiagramElement: rwLayout ] ] ].	" "
 			rwLayout lineStyle = rwLayout straightLineStyle
-				ifTrue: [ b shape line
+				ifTrue: [ rwLayout accessesWithArrows
+						ifTrue: [ b shape arrowedLine ]
+						ifFalse: [ b shape line ].
+					b shape
 						color: rwLayout colorSchema attributeLineColor;
-						withShorterDistanceAttachPoint ].
+							withShorterDistanceAttachPoint ].
 			rwLayout lineStyle = rwLayout multiLineStyle
 				ifTrue: [ b shape: RTStyledMultiLine new.
+					rwLayout accessesWithArrows
+						ifTrue: [ b shape arrowHead ].
 					b shape
 						color: rwLayout colorSchema attributeLineColor;
 						withShorterDistanceAttachPoint;
 						orthoVertical ].
 			rwLayout lineStyle = rwLayout multiLineStyle2
 				ifTrue: [ b shape: RTStyledMultiLine new.
+					rwLayout accessesWithArrows
+						ifTrue: [ b shape arrowHead ].
 					b shape
 						color: rwLayout colorSchema attributeLineColor;
 						withShorterDistanceAttachPoint;

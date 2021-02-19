@@ -120,7 +120,8 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 		@
 			(RTMenuActivable
 				new;
-				item: 'Set mode to display methods, attributes, classes and packages (Default)'
+				item:
+					'Set mode to display methods, attributes, classes and packages (Default)'
 					action: [ :e | 
 					self setLayoutCurrent: rwLayout.
 					rwLayout scope: rwLayout methodScope.
@@ -177,7 +178,10 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 					rwLayout snapToGrid gridX: 5.
 					rwLayout snapToGrid gridY: 5.
 					rwLayout snapToGrid active: true.
-					self readToRTView: b view withEditor: RWDiagramEditor uniqueInstance withLayout: rwLayout.
+					self
+						readToRTView: b view
+						withEditor: RWDiagramEditor uniqueInstance
+						withLayout: rwLayout.
 					rwLayout snapToGrid active: false.
 					e signalUpdate ]).
 	b view
@@ -241,6 +245,21 @@ addMenuTo: aRWDiagramElementGroup withEditor: rwEditor withLayout: rwLayout with
 				item: 'Toogle arrows (Point to using component)'
 					action: [ :e | 
 					rwLayout displayDependencies: rwLayout displayDependencies not.
+					self
+						redraw: aRWDiagramElementGroup
+						view: e
+						withEditor: rwEditor
+						withLayout: rwLayout
+						mondrian: b
+						ofMooseModel: aMooseModel
+						test: isTest ]).
+	b view
+		@
+			(RTMenuActivable
+				new;
+				item: 'Toggle Accesses with Arrows (Point to attribute)'
+					action: [ :e | 
+					rwLayout accessesWithArrows: rwLayout accessesWithArrows not.
 					self
 						redraw: aRWDiagramElementGroup
 						view: e

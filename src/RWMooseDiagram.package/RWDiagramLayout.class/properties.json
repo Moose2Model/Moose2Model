@@ -21,7 +21,8 @@
 		"packageBoxSuppressed",
 		"displayDependencies",
 		"moose2ModelName",
-		"name"
+		"name",
+		"accessesWithArrows"
 	],
 	"name" : "RWDiagramLayout",
 	"type" : "normal"
