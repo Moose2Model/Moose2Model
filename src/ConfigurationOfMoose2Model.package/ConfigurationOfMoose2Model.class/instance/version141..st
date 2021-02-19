@@ -6,7 +6,7 @@ version141: spec
 		do: [ spec repository: 'http://ss3.gemstone.com/ss/Moose2Model'.
 			spec
 				package: 'RWMooseDiagram'
-					with: 'RWMooseDiagram-RainerWinkler.1567165092';
+					with: 'RWMooseDiagram-RainerWinkler.1567165093';
 				"Includes also fix #93"
 					package: 'Moose2Model'
 					with: 'Moose2Model-RainerWinkler.1567165091' ]
