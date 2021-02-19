@@ -45,6 +45,8 @@ To get the development version use (You need it to install for experiments on Mo
 
 Select the complete coding with the mouse. This is mandatory because the Playground will execute only the marked part of the coding. Make a click with the right mouse button and select Do It. You can use the same statements to get the most actual coding. This is due to the get statements which are not required when the coding is read the first time.
 
+The stable version is release 1.4.0. Development is release 1.4.1 (Includes #102, option to display accesses as arrows).
+
 ## Enable links to ABAP Eclipse
 
 To use links to external application, OSProcess needs to be installed. Copy the following text into the same playground and execute in the same way:
