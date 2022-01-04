@@ -1,4 +1,4 @@
-<code>This project will be replaced by Moose2Model. FAMIX metamodels will not be supported anymore. The new metamodel is currently named SMOIX (04 January 2020). Please open an issue to get support :-)</code>
+<code>This project will be replaced by Moose2Model2. FAMIX metamodels will not be supported anymore. The new metamodel is currently named SMOIX (04 January 2020). Please open an issue to get support :-)</code>
 
 # Moose2Model
 
